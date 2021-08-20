@@ -1,0 +1,64 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "markdown",
+    "json",
+    "yaml",
+    "cpp",
+    "javescript",
+    "typescript",
+    "dart",
+    "python",
+    "go",
+    "rust",
+    "tf"
+  ],
+  "languageserver": {
+    "rust": {
+      "command": "rust-analyzer",
+      "filetypes": [
+        "rust"
+      ],
+      "rootPatterns": [
+        "Cargo.toml"
+      ]
+    },
+    "graphql": {
+      "command": "graphql-lsp",
+      "args": [
+        "server",
+        "-m",
+        "stream"
+      ],
+      "filetypes": [
+        "typescript",
+        "typescriptreact",
+        "graphql"
+      ]
+    },
+    "dockerfile": {
+      "command": "docker-langserver",
+      "filetypes": [
+        "dockerfile"
+      ],
+      "args": [
+        "--stdio"
+      ]
+    },
+    "terraform": {
+      "command": "terraform-ls",
+      "args": [
+        "serve"
+      ],
+      "filetypes": [
+        "terraform",
+        "tf"
+      ],
+      "initializationOptions": {}
+    }
+  },
+  "snippets.ultisnips.directories": [
+    "UltiSnips",
+    "~/.config/nvim/utils/snips"
+  ],
+  "snippets.userSnippetsDirectory": "~/.config/nvim/snips"
+}

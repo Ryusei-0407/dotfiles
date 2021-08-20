@@ -1,0 +1,38 @@
+[user]
+	name = Ryusei-0407
+	email = ryu000407@gmail.com
+
+[init]
+	defaultBranch = main
+
+[pager]
+    diff = delta
+    log = delta
+    reflog = delta
+    show = delta
+
+[delta]
+    plus-style = "syntax #012800"
+    minus-style = "syntax #340001"
+    syntax-theme = Monokai Extended
+    navifate = true
+    line-numbers = true
+    side-by-side = true
+    line-numbers-left-format = ""
+    line-numbers-right-format = "| "
+
+[interactive]
+    diffFilter = delta --color-only
+
+[core]
+	editor = /opt/homebrew/bin/nvim
+
+[alias]
+    d = diff
+    ch = checkout
+    co = commit
+    st = status
+    br = branch
+    mg = merge
+    re = restore
+    lone = log --oneline

@@ -1,0 +1,57 @@
+env:
+  TERM: xterm-256color
+window:
+  dynamic_padding: true
+font:
+  normal:
+    family: MesloLGS NF
+    style: Regular
+  bold:
+    family: MesloLGS NF
+    style: Bold
+  italic:
+    family: MesloLGS NF
+    style: Italic
+  bold_italic:
+    family: MesloLGS NF
+    style: Bold Italic
+  size: 12
+  use_thin_strokes: true
+colors:
+  primary:
+    background: "#17121d"
+    foreground: "#ffffff"
+  cursor:
+    text: CellBackground
+    cursor: "#d42270"
+  normal:
+    black: "#000000"
+    red: "#cd0000"
+    green: "#00cd00"
+    yellow: "#cdcd00"
+    blue: "#9891f1"
+    magenta: "#cd00cd"
+    cyan: "#00cdcd"
+    white: "#e5e5e5"
+  bright:
+    black: "#7f7f7f"
+    red: "#ff0000"
+    green: "#00ff00"
+    yellow: "#ffff00"
+    blue: "#5c5cff"
+    magenta: "#ff00ff"
+    cyan: "#00ffff"
+    white: "#ffffff"
+cursor:
+  style:
+    shape: Block
+  unfocused_hollow: true
+shell:
+  program: /opt/homebrew/bin/zsh
+  args:
+    - -c
+    - /opt/homebrew/bin/tmux a -t 0 || /opt/homebrew/bin/tmux
+  render_timer: false
+  persistent_logging: false
+  log_level: Off
+  print_events: false
