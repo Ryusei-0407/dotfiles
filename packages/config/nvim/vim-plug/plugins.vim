@@ -48,6 +48,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Treesitter
     Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
     " Rust tools
+    Plug 'rust-lang/rust.vim'
     Plug 'simrat39/rust-tools.nvim'
     Plug 'nvim-lua/popup.nvim'
     Plug 'nvim-lua/plenary.nvim'
