@@ -19,8 +19,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'lambdalisue/nerdfont.vim'
     Plug 'lambdalisue/fern-renderer-nerdfont.vim'
     Plug 'lambdalisue/glyph-palette.vim'
-    " Rainbow
-    Plug 'junegunn/rainbow_parentheses.vim'
     " Indent
     Plug 'lukas-reineke/indent-blankline.nvim'
     " Multiple cursors
@@ -35,14 +33,17 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'vim-airline/vim-airline-themes'
     " Markdown
     Plug 'skanehira/preview-markdown.vim'
+    " Dap
+    Plug 'mfussenegger/nvim-dap'
     " Denops
     " Plug 'vim-denops/denops.vim'
     " Plug 'Shougo/ddc.vim'
     " CoC
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+    " Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    " Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
     " LSP
     Plug 'neovim/nvim-lspconfig'
+    Plug 'kabouzeid/nvim-lspinstall'
     Plug 'ray-x/lsp_signature.nvim'
     " Treesitter
     Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
@@ -55,9 +56,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'hashivim/vim-terraform'
     " Flutter
     Plug 'dart-lang/dart-vim-plugin'
-    Plug 'thosakwe/vim-flutter'
-    Plug 'natebosch/vim-lsc'
-    Plug 'natebosch/vim-lsc-dart'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'akinsho/flutter-tools.nvim'
     " Solidity
     Plug 'tomlion/vim-solidity'
    

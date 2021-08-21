@@ -3,10 +3,6 @@ let g:preview_markdown_vertical = 1
 let g:preview_markdown_auto_update = 1
 " Winresizer
 let g:winresizer_start_key = '<C-S>'
-" Rainbow
-let g:rainbow#max_level = 16
-let g:rainbow#pairs = [['(', ')'], ['{', '}'], ['[', ']']]
-autocmd FileType * RainbowParentheses
 
 " Fern
 nnoremap <C-e> :Fern . -reveal=% -drawer -toggle -width=30<CR>
@@ -20,9 +16,6 @@ nnoremap \t :VTerm<CR>
 
 " Tig
 nnoremap <C-t> :TigStatus<CR>
-
-" CocAction
-nnoremap <A-Enter> :CocAction<CR>
 
 " Snippet
 let g:UltiSnipsUsePythonVersion = 3
