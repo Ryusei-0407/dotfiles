@@ -39,6 +39,8 @@ brew "go"
 brew "terraform"
 
 cask "iterm2"
+cask "hyper"
+cask "kitty"
 cask "google-chrome"
 cask "firefox"
 cask "amethyst"
