@@ -1,5 +1,5 @@
 lua << EOF
-local nvim_lsp = require'lspconfig'
+local lsp = require'lspconfig'
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
@@ -40,7 +40,7 @@ require'flutter-tools'.setup{}
 
 local servers = require'lspinstall'.installed_servers()
 for _, server in pairs(servers) do
-    require'lspconfig'[server].setup{}
+    require'lspconfig'[server].setup({})
 end
 EOF
 

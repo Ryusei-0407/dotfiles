@@ -46,7 +46,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'kabouzeid/nvim-lspinstall'
     Plug 'ray-x/lsp_signature.nvim'
     Plug 'nvim-lua/lsp_extensions.nvim'
-    Plug 'nvim-lua/completion-nvim'
+    " Coq
+    Plug 'hrsh7th/nvim-compe'
+    " Plug 'ms-jpq/coq_nvim', { 'branch': 'coq' }
+    " Plug 'ms-jpq/coq.artifacts', { 'branch': 'artifacts' }
     " Treesitter
     Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
     " Rust tools
