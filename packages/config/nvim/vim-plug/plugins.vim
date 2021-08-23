@@ -45,6 +45,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'neovim/nvim-lspconfig'
     Plug 'kabouzeid/nvim-lspinstall'
     Plug 'ray-x/lsp_signature.nvim'
+    Plug 'nvim-lua/lsp_extensions.nvim'
+    Plug 'nvim-lua/completion-nvim'
     " Treesitter
     Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
     " Rust tools
