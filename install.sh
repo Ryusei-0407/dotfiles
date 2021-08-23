@@ -37,5 +37,5 @@ if [ ! -f /opt/homebrew/bin/neovide ]; then
     cp ./target/release/neovide /opt/homebrew/bin
 fi
 
-stow -v -d ~/dotfiles/packages -t ~ zsh git tmux 
+stow -v -d ~/dotfiles/packages -t ~ zsh git tmux hyper
 stow -v -d ~/dotfiles/packages -t ~/.config config
