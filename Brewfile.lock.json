@@ -1320,6 +1320,12 @@
         "options": {
           "full_name": "kitty"
         }
+      },
+      "tableplus": {
+        "version": "4.1.0,376",
+        "options": {
+          "full_name": "tableplus"
+        }
       }
     }
   },
@@ -1328,7 +1334,7 @@
       "big_sur": {
         "HOMEBREW_VERSION": "3.2.9",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "329346f344b583367f61328556e2675625e36af2",
+        "Homebrew/homebrew-core": "2299c2edf0cf70e2ff795ac761e104b451d853f7",
         "CLT": "12.5.0.22.9",
         "Xcode": "12.5.1",
         "macOS": "11.5.2"
