@@ -89,3 +89,5 @@ if [ -f '/Users/ryuseifujiwara/google-cloud-sdk/completion.zsh.inc' ]; then . '/
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

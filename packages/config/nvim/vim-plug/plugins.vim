@@ -19,6 +19,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'lambdalisue/nerdfont.vim'
     Plug 'lambdalisue/fern-renderer-nerdfont.vim'
     Plug 'lambdalisue/glyph-palette.vim'
+    " fzf
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
+    Plug 'airblade/vim-rooter'
     " Indent
     Plug 'lukas-reineke/indent-blankline.nvim'
     " Multiple cursors

@@ -1,5 +1,6 @@
 source $HOME/.config/nvim/vim-plug/plugins.vim
 source $HOME/.config/nvim/general/settings.vim
+source $HOME/.config/nvim/general/fzf.vim
 source $HOME/.config/nvim/general/nvim-treesitter.vim
 source $HOME/.config/nvim/lsp/config.vim
 source $HOME/.config/nvim/lsp/compe-config.vim

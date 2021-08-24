@@ -44,6 +44,8 @@ let g:neovide_cursor_vfx_mode = 'railgun'
 " Rust Format
 let g:rustfmt_autosave = 1
 
+let g:mapleader = ","
+
 syntax enable                           " Enables syntax highlighing
 filetype plugin indent on
 colorscheme default
