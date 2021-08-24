@@ -37,6 +37,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'vim-airline/vim-airline-themes'
     " Markdown
     Plug 'skanehira/preview-markdown.vim'
+    " Silicon
+    Plug 'segeljakt/vim-silicon'
     " Dap
     Plug 'mfussenegger/nvim-dap'
     " Denops
