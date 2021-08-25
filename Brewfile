@@ -40,6 +40,7 @@ brew "gcc"
 brew "python"
 brew "go"
 brew "terraform"
+brew "serverless"
 
 cask "iterm2"
 cask "hyper"
