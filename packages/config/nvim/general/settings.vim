@@ -44,6 +44,9 @@ let g:neovide_cursor_vfx_mode = 'railgun'
 " Rust Format
 let g:rustfmt_autosave = 1
 
+" Python Format
+let g:python3_host_prog = '/opt/homebrew/bin/python3'
+
 let g:mapleader = ","
 
 syntax enable                           " Enables syntax highlighing

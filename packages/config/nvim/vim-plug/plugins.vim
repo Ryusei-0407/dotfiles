@@ -70,6 +70,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'dart-lang/dart-vim-plugin'
     Plug 'nvim-lua/plenary.nvim'
     Plug 'akinsho/flutter-tools.nvim'
+    " Python Black
+    Plug 'a-vrma/black-nvim', { 'do': ':UpdateRemotePlugins' }
     " Solidity
     Plug 'tomlion/vim-solidity'
    
