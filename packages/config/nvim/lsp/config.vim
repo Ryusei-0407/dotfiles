@@ -35,12 +35,26 @@ local on_attach = function(client, bufnr)
 end
 
 require'lspinstall'.setup()
-require'rust-tools'.setup({})
-require'flutter-tools'.setup{}
 
 local servers = require'lspinstall'.installed_servers()
 for _, server in pairs(servers) do
-    require'lspconfig'[server].setup({})
+    lsp[server].setup({})
 end
-EOF
 
+require'rust-tools'.setup{}
+
+require'flutter-tools'.setup{
+    ui = {
+        border = 'rounded',
+    },
+    decorations = {
+        statusline = {
+            app_version = true,
+            device = false,
+        }
+    },
+    dev_tools = {
+        autostart = true,
+    }
+}
+EOF

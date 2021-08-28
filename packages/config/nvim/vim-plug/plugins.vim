@@ -52,7 +52,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'kabouzeid/nvim-lspinstall'
     Plug 'ray-x/lsp_signature.nvim'
     Plug 'nvim-lua/lsp_extensions.nvim'
-    " Coq
+    " Complete
     Plug 'hrsh7th/nvim-compe'
     " Plug 'ms-jpq/coq_nvim', { 'branch': 'coq' }
     " Plug 'ms-jpq/coq.artifacts', { 'branch': 'artifacts' }

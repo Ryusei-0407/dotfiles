@@ -1,8 +1,7 @@
-call ddc#custom#patch_global('source', ['around'])
+call ddc#custom#patch_global('source', ['nvimlsp'])
 call ddc#custom#patch_global('sourceOptions', {
-    \ '_': {
-    \    'matchers': ['matcher_head'],
-    \    'sorters': ['sorter_rank']},
+    \ '_': { 'matchers': ['matcher_head'] },
+    \ 'nvimlsp': { 'mark': 'lsp', 'forceCompletionPattern': '\\.|:|->' },
     \ })
 
 call ddc#custom#patch_global('sources', ['around', 'nextword'])
