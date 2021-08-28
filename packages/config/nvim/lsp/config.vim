@@ -41,9 +41,8 @@ for _, server in pairs(servers) do
     lsp[server].setup({})
 end
 
-require'rust-tools'.setup{}
-
-require'flutter-tools'.setup{
+require'rust-tools'.setup {}
+require'flutter-tools'.setup {
     ui = {
         border = 'rounded',
     },

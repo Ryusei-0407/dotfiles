@@ -42,11 +42,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Dap
     Plug 'mfussenegger/nvim-dap'
     " Denops
-    Plug 'vim-denops/denops.vim'
-    Plug 'Shougo/ddc.vim'
-    " CoC
-    " Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    " Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+    " Plug 'vim-denops/denops.vim'
+    " Plug 'Shougo/ddc.vim'
     " LSP
     Plug 'neovim/nvim-lspconfig'
     Plug 'kabouzeid/nvim-lspinstall'
