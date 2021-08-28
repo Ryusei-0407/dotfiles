@@ -1,8 +1,6 @@
 brew "stow"
 brew "zsh"
 brew "nushell"
-brew "openssh"
-brew "libressl"
 brew "exa"
 brew "bat"
 brew "fzf"
