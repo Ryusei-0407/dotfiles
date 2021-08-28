@@ -41,6 +41,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'segeljakt/vim-silicon'
     " Dap
     Plug 'mfussenegger/nvim-dap'
+    Plug 'rcarriga/nvim-dap-ui'
+    Plug 'theHamsta/nvim-dap-virtual-text'
+    Plug 'nvim-lua/plenary.nvim'
     " Denops
     " Plug 'vim-denops/denops.vim'
     " Plug 'Shougo/ddc.vim'
@@ -51,25 +54,22 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'nvim-lua/lsp_extensions.nvim'
     " Complete
     Plug 'hrsh7th/nvim-compe'
-    " Plug 'ms-jpq/coq_nvim', { 'branch': 'coq' }
-    " Plug 'ms-jpq/coq.artifacts', { 'branch': 'artifacts' }
     " Treesitter
     Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
-    " Rust tools
+    " Rust
     Plug 'rust-lang/rust.vim'
     Plug 'simrat39/rust-tools.nvim'
     Plug 'nvim-lua/popup.nvim'
-    Plug 'nvim-lua/plenary.nvim'
-    Plug 'mfussenegger/nvim-dap'
-    " Terraform
-    Plug 'hashivim/vim-terraform'
+    " Go
+    Plug 'ray-x/go.nvim'
     " Flutter
     Plug 'dart-lang/dart-vim-plugin'
-    Plug 'nvim-lua/plenary.nvim'
     Plug 'akinsho/flutter-tools.nvim'
     " Python Black
     Plug 'a-vrma/black-nvim', { 'do': ':UpdateRemotePlugins' }
     " Solidity
     Plug 'tomlion/vim-solidity'
+    " Terraform
+    Plug 'hashivim/vim-terraform'
    
 call plug#end()
