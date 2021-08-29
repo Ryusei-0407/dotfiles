@@ -58,7 +58,7 @@ require'flutter-tools'.setup {
         autostart = true,
     },
     outline = {
-        open_cmd = '30vnew',
+        open_cmd = '40vnew',
         auto_open = true,
     },
 }
