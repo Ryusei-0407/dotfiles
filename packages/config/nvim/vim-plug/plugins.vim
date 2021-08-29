@@ -23,8 +23,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'airblade/vim-rooter'
-    " Indent
-    Plug 'lukas-reineke/indent-blankline.nvim'
     " Multiple cursors
     Plug 'terryma/vim-multiple-cursors'
     " Terminal

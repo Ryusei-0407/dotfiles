@@ -51,8 +51,15 @@ require'flutter-tools'.setup {
             device = false,
         }
     },
+    widget_guides = {
+        enabled = true,
+    },
     dev_tools = {
         autostart = true,
-    }
+    },
+    outline = {
+        open_cmd = '30vnew',
+        auto_open = true,
+    },
 }
 EOF

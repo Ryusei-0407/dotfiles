@@ -42,11 +42,14 @@ let g:multi_cursor_quit_key            = '<Esc>'
 " NeoVide
 let g:neovide_cursor_vfx_mode = 'railgun'
 
-" Rust Format
+" Rust format
 let g:rustfmt_autosave = 1
 
-" Python Format
+" Python format
 let g:python3_host_prog = '/opt/homebrew/bin/python3'
+
+" Dart format
+let g:dart_format_on_save = 1
 
 let g:mapleader = ","
 

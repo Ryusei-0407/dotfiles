@@ -1425,6 +1425,12 @@
         "options": {
           "full_name": "tableplus"
         }
+      },
+      "flutter": {
+        "version": "2.2.3",
+        "options": {
+          "full_name": "flutter"
+        }
       }
     }
   },
@@ -1433,7 +1439,7 @@
       "big_sur": {
         "HOMEBREW_VERSION": "3.2.9",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "2ff272b8150ad69d1da2ef36a22bd37211ef90f5",
+        "Homebrew/homebrew-core": "5fd8653faa4bcf277911a825c927c78f3883f2e2",
         "CLT": "12.5.0.22.9",
         "Xcode": "12.5.1",
         "macOS": "11.5.2"
