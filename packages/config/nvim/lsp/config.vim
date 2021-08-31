@@ -1,5 +1,5 @@
 lua << EOF
-local lsp = require'lspconfig'
+local lsp = require('lspconfig')
 
 local on_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
@@ -29,19 +29,21 @@ local on_attach = function(client, bufnr)
 
 end
 
-require'lspinstall'.setup()
+require('lspinstall').setup()
 
-local servers = require'lspinstall'.installed_servers()
+local servers = require('lspinstall').installed_servers()
 for _, server in pairs(servers) do
     lsp[server].setup({})
 end
 
 -- Rust
-require'rust-tools'.setup()
+require('rust-tools').setup({})
+require('rust-tools.runnables').runnables()
+require('rust-tools.hover_actions').hover_actions()
 -- Go
-require'go'.setup()
+require('go').setup()
 -- Flutter
-require'flutter-tools'.setup {
+require('flutter-tools').setup {
     ui = {
         border = 'rounded',
     },
