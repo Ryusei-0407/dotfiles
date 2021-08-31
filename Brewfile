@@ -30,6 +30,9 @@ brew "procs"
 brew "awscli"
 brew "youtube-dl"
 
+brew "figlet"
+brew "cowsay"
+
 brew "rust"
 brew "rustup-init"
 brew "rust-analyzer"

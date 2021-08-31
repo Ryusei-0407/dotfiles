@@ -31,6 +31,8 @@ alias pst='procs --tree'
 alias nsl='nslookup'
 alias pb='pbcopy'
 alias pass='pwgen 20 1'
+alias figlet='figlet -f slant'
+alias cowsay='cowsay -f dragon'
 alias siri='silicon'
 alias ng='ngrok'
 alias btop='bpytop'
@@ -47,6 +49,7 @@ alias opensim='open -a Simulator'
 alias dotfiles='~/dotfiles/install.sh'
 
 eval $(ssh-agent)
+figlet -f slant `date "+%H:%M:%S"`
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
