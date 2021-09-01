@@ -55,7 +55,7 @@ let g:mapleader = ","
 
 syntax enable                           " Enables syntax highlighing
 filetype plugin indent on
-colorscheme default
+colorscheme dogrun
 
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set nowrap                              " Display long lines as just one line
