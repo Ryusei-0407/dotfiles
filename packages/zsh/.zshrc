@@ -47,7 +47,8 @@ alias tf='terraform'
 alias opensim='open -a Simulator'
 alias dotfiles='~/dotfiles/install.sh'
 
-eval $(ssh-agent)
+eval "$(ssh-agent)"
+eval "$(jump shell)"
 figlet -f slant `date "+%H:%M:%S"`
 
 ### Added by Zinit's installer
