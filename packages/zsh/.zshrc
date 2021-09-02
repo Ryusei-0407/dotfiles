@@ -20,6 +20,7 @@ alias ll='exa -l --icons'
 alias lla='exa -la --icons'
 alias la='exa -a --icons'
 alias tree='exa --tree'
+alias j='jump'
 alias md='mdr'
 alias csv='csview'
 alias hex='hexyl'
@@ -47,8 +48,8 @@ alias tf='terraform'
 alias opensim='open -a Simulator'
 alias dotfiles='~/dotfiles/install.sh'
 
-eval "$(ssh-agent)"
-eval "$(jump shell)"
+eval $(ssh-agent)
+eval $(jump shell)
 figlet -f slant `date "+%H:%M:%S"`
 
 ### Added by Zinit's installer
