@@ -15,12 +15,12 @@ alias t='tmux'
 alias vi='nvim'
 alias vim='nvim'
 alias nv='neovide'
+alias j='z'
 alias ls='exa --icons'
 alias ll='exa -l --icons'
 alias lla='exa -la --icons'
 alias la='exa -a --icons'
 alias tree='exa --tree'
-alias j='jump'
 alias md='mdr'
 alias csv='csview'
 alias hex='hexyl'
@@ -44,13 +44,17 @@ alias g++='/opt/homebrew/Cellar/gcc/11.2.0/bin/g++-11 -std=c11'
 alias py2='python'
 alias py3='python3'
 alias pip='pip3'
+alias up='docker-compose up -d'
+alias down='docker-compose down'
 alias k='kubectl'
 alias tf='terraform'
 alias opensim='open -a Simulator'
 alias dotfiles='~/dotfiles/install.sh'
 
+# z
+. /opt/homebrew/etc/profile.d/z.sh
+
 eval $(ssh-agent)
-eval $(jump shell)
 figlet -f slant `date "+%H:%M:%S"`
 
 ### Added by Zinit's installer
