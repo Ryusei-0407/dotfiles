@@ -53,6 +53,7 @@ brew "serverless"
 brew "docker"
 brew "docker-compose"
 brew "kubectl"
+brew "helm"
 brew "eksctl"
 # brew "minikube"
 
