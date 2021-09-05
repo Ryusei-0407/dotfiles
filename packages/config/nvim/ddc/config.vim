@@ -1,17 +1,13 @@
-call ddc#custom#patch_global('source', ['nvimlsp'])
-call ddc#custom#patch_global('sourceOptions', {
-    \ '_': { 'matchers': ['matcher_head'] },
-    \ 'nvimlsp': { 'mark': 'lsp', 'forceCompletionPattern': '\\.|:|->' },
-    \ })
-
-call ddc#custom#patch_global('sources', ['around', 'nextword'])
-call ddc#custom#patch_global('sourceOptions', {
-    \ 'around': {'mark': 'A'},
-    \ 'nextword': {'mark': 'nextword'},
-    \ '_': {
-    \ 'matchers': ['matcher_head'],
-    \ 'sorters': ['sorter_rank']},
-    \ })
+call ddc#custom#patch_global('sources', ['nvimlsp'])
+" call ddc#custom#patch_global('sourceOptions', {
+"       \ '_': { 'matchers': ['matcher_head'] },
+"       \ 'nvimlsp': { 'mark': 'lsp', 'forceCompletionPattern': '\.|:|->' },
+"       \ })
+" 
+" " Use Customized labels
+" call ddc#custom#patch_global('sourceParams', {
+"       \ 'nvimlsp': { 'kindLabels': { 'Class': 'c' } },
+"       \ })
 
 " Mappings
 inoremap <silent><expr> <TAB>

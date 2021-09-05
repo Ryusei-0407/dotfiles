@@ -10,9 +10,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'wadackel/vim-dogrun'
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
-    " Snippets
-    Plug 'honza/vim-snippets'
-    Plug 'SirVer/ultisnips'
     " Split window resize
     Plug 'simeji/winresizer'
     " Explore
@@ -54,6 +51,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'nvim-lua/lsp_extensions.nvim'
     " Complete
     Plug 'hrsh7th/nvim-compe'
+    " Plug 'hrsh7th/nvim-cmp'
+    " Plug 'hrsh7th/vim-vsnip'
+    " Plug 'hrsh7th/cmp-buffer'
     " Treesitter
     Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
     " Rust

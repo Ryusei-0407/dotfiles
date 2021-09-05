@@ -19,14 +19,14 @@ nnoremap \t :VTerm<CR>
 nnoremap <C-t> :TigStatus<CR>
 
 " Snippet
-let g:UltiSnipsUsePythonVersion = 3
-let g:UltiSnipsEditSplit = 'normal'
-let g:UltiSnipsSnippetDirectories  = ['$HOME/.config/nvim/snips']
-let g:UltiSnipsEnableSnipMate = 0
-let g:UltiSnipsExpandTrigger = "<C-k>"
-let g:UltiSnipsJumpForwardTrigger = "<C-b>"
-let g:UltiSnipsJumpBackwardTrigger = "<C-z>"
-command! SNIP UltiSnipsEdit
+" let g:UltiSnipsUsePythonVersion = 3
+" let g:UltiSnipsEditSplit = 'normal'
+" let g:UltiSnipsSnippetDirectories  = ['$HOME/.config/nvim/snips']
+" let g:UltiSnipsEnableSnipMate = 0
+" let g:UltiSnipsExpandTrigger = "<C-k>"
+" let g:UltiSnipsJumpForwardTrigger = "<C-b>"
+" let g:UltiSnipsJumpBackwardTrigger = "<C-z>"
+" command! SNIP UltiSnipsEdit
 
 " Multiple cursor
 let g:multi_cursor_use_default_mapping = 0
