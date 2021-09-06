@@ -18,30 +18,31 @@ font:
   size: 12
   use_thin_strokes: true
 colors:
+  author: ""
   primary:
-    background: "#17121d"
-    foreground: "#ffffff"
+    background: "#101010"
+    foreground: "#00ee00"
   cursor:
-    text: CellBackground
-    cursor: "#d42270"
+    text: "#101010"
+    cursor: "#008c00"
   normal:
-    black: "#000000"
-    red: "#cd0000"
-    green: "#00cd00"
-    yellow: "#cdcd00"
-    blue: "#9891f1"
-    magenta: "#cd00cd"
-    cyan: "#00cdcd"
-    white: "#e5e5e5"
+    black: "#1c1c1c"
+    red: "#d81860"
+    green: "#60ff60"
+    yellow: "#f9fd75"
+    blue: "#4695c8"
+    magenta: "#a78edb"
+    cyan: "#43afce"
+    white: "#f3ebe2"
   bright:
-    black: "#7f7f7f"
-    red: "#ff0000"
-    green: "#00ff00"
-    yellow: "#ffff00"
-    blue: "#5c5cff"
-    magenta: "#ff00ff"
-    cyan: "#00ffff"
-    white: "#ffffff"
+    black: "#4d4d4d"
+    red: "#f00060"
+    green: "#70ff70"
+    yellow: "#f9fd80"
+    blue: "#5a9dc8"
+    magenta: "#b29fdb"
+    cyan: "#69b8ce"
+    white: "#eeeeee"
 cursor:
   style:
     shape: Block
@@ -55,7 +56,11 @@ shell:
   persistent_logging: false
   log_level: Off
   print_events: false
-
 key_bindings:
-  - { key: N,        mods: Command, command: { program: "open", args: ["-n", "/Applications/Alacritty.app"] } }
-
+  - key: N
+    mods: Command
+    command:
+      program: open
+      args:
+        - -n
+        - /Applications/Alacritty.app
