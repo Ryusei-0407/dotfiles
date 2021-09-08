@@ -7,6 +7,7 @@ export PATH=$GEM_HOME/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/opt/homebrew/sbin:$PATH
 export PATH=/opt/homebrew/bin:$PATH
+export EDITOR=nvim
 
 # alias
 alias zshconf='vi ~/.zshrc'
