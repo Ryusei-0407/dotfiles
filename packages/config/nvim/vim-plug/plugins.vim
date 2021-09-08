@@ -10,6 +10,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'wadackel/vim-dogrun'
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
+    " Snippets
+    Plug 'honza/vim-snippets'
+    Plug 'SirVer/ultisnips'
     " Split window resize
     Plug 'simeji/winresizer'
     " Explore
@@ -69,6 +72,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'a-vrma/black-nvim', { 'do': ':UpdateRemotePlugins' }
     " Solidity
     Plug 'tomlion/vim-solidity'
+    " Kubernetes
+    Plug 'andrewstuart/vim-kubernetes'
     " Terraform
     Plug 'hashivim/vim-terraform'
    

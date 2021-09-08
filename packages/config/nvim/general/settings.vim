@@ -23,9 +23,9 @@ nnoremap <C-t> :TigStatus<CR>
 " let g:UltiSnipsEditSplit = 'normal'
 " let g:UltiSnipsSnippetDirectories  = ['$HOME/.config/nvim/snips']
 " let g:UltiSnipsEnableSnipMate = 0
-" let g:UltiSnipsExpandTrigger = "<C-k>"
-" let g:UltiSnipsJumpForwardTrigger = "<C-b>"
-" let g:UltiSnipsJumpBackwardTrigger = "<C-z>"
+" let g:UltiSnipsExpandTrigger = "<>"
+" let g:UltiSnipsJumpForwardTrigger = "<>"
+" let g:UltiSnipsJumpBackwardTrigger = "<>"
 " command! SNIP UltiSnipsEdit
 
 " Multiple cursor

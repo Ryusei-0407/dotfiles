@@ -44,6 +44,7 @@ alias pip='pip3'
 alias up='docker-compose up -d'
 alias down='docker-compose down'
 alias k='kubectl'
+alias kct='kubectx'
 alias tf='terraform'
 alias opensim='open -a Simulator'
 alias dotfiles='~/dotfiles/install.sh'
@@ -94,6 +95,7 @@ if [ -f '/Users/ryuseifujiwara/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/
 if [ -f '/Users/ryuseifujiwara/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ryuseifujiwara/google-cloud-sdk/completion.zsh.inc'; fi
 
 autoload -U +X bashcompinit && bashcompinit
+source <(kubectl completion zsh)
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

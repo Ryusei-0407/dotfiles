@@ -33,7 +33,7 @@ require('lspinstall').setup()
 
 local servers = require('lspinstall').installed_servers()
 for _, server in pairs(servers) do
-    lsp[server].setup({})
+    lsp[server].setup{}
 end
 
 -- Rust
