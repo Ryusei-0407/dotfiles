@@ -7,6 +7,7 @@ export PATH=$GEM_HOME/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/opt/homebrew/sbin:$PATH
 export PATH=/opt/homebrew/bin:$PATH
+export PATH=$HOME/.krew/bin:$PATH
 export EDITOR=nvim
 
 # alias
@@ -45,7 +46,7 @@ alias pip='pip3'
 alias up='docker-compose up -d'
 alias down='docker-compose down'
 alias k='kubectl'
-alias kct='kubectx'
+alias krew='kubectl krew'
 alias tf='terraform'
 alias opensim='open -a Simulator'
 alias dotfiles='~/dotfiles/install.sh'
