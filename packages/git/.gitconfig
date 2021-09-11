@@ -30,9 +30,9 @@
 [alias]
     d = diff
     ch = checkout
+    se = switch
     co = commit
     st = status
     br = branch
     mg = merge
     re = restore
-    lone = log --oneline
