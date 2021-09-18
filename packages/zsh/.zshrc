@@ -1,14 +1,16 @@
 export HOMEBREW_CACHE=/opt/homebrew/cache
 export GOPATH=$HOME/go
+export JAVA_HOME=$(/usr/libexec/java_home)
+export GEM_HOME=$HOME/.gem
+export PKG_CONFIG_PATH=/opt/homebrew/opt/ruby/lib/pkgconfig
 export PATH=$PATH:$GOPATH/bin
 export PATH=/opt/homebrew/opt/openssl@1.1/bin:$PATH
-export GEM_HOME=$HOME/.gem
 export PATH=$GEM_HOME/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/opt/homebrew/sbin:$PATH
 export PATH=/opt/homebrew/bin:$PATH
 export PATH=$HOME/.krew/bin:$PATH
-export EDITOR=nvim
+export PATH=/opt/homebrew/opt/ruby/bin:$PATH
 
 # alias
 alias zshconf='vi ~/.zshrc'
@@ -41,7 +43,7 @@ alias car='cargo'
 alias rsc='rustc'
 alias rsf='rustfmt'
 alias py2='python'
-alias py3='python3'
+alias py3='/opt/homebrew/bin/python3.9'
 alias pip='pip3'
 alias up='docker-compose up -d'
 alias down='docker-compose down'
@@ -101,3 +103,4 @@ source <(kubectl completion zsh)
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+

@@ -11,8 +11,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
     " Snippets
-    Plug 'honza/vim-snippets'
-    Plug 'SirVer/ultisnips'
+    " Plug 'honza/vim-snippets'
+    " Plug 'SirVer/ultisnips'
     " Split window resize
     Plug 'simeji/winresizer'
     " Explore
