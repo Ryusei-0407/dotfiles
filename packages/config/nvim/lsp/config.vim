@@ -139,26 +139,4 @@ local opts = {
 require('rust-tools').setup(opts)
 -- Go
 require('go').setup()
--- Flutter
-require('flutter-tools').setup {
-    ui = {
-        border = 'rounded',
-    },
-    decorations = {
-        statusline = {
-            app_version = true,
-            device = false,
-        }
-    },
-    widget_guides = {
-        enabled = true,
-    },
-    dev_tools = {
-        autostart = true,
-    },
-    outline = {
-        open_cmd = '40vnew',
-        auto_open = true,
-    },
-}
 EOF

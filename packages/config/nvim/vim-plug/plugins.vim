@@ -65,9 +65,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'nvim-lua/popup.nvim'
     " Go
     Plug 'ray-x/go.nvim'
-    " Flutter
-    Plug 'dart-lang/dart-vim-plugin'
-    Plug 'akinsho/flutter-tools.nvim'
     " Python Black
     Plug 'a-vrma/black-nvim', { 'do': ':UpdateRemotePlugins' }
     " Solidity
