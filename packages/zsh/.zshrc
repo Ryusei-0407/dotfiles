@@ -92,8 +92,6 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*:default' menu select=1
 zinit light zdharma/fast-syntax-highlighting
 zinit light zdharma/history-search-multi-word
-zinit ice lucid depth"1" blockf
-zinit light yuki-yano/zeno.zsh
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/ryuseifujiwara/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ryuseifujiwara/google-cloud-sdk/path.zsh.inc'; fi
