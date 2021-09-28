@@ -19,14 +19,14 @@ nnoremap \t :VTerm<CR>
 nnoremap <C-t> :TigStatus<CR>
 
 " Snippet
-" let g:UltiSnipsUsePythonVersion = 3
-" let g:UltiSnipsEditSplit = 'normal'
-" let g:UltiSnipsSnippetDirectories  = ['$HOME/.config/nvim/snips']
-" let g:UltiSnipsEnableSnipMate = 0
-" let g:UltiSnipsExpandTrigger = "<>"
-" let g:UltiSnipsJumpForwardTrigger = "<>"
-" let g:UltiSnipsJumpBackwardTrigger = "<>"
-" command! SNIP UltiSnipsEdit
+let g:UltiSnipsUsePythonVersion = 3
+let g:UltiSnipsEditSplit = 'normal'
+let g:UltiSnipsSnippetDirectories  = ['$HOME/.config/nvim/snips']
+let g:UltiSnipsEnableSnipMate = 0
+let g:UltiSnipsExpandTrigger = "<>"
+let g:UltiSnipsJumpForwardTrigger = "<>"
+let g:UltiSnipsJumpBackwardTrigger = "<>"
+command! SNIP UltiSnipsEdit
 
 " Multiple cursor
 let g:multi_cursor_use_default_mapping = 0
@@ -38,19 +38,6 @@ let g:multi_cursor_next_key            = '<C-n>'
 let g:multi_cursor_prev_key            = '<C-p>'
 let g:multi_cursor_skip_key            = '<C-x>'
 let g:multi_cursor_quit_key            = '<Esc>'
-
-" CoC
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? coc#_select_confirm() :
-      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
 
 " NeoVide
 let g:neovide_cursor_vfx_mode = 'railgun'

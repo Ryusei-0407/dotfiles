@@ -8,6 +8,18 @@ source $HOME/.config/nvim/general/nvim-treesitter.vim
 source $HOME/.config/nvim/themes/airline.vim
 source $HOME/.config/nvim/vim-plug/plugins.vim
 
+" CoC
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
 " Split window
 nnoremap ss :split<CR>
 nnoremap sv :vsplit<CR>
