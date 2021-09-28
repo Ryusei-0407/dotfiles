@@ -11,8 +11,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
     " Snippets
-    " Plug 'honza/vim-snippets'
-    " Plug 'SirVer/ultisnips'
+    Plug 'honza/vim-snippets'
+    Plug 'SirVer/ultisnips'
     " Split window resize
     Plug 'simeji/winresizer'
     " Explore
@@ -40,20 +40,23 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Silicon
     Plug 'segeljakt/vim-silicon'
     " Dap
-    Plug 'mfussenegger/nvim-dap'
-    Plug 'rcarriga/nvim-dap-ui'
-    Plug 'theHamsta/nvim-dap-virtual-text'
-    Plug 'nvim-lua/plenary.nvim'
+    " Plug 'mfussenegger/nvim-dap'
+    " Plug 'rcarriga/nvim-dap-ui'
+    " Plug 'theHamsta/nvim-dap-virtual-text'
+    " Plug 'nvim-lua/plenary.nvim'
     " Denops
     " Plug 'vim-denops/denops.vim'
     " Plug 'Shougo/ddc.vim'
+    " CoC
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
     " LSP
-    Plug 'neovim/nvim-lspconfig'
-    Plug 'kabouzeid/nvim-lspinstall'
-    Plug 'ray-x/lsp_signature.nvim'
-    Plug 'nvim-lua/lsp_extensions.nvim'
+    " Plug 'neovim/nvim-lspconfig'
+    " Plug 'kabouzeid/nvim-lspinstall'
+    " Plug 'ray-x/lsp_signature.nvim'
+    " Plug 'nvim-lua/lsp_extensions.nvim'
     " Complete
-    Plug 'hrsh7th/nvim-compe'
+    " Plug 'hrsh7th/nvim-compe'
     " Plug 'hrsh7th/nvim-cmp'
     " Plug 'hrsh7th/vim-vsnip'
     " Plug 'hrsh7th/cmp-buffer'

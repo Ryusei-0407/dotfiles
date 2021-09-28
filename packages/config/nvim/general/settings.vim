@@ -39,6 +39,19 @@ let g:multi_cursor_prev_key            = '<C-p>'
 let g:multi_cursor_skip_key            = '<C-x>'
 let g:multi_cursor_quit_key            = '<Esc>'
 
+" CoC
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+
 " NeoVide
 let g:neovide_cursor_vfx_mode = 'railgun'
 
@@ -47,9 +60,6 @@ let g:rustfmt_autosave = 1
 
 " Python format
 let g:python3_host_prog = '/opt/homebrew/bin/python3'
-
-" Dart format
-let g:dart_format_on_save = 1
 
 let g:mapleader = ","
 
