@@ -43,11 +43,12 @@ alias btop='bpytop'
 alias car='cargo'
 alias rsc='rustc'
 alias rsf='rustfmt'
-alias wasm='wasm-pack'
+alias npm='pnpm'
 alias py2='python'
 alias py3='/opt/homebrew/bin/python3.9'
 alias pip='pip3'
 alias dps='docker ps'
+alias dimg='docker images'
 alias up='docker-compose up -d'
 alias down='docker-compose down'
 alias k='kubectl'
@@ -59,8 +60,8 @@ alias dotfiles='~/dotfiles/install.sh'
 # z
 . /opt/homebrew/etc/profile.d/z.sh
 
-eval $(ssh-agent)
-macchina -H Host LocalIP
+# eval $(ssh-agent)
+# macchina -H Host LocalIP
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
