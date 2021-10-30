@@ -1,6 +1,7 @@
 brew "stow"
 brew "zsh"
 brew "nushell"
+brew "starship"
 brew "exa"
 brew "bat"
 brew "z"
