@@ -20,6 +20,8 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
 " Split window
 nnoremap ss :split<CR>
 nnoremap sv :vsplit<CR>

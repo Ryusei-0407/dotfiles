@@ -76,5 +76,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'andrewstuart/vim-kubernetes'
     " Terraform
     Plug 'hashivim/vim-terraform'
+    " Copilot
+    Plug 'github/copilot.vim'
    
 call plug#end()
