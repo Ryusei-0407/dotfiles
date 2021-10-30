@@ -48,7 +48,7 @@ cursor:
     shape: Block
   unfocused_hollow: true
 shell:
-  program: /opt/homebrew/bin/zsh
+  program: /opt/homebrew/bin/ion
   args:
     - -c
     - /opt/homebrew/bin/tmux a -t 0 || /opt/homebrew/bin/tmux
