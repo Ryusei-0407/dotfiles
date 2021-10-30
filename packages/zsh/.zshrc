@@ -3,6 +3,7 @@ export GOPATH=$HOME/go
 export JAVA_HOME=$(/usr/libexec/java_home)
 export GEM_HOME=$HOME/.gem
 export PKG_CONFIG_PATH=/opt/homebrew/opt/ruby/lib/pkgconfig
+export STARSHIP_CONFIG=$HOME/.config/starship/config.toml
 export PATH=$PATH:$GOPATH/bin
 export PATH=/opt/homebrew/opt/openssl@1.1/bin:$PATH
 export PATH=$GEM_HOME/bin:$PATH
@@ -14,8 +15,10 @@ export PATH=/opt/homebrew/opt/ruby/bin:$PATH
 
 # alias
 alias zshconf='vi ~/.zshrc'
+alias zshrc='source ~/.zshrc'
+alias ionconf='vi ~/.config/ion/initrc'
+alias initrc='source ~/.config/ion/initrc'
 alias t='tmux'
-# alias y='yabai'
 alias vi='nvim'
 alias vim='nvim'
 alias nv='neovide'
@@ -97,10 +100,10 @@ zinit light zdharma/fast-syntax-highlighting
 zinit light zdharma/history-search-multi-word
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/ryuseifujiwara/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ryuseifujiwara/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '~/google-cloud-sdk/path.zsh.inc' ]; then . '~/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/ryuseifujiwara/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ryuseifujiwara/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '~/google-cloud-sdk/completion.zsh.inc' ]; then . '~/google-cloud-sdk/completion.zsh.inc'; fi
 
 autoload -U +X bashcompinit && bashcompinit
 source <(kubectl completion zsh)
