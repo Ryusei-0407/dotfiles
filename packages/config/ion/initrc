@@ -59,4 +59,10 @@ alias tf='terraform'
 alias opensim='open -a Simulator'
 alias dotfiles='~/dotfiles/install.sh'
 
+alias youtube='open https://youtube.com'
+alias brave='open http://search.brave.com'
+alias github='open https://github.com'
+alias amazon='open https://amazon.co.jp'
+
+
 eval $(starship init ion)
