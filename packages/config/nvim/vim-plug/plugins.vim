@@ -6,77 +6,97 @@ endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
 
-    " Colortheme
+" Colortheme
     Plug 'wadackel/vim-dogrun'
-    " Better Syntax Support
+
+" Better Syntax Support
     Plug 'sheerun/vim-polyglot'
-    " Snippets
+
+" Snippets
     Plug 'honza/vim-snippets'
     Plug 'SirVer/ultisnips'
-    " Split window resize
+
+" Split window resize
     Plug 'simeji/winresizer'
-    " Explore
+
+" Explore
     Plug 'lambdalisue/fern.vim'
     Plug 'lambdalisue/fern-git-status.vim'
     Plug 'lambdalisue/nerdfont.vim'
     Plug 'lambdalisue/fern-renderer-nerdfont.vim'
     Plug 'lambdalisue/glyph-palette.vim'
-    " fzf
+
+" fzf
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'airblade/vim-rooter'
-    " Multiple cursors
+
+" Multiple cursors
     Plug 'terryma/vim-multiple-cursors'
-    " Terminal
+
+" Terminal
     Plug 'vimlab/split-term.vim'
-    " Tig
-    Plug 'iberianpig/tig-explorer.vim'
-    Plug 'rbgrouleff/bclose.vim'
-    " Airline
+
+" Airline
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
-    " Markdown
+
+" Markdown
     Plug 'skanehira/preview-markdown.vim'
-    " Silicon
+
+" Silicon
     Plug 'segeljakt/vim-silicon'
-    " Dap
+
+" Dap
     " Plug 'mfussenegger/nvim-dap'
     " Plug 'rcarriga/nvim-dap-ui'
     " Plug 'theHamsta/nvim-dap-virtual-text'
     " Plug 'nvim-lua/plenary.nvim'
-    " Denops
+
+" Denops
     " Plug 'vim-denops/denops.vim'
     " Plug 'Shougo/ddc.vim'
-    " CoC
+
+" CoC
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-    " LSP
+
+" LSP
     " Plug 'neovim/nvim-lspconfig'
     " Plug 'kabouzeid/nvim-lspinstall'
     " Plug 'ray-x/lsp_signature.nvim'
     " Plug 'nvim-lua/lsp_extensions.nvim'
-    " Complete
+
+" Complete
     " Plug 'hrsh7th/nvim-compe'
     " Plug 'hrsh7th/nvim-cmp'
     " Plug 'hrsh7th/vim-vsnip'
     " Plug 'hrsh7th/cmp-buffer'
-    " Treesitter
+
+" Treesitter
     Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
-    " Rust
+
+" Rust
     Plug 'rust-lang/rust.vim'
     Plug 'simrat39/rust-tools.nvim'
     Plug 'nvim-lua/popup.nvim'
-    " Go
+
+" Go
     Plug 'ray-x/go.nvim'
-    " Python Black
+
+" Python Black
     Plug 'a-vrma/black-nvim', { 'do': ':UpdateRemotePlugins' }
-    " Solidity
+
+" Solidity
     Plug 'tomlion/vim-solidity'
-    " Kubernetes
+
+" Kubernetes
     Plug 'andrewstuart/vim-kubernetes'
-    " Terraform
+
+" Terraform
     Plug 'hashivim/vim-terraform'
-    " Copilot
+
+" Copilot
     Plug 'github/copilot.vim'
    
 call plug#end()

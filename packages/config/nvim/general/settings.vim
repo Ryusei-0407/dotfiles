@@ -15,9 +15,6 @@ let g:fern#default_hidden = 1
 " Terminal
 nnoremap \t :VTerm<CR>
 
-" Tig
-nnoremap <C-t> :TigStatus<CR>
-
 " Snippet
 let g:UltiSnipsUsePythonVersion = 3
 let g:UltiSnipsEditSplit = 'normal'
