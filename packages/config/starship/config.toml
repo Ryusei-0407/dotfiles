@@ -11,6 +11,9 @@ disabled = true
 truncation_length = 1
 truncation_symbol = "…/"
 
+[git_branch]
+format = "[$symbol$branch]($style) "
+
 [username]
 disabled = true
 
