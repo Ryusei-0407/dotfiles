@@ -9,6 +9,7 @@ export PATH=$GEM_HOME/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/opt/homebrew/sbin:$PATH
 export PATH=/opt/homebrew/bin:$PATH
+export PATH=$HOME/.cargo/bin:$PATH
 export PATH=$HOME/.krew/bin:$PATH
 export PATH=/opt/homebrew/opt/ruby/bin:$PATH
 
@@ -53,6 +54,7 @@ alias dps='docker ps'
 alias dimg='docker images'
 alias up='docker-compose up -d'
 alias down='docker-compose down'
+alias glog='git log --oneline --graph'
 alias k='kubectl'
 alias krew='kubectl krew'
 alias tf='terraform'
