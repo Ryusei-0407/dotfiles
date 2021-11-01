@@ -28,19 +28,24 @@ if [ ! -d ~/.config ]; then
     mkdir ~/.config
 fi
 
+
+# Alacritty
 if [ ! -d /Applications/Alacritty.app ]; then
     cd ~/Downloads
     git clone git@github.com:alacritty/alacritty.git
     cd ~/Downloads/alacritty && make app
 fi
 
-if [ ! -f /opt/homebrew/bin/neovide ]; then
-    cd ~/Downloads
-    git clone https://github.com/Kethku/neovide && cd neovide
-    cargo build --release
-    cp ./target/release/neovide /opt/homebrew/bin
-fi
 
+# NeoVide
+# if [ ! -f /opt/homebrew/bin/neovide ]; then
+#     cd ~/Downloads
+#     git clone https://github.com/Kethku/neovide && cd neovide
+#     cargo build --release
+#     cp ./target/release/neovide /opt/homebrew/bin
+# fi
+
+# Rustup
 if [ ! -f ~/.cargo/bin/rustup ]; then
     curl https://sh.rustup.rs -sSf | sh
 else
