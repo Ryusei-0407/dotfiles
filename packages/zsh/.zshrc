@@ -53,6 +53,7 @@ alias down='docker-compose down'
 alias k='kubectl'
 alias krew='kubectl krew'
 alias tf='terraform'
+alias glog='git log --oneline --graph'
 alias opensim='open -a Simulator'
 alias dotfiles='~/dotfiles/install.sh'
 
