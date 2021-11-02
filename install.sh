@@ -48,5 +48,5 @@ else
     rustup update
 fi
 
-stow -v -d ~/dotfiles/packages -t ~ zsh fzf git tmux hyper
+stow -v -d ~/dotfiles/packages -t ~ zsh fzf git tmux
 stow -v -d ~/dotfiles/packages -t ~/.config config
