@@ -65,7 +65,7 @@ disabled = true
 [git_metrics]
 disabled = false
 
-[go]
+[golang]
 disabled = true
 
 [helm]

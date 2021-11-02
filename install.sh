@@ -6,10 +6,6 @@ if [ ! -f /opt/homebrew/bin/brew ]; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-# if [ ! -f ~/.zinit/bin/zinit.zsh ]; then
-#     sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
-# fi
-
 if [ ! -f /opt/homebrew/bin/git ]; then
     brew install git
 fi

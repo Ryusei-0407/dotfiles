@@ -78,7 +78,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
 " Rust
     Plug 'rust-lang/rust.vim'
-    Plug 'simrat39/rust-tools.nvim'
+    " Plug 'simrat39/rust-tools.nvim'
     Plug 'nvim-lua/popup.nvim'
 
 " Go

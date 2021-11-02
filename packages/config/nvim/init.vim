@@ -6,7 +6,6 @@ source $HOME/.config/nvim/general/nvim-treesitter.vim
 " source $HOME/.config/nvim/lsp/compe-config.vim
 " source $HOME/.config/nvim/ddc/config.vim
 source $HOME/.config/nvim/themes/airline.vim
-source $HOME/.config/nvim/vim-plug/plugins.vim
 
 " CoC
 inoremap <silent><expr> <TAB>
