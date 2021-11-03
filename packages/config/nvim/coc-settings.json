@@ -3,7 +3,7 @@
     "json",
     "yaml",
     "cpp",
-    "javescript",
+    "javascript",
     "javascriptreact",
     "typescript",
     "typescriptreact",
@@ -15,6 +15,10 @@
     "tf",
     "markdown"
   ],
+  "prettier.formatterPriority": 1,
+  "prettier.tabWidth": 4,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
   "languageserver": {
     "rust": {
       "command": "rust-analyzer",
