@@ -13,7 +13,9 @@ autocmd FileType nerdtree,startify call glyph_palette#apply()
 let g:fern#default_hidden = 1
 
 " Terminal
-nnoremap \t :VTerm<CR>
+let g:floaterm_width = 0.8
+let g:floaterm_height = 0.8
+nnoremap <C-t> :FloatermNew<CR>
 
 " Snippet
 let g:UltiSnipsUsePythonVersion = 3

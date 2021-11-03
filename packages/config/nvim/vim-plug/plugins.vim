@@ -35,7 +35,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'terryma/vim-multiple-cursors'
 
 " Terminal
-    Plug 'vimlab/split-term.vim'
+    Plug 'voldikss/vim-floaterm'
 
 " Airline
     Plug 'vim-airline/vim-airline'
