@@ -16,6 +16,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'honza/vim-snippets'
     Plug 'SirVer/ultisnips'
 
+" Sandwich
+    Plug 'machakann/vim-sandwich'
+
 " Split window resize
     Plug 'simeji/winresizer'
 
