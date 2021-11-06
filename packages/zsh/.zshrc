@@ -12,7 +12,8 @@ export PATH=/opt/homebrew/sbin:$PATH
 export PATH=/opt/homebrew/bin:$PATH
 export PATH=$HOME/.krew/bin:$PATH
 export PATH=/opt/homebrew/opt/ruby/bin:$PATH
-# alias alias zshconf='vi ~/.zshrc'
+# alias
+alias zshconf='vi ~/.zshrc'
 alias zshrc='source ~/.zshrc'
 # alias t='tmux'
 alias vi='nvim'
@@ -73,4 +74,4 @@ complete -o nospace -C /opt/homebrew/bin/terraform terraform
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 # The following lines were added by compinstall
-zstyle :compinstall filename '/Users/ryuseifujiwara/.zshrc'
+zstyle :compinstall filename '~/.zshrc'
