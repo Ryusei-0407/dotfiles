@@ -15,7 +15,7 @@ let g:fern#default_hidden = 1
 " Terminal
 let g:floaterm_width = 0.8
 let g:floaterm_height = 0.8
-nnoremap <C-t> :FloatermNew<CR>
+nnoremap <C-t> :FloatermNew tig status<CR>
 
 " Snippet
 let g:UltiSnipsUsePythonVersion = 3
