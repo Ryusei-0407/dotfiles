@@ -58,6 +58,8 @@ alias glog='git log --oneline --graph'
 alias opensim='open -a Simulator'
 alias dotfiles='~/dotfiles/install.sh'
 
+bindkey \^U backward-kill-line
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '~/google-cloud-sdk/path.zsh.inc' ]; then . '~/google-cloud-sdk/path.zsh.inc'; fi
 
