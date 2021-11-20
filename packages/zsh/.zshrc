@@ -12,10 +12,11 @@ export PATH=/opt/homebrew/sbin:$PATH
 export PATH=/opt/homebrew/bin:$PATH
 export PATH=$HOME/.krew/bin:$PATH
 export PATH=/opt/homebrew/opt/ruby/bin:$PATH
+
 # alias
 alias zshconf='vi ~/.zshrc'
 alias zshrc='source ~/.zshrc'
-# alias t='tmux'
+alias t='tmux'
 alias vi='nvim'
 alias vim='nvim'
 alias nv='neovide'
@@ -31,8 +32,8 @@ alias hex='hexyl'
 alias img='viu'
 alias grep='rg'
 alias find='fd'
-alias ps='procs'
-alias pst='procs --tree'
+alias ps='btm'
+alias htop='btm -b'
 alias nsl='nslookup'
 alias pb='pbcopy'
 alias pass='pwgen 20 1'
