@@ -9,6 +9,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 " Colortheme
     Plug 'wadackel/vim-dogrun'
 
+" JK
+    Plug 'PHSix/faster.nvim'
+
 " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
 
