@@ -47,6 +47,12 @@ let g:rustfmt_autosave = 1
 " Python format
 let g:python3_host_prog = '/opt/homebrew/bin/python3'
 
+" JK
+lua << EOF
+    vim.api.nvim_set_keymap('n', 'j', '<Plug>(faster_move_j)', {noremap=false, silent=true})
+    vim.api.nvim_set_keymap('n', 'k', '<Plug>(faster_move_k)', {noremap=false, silent=true})
+EOF
+
 let g:mapleader = ","
 
 syntax enable                           " Enables syntax highlighing
