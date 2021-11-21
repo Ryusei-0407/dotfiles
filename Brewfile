@@ -1,89 +1,90 @@
-brew "stow"
-brew "zsh"
-brew "mosh"
-brew "starship"
-brew "exa"
-brew "bat"
-brew "gping"
-brew "tldr"
-brew "fzf"
-brew "fd"
-brew "ripgrep"
-brew "zoxide"
-brew "nkf"
-brew "universal-ctags"
-brew "the_silver_searcher"
-brew "gh"
-brew "tig"
-brew "git-delta"
-brew "circleci"
-brew "dep"
-brew "llvm"
-brew "ninja"
-brew "glow"
-brew "csview"
-brew "mdcat"
-brew "tokei"
-brew "hyperfine"
-brew "dive"
-brew "silicon"
-brew "tree-sitter"
-# brew "yabai"
-# brew "skhd"
-brew "neovim"
-brew "luajit"
-brew "tmux"
-brew "watch"
-brew "htop"
-brew "bottom"
-brew "procs"
-brew "awscli"
-brew "aws-iam-authenticator"
-brew "youtube-dl"
-brew "figlet"
-brew "cmatrix"
-brew "macchina"
+brew "stow"                   # stow
+brew "zsh"                    # zsh
+brew "mosh"                   # mosh
+brew "starship"               # zsh theme
+brew "exa"                    # exa -> better ls
+brew "bat"                    # bat -> better cat
+brew "gping"                  # gping -> better ping
+brew "tldr"                   # tldr -> preview markdown
+brew "fzf"                    # fzf
+brew "fd"                     # fd -> better find
+brew "ripgrep"                # ripgrep -> better grep
+brew "zoxide"                 # zoxide -> better z
+brew "nkf"                    # nkf -> better cat
+brew "universal-ctags"        # universal-ctags
+brew "the_silver_searcher"    # the_silver_searcher -> better ag
+brew "watch"                  # watch
+brew "htop"                   # htop -> better top
+brew "bottom"                 # bottom -> better htop
+brew "procs"                  # procs -> better ps
 
-# brew "rust"
-brew "rust-analyzer"
-brew "wasm-pack"
-brew "ghc"
-brew "deno"
-brew "dart"
-brew "node"
-brew "yarn"
-brew "pnpm"
-brew "typescript"
-brew "gcc"
-brew "python"
-brew "go"
-brew "java"
-brew "gradle"
-brew "sbt"
-brew "autoconf"
-brew "terraform"
-# brew "serverless"
-brew "cocoapods"
-# brew "lima"
-brew "docker"
-brew "docker-compose"
-brew "kubectl"
-brew "helm"
-brew "eksctl"
-brew "minikube"
-brew "krew"
-brew "viddy"
-brew "stern"
-brew "kind"
-brew "gnu-getopt"
+brew "gh"                     # github
+brew "tig"                    # git
+brew "git-delta"              # diff
+brew "circleci"               # circleci
 
-cask "iterm2"
-cask "kitty"
-cask "cool-retro-term"
-cask "flutter"
-cask "google-chrome"
-cask "firefox"
-cask "amethyst"
-cask "deepl"
-cask "tableplus"
-cask "boostnote"
+brew "dep"                    # dep
+brew "llvm"                   # llvm
+brew "ninja"                  # ninja
+brew "glow"                   # glow
+brew "csview"                 # csview
+brew "mdcat"                  # mdcat -> preview markdown
+brew "tokei"                  # tokei -> count lines
+brew "hyperfine"              # hyperfine -> benchmark
+brew "dive"                   # dive
+brew "silicon"                # silicon
+
+brew "tree-sitter"            # tree-sitter -> syntax highlighting
+brew "yabai"                  # yabai -> tile manager
+brew "skhd"                   # skhd -> keyboard shortcuts
+brew "tmux"                   # tmux
+brew "neovim"                 # neovim
+brew "luajit"                 # luajit
+
+brew "awscli"                 # awscli
+brew "aws-iam-authenticator"  # aws-iam-authenticator
+brew "youtube-dl"             # youtube-dl
+
+brew "figlet"                 # figlet
+brew "cmatrix"                # cmatrix
+brew "macchina"               # macchina -> better watch
+
+
+brew "rust-analyzer"          # rust-analyzer
+brew "wasm-pack"              # wasm-pack
+brew "ghc"                    # ghc
+brew "deno"                   # deno
+brew "dart"                   # dart
+brew "node"                   # node
+brew "yarn"                   # yarn
+brew "pnpm"                   # pnpm -> better npm
+brew "typescript"             # typescript
+brew "gcc"                    # gcc
+brew "python"                 # python
+brew "go"                     # go
+brew "java"                   # java
+brew "gradle"                 # gradle -> better mvn
+brew "sbt"                    # sbt -> scala build tool
+brew "autoconf"               # autoconf
+brew "terraform"              # terraform
+brew "cocoapods"              # cocoapods
+brew "docker"                 # docker
+brew "docker-compose"         # docker-compose
+brew "kubectl"                # kubectl
+brew "helm"                   # helm
+brew "eksctl"                 # eksctl
+brew "minikube"               # minikube
+brew "krew"                   # krew
+brew "viddy"                  # viddy
+brew "stern"                  # stern
+brew "kind"                   # kind
+brew "gnu-getopt"             # gnu-getopt
+
+cask "iterm2"                 # iterm2
+cask "cool-retro-term"        # cool-retro-term
+cask "flutter"                # flutter
+cask "google-chrome"          # google-chrome
+cask "firefox"                # firefox
+cask "deepl"                  # deepl
+cask "tableplus"              # tableplus
+cask "boostnote"              # boostnote
