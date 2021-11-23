@@ -70,6 +70,7 @@ brew "terraform"              # terraform
 brew "cocoapods"              # cocoapods
 brew "docker"                 # docker
 brew "docker-compose"         # docker-compose
+brew "lima"                   # lima
 brew "kubectl"                # kubectl
 brew "helm"                   # helm
 brew "eksctl"                 # eksctl
