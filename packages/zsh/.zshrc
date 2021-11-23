@@ -59,6 +59,16 @@ alias glog='git log --oneline --graph'
 alias opensim='open -a Simulator'
 alias dotfiles='~/dotfiles/install.sh'
 
+# yabai alias
+alias ybsp='yabai -m config layout bsp'
+alias yfloat='yabai -m config layout float'
+alias yf='yabai -m window --focus'
+alias ys='yabai -m window --swap'
+alias yw='yabai -m window --warp'
+alias yr='yabai -m space --rotate'
+alias yy='yabai -m space --mirror y-axis'
+alias yx='yabai -m space --mirror x-axis'
+
 bindkey \^U backward-kill-line
 
 # The next line updates PATH for the Google Cloud SDK.
