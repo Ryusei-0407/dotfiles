@@ -93,6 +93,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 " Python Black
     Plug 'a-vrma/black-nvim', { 'do': ':UpdateRemotePlugins' }
 
+" Svelte
+    Plug 'evanleck/vim-svelte', {'branch': 'main'}
+
 " Solidity
     Plug 'tomlion/vim-solidity'
 

@@ -38,14 +38,15 @@ let g:multi_cursor_prev_key            = '<C-p>'
 let g:multi_cursor_skip_key            = '<C-x>'
 let g:multi_cursor_quit_key            = '<Esc>'
 
-" NeoVide
-let g:neovide_cursor_vfx_mode = 'railgun'
-
 " Rust format
 let g:rustfmt_autosave = 1
 
 " Python format
 let g:python3_host_prog = '/opt/homebrew/bin/python3'
+
+" Svelte
+let g:svelte_indent_script = 0
+let g:svelte_indent_style = 0
 
 " JK
 lua << EOF
