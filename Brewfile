@@ -5,6 +5,7 @@ brew "starship"               # zsh theme
 brew "exa"                    # exa -> better ls
 brew "bat"                    # bat -> better cat
 brew "gping"                  # gping -> better ping
+brew "httpie"                 # httpie -> better curl
 brew "tldr"                   # tldr -> preview markdown
 brew "fzf"                    # fzf
 brew "fd"                     # fd -> better find
@@ -13,7 +14,9 @@ brew "zoxide"                 # zoxide -> better z
 brew "nkf"                    # nkf -> better cat
 brew "universal-ctags"        # universal-ctags
 brew "the_silver_searcher"    # the_silver_searcher -> better ag
+brew "peco"                   # peco -> history search
 brew "watch"                  # watch
+brew "viddy"                  # viddy -> better watch
 brew "htop"                   # htop -> better top
 brew "bottom"                 # bottom -> better htop
 brew "procs"                  # procs -> better ps
@@ -68,6 +71,7 @@ brew "sbt"                    # sbt -> scala build tool
 brew "autoconf"               # autoconf
 brew "terraform"              # terraform
 brew "cocoapods"              # cocoapods
+
 brew "docker"                 # docker
 brew "docker-compose"         # docker-compose
 brew "lima"                   # lima
@@ -76,7 +80,6 @@ brew "helm"                   # helm
 brew "eksctl"                 # eksctl
 brew "minikube"               # minikube
 brew "krew"                   # krew
-brew "viddy"                  # viddy
 brew "stern"                  # stern
 brew "kind"                   # kind
 brew "gnu-getopt"             # gnu-getopt
