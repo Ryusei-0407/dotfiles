@@ -1,5 +1,6 @@
 {
   "coc.preferences.formatOnSaveFiletypes": [
+    "html",
     "json",
     "yaml",
     "cpp",
@@ -41,5 +42,32 @@
       "filetypes": ["terraform", "tf"],
       "initializationOptions": {}
     }
-  }
+  },
+  "files.associations": {
+    "json": "jsonc",
+    "yaml": "yaml",
+    "yml": "yaml",
+    "*.svelte": "html",
+    "tf": "terraform",
+    "tfvars": "terraform",
+    "tfstate": "terraform",
+    "tfstate.backup": "terraform",
+    "tfstate.delta": "terraform",
+    "tfstate.lock": "terraform",
+    "tfstate.lru": "terraform",
+    "tfstate.windows": "terraform",
+    "tfstate.windows.backup": "terraform",
+    "tfstate.windows.delta": "terraform",
+    "tfstate.windows.lock": "terraform",
+    "tfstate.windows.lru": "terraform",
+    "tfstate.windows.windows": "terraform",
+    "tfstate.windows.windows.backup": "terraform",
+    "tfstate.windows.windows.delta": "terraform",
+    "tfstate.windows.windows.lock": "terraform",
+    "tfstate.windows.windows.lru": "terraform",
+    "tfstate.windows.windows.windows": "terraform",
+    "tfstate.windows.windows.windows.backup": "terraform",
+    "tfstate.windows.windows.windows.delta": "terraform",
+  },
+  "svelte.enable-ts-plugin": true
 }
