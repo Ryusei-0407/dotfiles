@@ -26,6 +26,16 @@ brew "tig"                    # git
 brew "git-delta"              # diff
 brew "circleci"               # circleci
 
+brew "pkg-config"             # pkg-config
+brew "zlib"                   # zlib
+brew "librsync"               # librsync
+brew "libpng"                 # libpng
+brew "ImageMagick"            # imagemagick
+brew "pygments"               # pygments
+brew "harfbuzz"               # harfbuzz
+brew "sphinx-doc"             # sphinx-doc
+brew "lcms2"                  # lcms2
+
 brew "dep"                    # dep
 brew "llvm"                   # llvm
 brew "ninja"                  # ninja
