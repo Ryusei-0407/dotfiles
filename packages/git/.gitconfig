@@ -29,9 +29,8 @@
 
 [alias]
     d = "diff"
-    ch = "checkout"
     sw = "switch"
-    co = "commit"
+    cm = "commit"
     st = "status --short --branch"
     br = "branch"
     mg = "merge"
