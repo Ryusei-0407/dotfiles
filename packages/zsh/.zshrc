@@ -16,7 +16,8 @@ export PATH=/opt/homebrew/opt/ruby/bin:$PATH
 # alias
 alias zshconf='vi ~/.zshrc'
 alias zshrc='source ~/.zshrc'
-alias t='tmux'
+alias yabaiconf='vi ~/.config/yabai/yabairc'
+alias skhdconf='vi ~/.config/skhd/skhdrc'
 alias vi='nvim'
 alias vim='nvim'
 alias nv='neovide'
@@ -57,16 +58,6 @@ alias tf='terraform'
 alias glog='git log --oneline --graph'
 alias opensim='open -a Simulator'
 alias dotfiles='~/dotfiles/install.sh'
-
-# yabai alias
-alias ybsp='yabai -m config layout bsp'
-alias yfloat='yabai -m config layout float'
-alias yf='yabai -m window --focus'
-alias ys='yabai -m window --swap'
-alias yw='yabai -m window --warp'
-alias yr='yabai -m space --rotate'
-alias yy='yabai -m space --mirror y-axis'
-alias yx='yabai -m space --mirror x-axis'
 
 bindkey \^U backward-kill-line
 
