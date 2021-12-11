@@ -57,10 +57,4 @@ shell:
     log_level: Off
     print_events: false
 key_bindings:
-    - key: N
-      mods: Command
-      command:
-          program: open
-          args:
-              - -n
-              - /Applications/Alacritty.app
+    - { key: N, mods: Command, action: SpawnNewInstance }
