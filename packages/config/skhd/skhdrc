@@ -1,5 +1,5 @@
 # opens iTerm2
-alt - return : open -n /Applications/Alacritty.app
+alt - return : open -n /Applications/Kitty.app --args --config ~/.config/kitty/kitty.conf
 
 # Navigation
 alt - h : yabai -m window --focus west
