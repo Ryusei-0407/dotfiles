@@ -17,7 +17,7 @@
     "markdown"
   ],
   "prettier.formatterPriority": 1,
-  "prettier.tabWidth": 4,
+  "prettier.tabWidth": 2,
   "prettier.singleQuote": true,
   "prettier.trailingComma": "all",
   "languageserver": {
