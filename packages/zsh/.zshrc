@@ -58,6 +58,8 @@ alias tf='terraform'
 alias glog='git log --oneline --graph'
 alias opensim='open -a Simulator'
 alias dotfiles='~/dotfiles/install.sh'
+# kitty
+alias icat='kitty +icat'
 
 bindkey \^U backward-kill-line
 
