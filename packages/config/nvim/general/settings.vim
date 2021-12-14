@@ -41,6 +41,10 @@ let g:multi_cursor_quit_key            = '<Esc>'
 " Block Paste
 let g:block_paste_fill_blank = 1
 
+" Select Multi Lines
+nnoremap <Space>v :call sml#mode_on()<CR>
+let g:sml#echo_yank_str = 0
+
 " Rust format
 let g:rustfmt_autosave = 1
 

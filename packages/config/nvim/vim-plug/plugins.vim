@@ -25,6 +25,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 " Block Paste
    Plug 'Rasukarusan/vim-block-paste'
 
+" Select Multi Lines
+    Plug 'Rasukarusan/nvim-select-multi-line'
+
 " Split window resize
     Plug 'simeji/winresizer'
 
