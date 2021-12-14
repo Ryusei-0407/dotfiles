@@ -22,6 +22,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 " Sandwich
     Plug 'machakann/vim-sandwich'
 
+" Block Paste
+   Plug 'Rasukarusan/vim-block-paste'
+
 " Split window resize
     Plug 'simeji/winresizer'
 

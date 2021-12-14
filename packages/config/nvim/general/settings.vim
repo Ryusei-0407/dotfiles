@@ -38,6 +38,9 @@ let g:multi_cursor_prev_key            = '<C-p>'
 let g:multi_cursor_skip_key            = '<C-x>'
 let g:multi_cursor_quit_key            = '<Esc>'
 
+" Block Paste
+let g:block_paste_fill_blank = 1
+
 " Rust format
 let g:rustfmt_autosave = 1
 
