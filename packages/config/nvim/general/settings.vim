@@ -27,6 +27,9 @@ let g:UltiSnipsJumpForwardTrigger = "<>"
 let g:UltiSnipsJumpBackwardTrigger = "<>"
 command! SNIP UltiSnipsEdit
 
+" Match up
+let g:loaded_matchit = 1
+
 " Multiple cursor
 let g:multi_cursor_use_default_mapping = 0
 let g:multi_cursor_start_word_key      = '<C-n>'

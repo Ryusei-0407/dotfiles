@@ -19,6 +19,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'honza/vim-snippets'
     Plug 'SirVer/ultisnips'
 
+" Match up
+    Plug 'andymass/vim-matchup'
+
 " Sandwich
     Plug 'machakann/vim-sandwich'
 

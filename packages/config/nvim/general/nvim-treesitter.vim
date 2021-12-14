@@ -18,6 +18,10 @@ require'nvim-treesitter.configs'.setup {
   },
   indent = {
     enable = true
+  },
+  matchup = {
+    enable = true,
+    highlight_delay = 20,
   }
 }
 EOF
