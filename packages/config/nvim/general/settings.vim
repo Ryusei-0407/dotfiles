@@ -4,6 +4,10 @@ let g:preview_markdown_auto_update = 1
 " Winresizer
 let g:winresizer_start_key = '<C-S>'
 
+" Silicon
+let g:silicon_auto_update = 1
+let g:silicon = { 'font': 'JetBrains Mono Nerd Font' }
+
 " Fern
 nnoremap <C-e> :Fern . -reveal=% -drawer -toggle -width=30<CR>
 let g:fern#renderer = 'nerdfont'
