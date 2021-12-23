@@ -1,4 +1,7 @@
-export HOMEBREW_CACHE=/opt/homebrew/cache
+eval "$(/opt/homebrew/bin/brew shellenv)"
+export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/opt/homebrew/sbin:$PATH"
+export HOMEBREW_CACHE="/opt/homebrew/cache"
 export GOPATH=$HOME/go
 export JAVA_HOME=$(/usr/libexec/java_home)
 export GEM_HOME=$HOME/.gem
@@ -8,8 +11,6 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=/opt/homebrew/opt/openssl@1.1/bin:$PATH
 export PATH=$GEM_HOME/bin:$PATH
 export PATH=/usr/local/bin:$PATH
-export PATH=/opt/homebrew/sbin:$PATH
-export PATH=/opt/homebrew/bin:$PATH
 export PATH=$HOME/.krew/bin:$PATH
 export PATH=/opt/homebrew/opt/ruby/bin:$PATH
 
@@ -20,7 +21,6 @@ alias yabaiconf='vi ~/.config/yabai/yabairc'
 alias skhdconf='vi ~/.config/skhd/skhdrc'
 alias vi='nvim'
 alias vim='nvim'
-alias nv='neovide'
 alias j='z'
 alias ls='exa --git --icons'
 alias ll='exa -l --git --icons'
@@ -59,13 +59,13 @@ alias glog='git log --oneline --graph'
 alias opensim='open -a Simulator'
 alias dotfiles='~/dotfiles/install.sh'
 # kitty
-alias icat='kitty +icat'
-
+alias icat='kitty +kitten icat'
+    
 bindkey \^U backward-kill-line
-
+   
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '~/google-cloud-sdk/path.zsh.inc' ]; then . '~/google-cloud-sdk/path.zsh.inc'; fi
-
+  
 # The next line enables shell command completion for gcloud.
 if [ -f '~/google-cloud-sdk/completion.zsh.inc' ]; then . '~/google-cloud-sdk/completion.zsh.inc'; fi
 
