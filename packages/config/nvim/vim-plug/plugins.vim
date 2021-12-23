@@ -12,18 +12,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 " JK
     Plug 'PHSix/faster.nvim'
 
-" Better Syntax Support
-    Plug 'sheerun/vim-polyglot'
-
-" Snippets
-    Plug 'honza/vim-snippets'
-    Plug 'SirVer/ultisnips'
-
-" Match up
-    Plug 'andymass/vim-matchup'
-
 " Sandwich
     Plug 'machakann/vim-sandwich'
+
+" Silicon
+    Plug 'segeljakt/vim-silicon'
 
 " Block Paste
    Plug 'Rasukarusan/vim-block-paste'
@@ -59,60 +52,24 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 " Markdown
     Plug 'skanehira/preview-markdown.vim'
 
-" Silicon
-    Plug 'segeljakt/vim-silicon'
-
-" Dap
-    " Plug 'mfussenegger/nvim-dap'
-    " Plug 'rcarriga/nvim-dap-ui'
-    " Plug 'theHamsta/nvim-dap-virtual-text'
-    " Plug 'nvim-lua/plenary.nvim'
-
-" Denops
-    " Plug 'vim-denops/denops.vim'
-    " Plug 'Shougo/ddc.vim'
-
-" CoC
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-
 " LSP
-    " Plug 'neovim/nvim-lspconfig'
-    " Plug 'kabouzeid/nvim-lspinstall'
-    " Plug 'ray-x/lsp_signature.nvim'
-    " Plug 'nvim-lua/lsp_extensions.nvim'
+    Plug 'prabirshrestha/vim-lsp'
+    Plug 'mattn/vim-lsp-settings'
 
 " Complete
-    " Plug 'hrsh7th/nvim-compe'
-    " Plug 'hrsh7th/nvim-cmp'
-    " Plug 'hrsh7th/vim-vsnip'
-    " Plug 'hrsh7th/cmp-buffer'
+    Plug 'prabirshrestha/asyncomplete.vim'
+    Plug 'prabirshrestha/asyncomplete-lsp.vim'
 
 " Treesitter
     Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 
-" Rust
-    Plug 'rust-lang/rust.vim'
-    " Plug 'simrat39/rust-tools.nvim'
-    Plug 'nvim-lua/popup.nvim'
-
-" Go
-    Plug 'ray-x/go.nvim'
-
-" Python Black
-    Plug 'a-vrma/black-nvim', { 'do': ':UpdateRemotePlugins' }
-
-" Svelte
-    Plug 'evanleck/vim-svelte', {'branch': 'main'}
+" Prettier
+    Plug 'prettier/vim-prettier', { 
+        \ 'do': 'yarn install --frozen-lockfile --production',
+        \ 'for': ['javascript', 'typescript', 'css', 'json', 'graphql', 'markdown', 'svelte', 'yaml', 'html'] }
 
 " Solidity
     Plug 'tomlion/vim-solidity'
-
-" Kubernetes
-    Plug 'andrewstuart/vim-kubernetes'
-
-" Terraform
-    Plug 'hashivim/vim-terraform'
 
 " Copilot
     Plug 'github/copilot.vim'
