@@ -72,6 +72,7 @@ brew "node"                   # node
 brew "yarn"                   # yarn
 brew "pnpm"                   # pnpm -> better npm
 brew "typescript"             # typescript
+brew "snyk"                   # snyk
 brew "gcc"                    # gcc
 brew "python"                 # python
 brew "go"                     # go
