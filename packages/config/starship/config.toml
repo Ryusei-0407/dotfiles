@@ -1,8 +1,8 @@
 add_newline = false
 
 [character]
-success_symbol = "🦕"
-error_symbol = "🦕"
+success_symbol = "🦖 ➤"
+error_symbol = "🦖 ➤"
 
 [package]
 disabled = true
