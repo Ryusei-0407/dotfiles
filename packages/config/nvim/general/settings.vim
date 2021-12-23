@@ -4,9 +4,7 @@ let g:preview_markdown_auto_update = 1
 " Winresizer
 let g:winresizer_start_key = '<C-S>'
 
-" Silicon
-let g:silicon_auto_update = 1
-let g:silicon = { 'font': 'JetBrains Mono Nerd Font' }
+let g:silicon = { 'font': 'MesloLGS NF' }
 
 " Fern
 nnoremap <C-e> :Fern . -reveal=% -drawer -toggle -width=30<CR>
@@ -15,11 +13,6 @@ autocmd! *
 autocmd FileType fern call glyph_palette#apply()
 autocmd FileType nerdtree,startify call glyph_palette#apply()
 let g:fern#default_hidden = 1
-
-" Terminal
-let g:floaterm_width = 0.8
-let g:floaterm_height = 0.8
-nnoremap <C-t> :FloatermNew tig<CR>
 
 " Snippet
 let g:UltiSnipsUsePythonVersion = 3
@@ -30,9 +23,6 @@ let g:UltiSnipsExpandTrigger = "<>"
 let g:UltiSnipsJumpForwardTrigger = "<>"
 let g:UltiSnipsJumpBackwardTrigger = "<>"
 command! SNIP UltiSnipsEdit
-
-" Match up
-let g:loaded_matchit = 1
 
 " Multiple cursor
 let g:multi_cursor_use_default_mapping = 0
@@ -55,12 +45,12 @@ let g:sml#echo_yank_str = 0
 " Rust format
 let g:rustfmt_autosave = 1
 
-" Python format
-let g:python3_host_prog = '/opt/homebrew/bin/python3'
-
 " Svelte
 let g:svelte_indent_script = 0
 let g:svelte_indent_style = 0
+
+" Prettier
+let g:prettier#autoformat = 1
 
 " JK
 lua << EOF
