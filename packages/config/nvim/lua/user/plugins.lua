@@ -48,7 +48,7 @@ return packer.startup(function(use)
     use 'nvim-lualine/lualine.nvim'
 
     -- colorschemes
-    use 'wadackel/vim-dogrun'
+    -- use 'wadackel/vim-dogrun'
 
     -- indent
     use 'lukas-reineke/indent-blankline.nvim'
