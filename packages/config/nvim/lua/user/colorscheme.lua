@@ -1,6 +1,6 @@
 vim.cmd [[
 try
-    colorscheme default
+    colorscheme dogrun
 catch /^Vim\%((\a\+)\)\=:E185/
     colorscheme default
 endtry
