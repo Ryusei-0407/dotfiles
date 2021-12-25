@@ -10,6 +10,11 @@ null_ls.setup({
     debug = false,
     sources = {
         formatting.prettier.with({ extra_args = { '--single-quote', '--jsx-single-quote' } }),
+        formatting.eslint,
         formatting.stylua,
+        formatting.black,
+        formatting.dart_format,
+        formatting.rustfmt,
+        formatting.terraform_fmt,
     },
 })
