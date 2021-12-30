@@ -21,6 +21,7 @@ brew "htop"                   # htop -> better top
 brew "bottom"                 # bottom -> better htop
 brew "procs"                  # procs -> better ps
 brew "gnuplot"                # gnuplot
+brew "make"                   # make
 
 brew "gh"                     # github
 brew "tig"                    # git

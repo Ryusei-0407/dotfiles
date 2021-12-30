@@ -13,6 +13,7 @@ export PATH=$GEM_HOME/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/.krew/bin:$PATH
 export PATH=/opt/homebrew/opt/ruby/bin:$PATH
+export PATH=/opt/homebrew/opt/make/libexec/gnubin:$PATH
 
 # alias
 alias zshconf='vi ~/.zshrc'
@@ -20,7 +21,6 @@ alias zshrc='source ~/.zshrc'
 alias yabaiconf='vi ~/.config/yabai/yabairc'
 alias skhdconf='vi ~/.config/skhd/skhdrc'
 alias vi='nvim'
-alias vim='nvim'
 alias j='z'
 alias ls='exa --git --icons'
 alias ll='exa -l --git --icons'
