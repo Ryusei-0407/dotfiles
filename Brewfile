@@ -106,3 +106,4 @@ cask "firefox"                # firefox
 cask "deepl"                  # deepl
 cask "tableplus"              # tableplus
 cask "boostnote"              # boostnote
+cask "hammerspoon"            # hammerspoon
