@@ -8,3 +8,14 @@ hs.hotkey.bind({'ctrl'}, 'g', function()
         hs.application.launchOrFocus('/Applications/kitty.app')
     end
 end)
+
+hs.hotkey.bind({'ctrl'}, 'b', function()
+    local brave = hs.application.get('Brave Browser')
+    if brave == nil then
+        hs.application.launchOrFocus('/Applications/Brave Browser.app')
+    elseif brave:isFrontmost() then
+        brave:hide()
+    else
+        hs.application.launchOrFocus('/Applications/Brave Browser.app')
+    end
+end)
