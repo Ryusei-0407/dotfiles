@@ -1,4 +1,4 @@
-hs.hotkey.bind({'ctrl'}, '<F12>', function()
+hs.hotkey.bind({'ctrl'}, 'g', function()
     local kitty = hs.application.get('kitty')
     if kitty == nil then
         hs.application.launchOrFocus('/Applications/kitty.app')
