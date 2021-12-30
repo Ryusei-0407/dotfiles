@@ -31,5 +31,5 @@ else
     rustup update
 fi
 
-stow -v -d ~/dotfiles/packages -t ~ zsh fzf git tmux .hammerspoon
+stow -v -d ~/dotfiles/packages -t ~ zsh fzf git tmux hammerspoon
 stow -v -d ~/dotfiles/packages -t ~/.config config
