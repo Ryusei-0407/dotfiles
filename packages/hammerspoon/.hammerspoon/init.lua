@@ -9,7 +9,7 @@ hs.hotkey.bind({'ctrl'}, 'g', function()
     end
 end)
 
-hs.hotkey.bind({'ctrl'}, 'b', function()
+hs.hotkey.bind({'ctrl', 'shift'}, 'b', function()
     local brave = hs.application.get('Brave Browser')
     if brave == nil then
         hs.application.launchOrFocus('/Applications/Brave Browser.app')
