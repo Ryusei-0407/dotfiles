@@ -2,7 +2,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/opt/homebrew/sbin:$PATH"
 export HOMEBREW_CACHE="/opt/homebrew/cache"
-export GO11MODULE=on
+export GO111MODULE=on
 export GOBIN=$HOME/go/bin
 export GOMODCACHE=$HOME/.cache/go_mod
 export JAVA_HOME=$(/usr/libexec/java_home)
