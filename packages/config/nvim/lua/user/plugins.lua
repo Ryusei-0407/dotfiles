@@ -95,7 +95,7 @@ return packer.startup(function(use)
     use 'nvim-telescope/telescope-media-files.nvim'
 
     -- Treesitter
-    -- use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
     -- Accelerate j or k
     use {
