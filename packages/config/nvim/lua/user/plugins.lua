@@ -42,7 +42,7 @@ return packer.startup(function(use)
     use 'kyazdani42/nvim-tree.lua'
 
     -- colortheme
-    use 'Mofiqul/dracula.nvim'
+    use 'marko-cerovac/material.nvim'
 
     -- alpha
     use 'goolord/alpha-nvim'
