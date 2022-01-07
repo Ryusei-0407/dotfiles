@@ -43,6 +43,7 @@ return packer.startup(function(use)
 
     -- colortheme
     use 'marko-cerovac/material.nvim'
+    use 'Mofiqul/dracula.nvim'
 
     -- alpha
     use 'goolord/alpha-nvim'
