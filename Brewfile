@@ -89,14 +89,6 @@ brew "docker"                 # docker
 brew "docker-compose"         # docker-compose
 brew "lima"                   # lima
 brew "qemu"                   # qemu
-brew "kubectl"                # kubectl
-brew "helm"                   # helm
-brew "eksctl"                 # eksctl
-brew "minikube"               # minikube
-brew "krew"                   # krew
-brew "stern"                  # stern
-brew "kind"                   # kind
-brew "gnu-getopt"             # gnu-getopt
 
 cask "iterm2"                 # iterm2
 cask "cool-retro-term"        # cool-retro-term
