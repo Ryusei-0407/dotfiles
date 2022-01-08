@@ -74,7 +74,6 @@ if [ -f '~/google-cloud-sdk/completion.zsh.inc' ]; then . '~/google-cloud-sdk/co
 
 autoload -Uz compinit && compinit
 autoload -U bashcompinit && bashcompinit
-source <(kubectl completion zsh)
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
