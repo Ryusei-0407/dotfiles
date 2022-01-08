@@ -90,8 +90,6 @@ brew "docker-compose"         # docker-compose
 brew "lima"                   # lima
 brew "qemu"                   # qemu
 
-cask "iterm2"                 # iterm2
-cask "cool-retro-term"        # cool-retro-term
 cask "flutter"                # flutter
 cask "google-chrome"          # google-chrome
 cask "firefox"                # firefox
