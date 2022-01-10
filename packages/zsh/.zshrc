@@ -4,7 +4,7 @@ export PATH="/opt/homebrew/sbin:$PATH"
 export HOMEBREW_CACHE="/opt/homebrew/cache"
 export GO111MODULE=on
 export GOBIN=$HOME/go/bin
-export GOMODCACHE=$HOME/.cache/go_mod
+# export GOMODCACHE=$HOME/.cache/go_mod
 export JAVA_HOME=$(/usr/libexec/java_home)
 export GEM_HOME=$HOME/.gem
 export PKG_CONFIG_PATH=/opt/homebrew/opt/ruby/lib/pkgconfig
@@ -60,6 +60,7 @@ alias tf='terraform'
 alias ga='git add'
 alias glog='git log --oneline --graph'
 alias opensim='open -a Simulator'
+alias awsp='source _awsp'
 alias dotfiles='~/dotfiles/install.sh'
 # kitty
 alias icat='kitty +kitten icat'
