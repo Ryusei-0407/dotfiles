@@ -23,6 +23,8 @@ brew "procs"                  # procs -> better ps
 brew "gnuplot"                # gnuplot
 brew "make"                   # make
 
+brew "opensc"                 # opensc
+
 brew "gh"                     # github
 brew "tig"                    # git
 brew "git-delta"              # diff
