@@ -4,7 +4,7 @@ export PATH="/opt/homebrew/sbin:$PATH"
 export HOMEBREW_CACHE="/opt/homebrew/cache"
 export GO111MODULE=on
 export GOBIN=$HOME/go/bin
-# export GOMODCACHE=$HOME/.cache/go_mod
+export GOMODCACHE=$HOME/.cache/go_mod
 export JAVA_HOME=$(/usr/libexec/java_home)
 export GEM_HOME=$HOME/.gem
 export PKG_CONFIG_PATH=/opt/homebrew/opt/ruby/lib/pkgconfig
@@ -46,9 +46,6 @@ alias siri='silicon'
 alias ng='ngrok'
 alias btop='bpytop'
 alias m='make'
-alias car='cargo'
-alias rsc='rustc'
-alias rsf='rustfmt'
 alias py2='python'
 alias py3='/opt/homebrew/bin/python3.9'
 alias pip='pip3'
@@ -64,6 +61,8 @@ alias awsp='source _awsp'
 alias dotfiles='~/dotfiles/install.sh'
 # kitty
 alias icat='kitty +kitten icat'
+# M1
+alias x64='arch -x86_64 bash'
     
 bindkey \^U backward-kill-line
    
