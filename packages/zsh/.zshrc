@@ -1,7 +1,6 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
-export PATH="/opt/homebrew/bin:$PATH"
-export PATH="/opt/homebrew/sbin:$PATH"
 export HOMEBREW_CACHE="/opt/homebrew/cache"
+export CARGO_PATH="$HOME/.cargo/env"
 export GO111MODULE=on
 export GOBIN=$HOME/go/bin
 export GOMODCACHE=$HOME/.cache/go_mod
@@ -9,10 +8,12 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 export GEM_HOME=$HOME/.gem
 export PKG_CONFIG_PATH=/opt/homebrew/opt/ruby/lib/pkgconfig
 export STARSHIP_CONFIG=$HOME/.config/starship/config.toml
+export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/opt/homebrew/sbin:$PATH"
+export PATH=$PATH:$CARGO_PATH
 export PATH=$PATH:$GOBIN
 export PATH=/opt/homebrew/opt/openssl@1.1/bin:$PATH
 export PATH=$GEM_HOME/bin:$PATH
-export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/.krew/bin:$PATH
 export PATH=/opt/homebrew/opt/ruby/bin:$PATH
 export PATH=/opt/homebrew/opt/make/libexec/gnubin:$PATH
