@@ -69,6 +69,7 @@ brew "macchina"               # macchina -> better watch
 
 brew "rust-analyzer"          # rust-analyzer
 brew "wasm-pack"              # wasm-pack
+brew "sccache"                # sccache
 brew "ghc"                    # ghc
 brew "deno"                   # deno
 brew "dart"                   # dart
