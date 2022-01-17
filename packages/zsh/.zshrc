@@ -1,6 +1,7 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 export HOMEBREW_CACHE="/opt/homebrew/cache"
 export CARGO_PATH="$HOME/.cargo/env"
+export RUSTC_WRAPPER="/opt/homebrew/bin/sccache"
 export GO111MODULE=on
 export GOBIN=$HOME/go/bin
 export GOMODCACHE=$HOME/.cache/go_mod
