@@ -96,10 +96,12 @@ brew "docker-compose"         # docker-compose
 brew "lima"                   # lima
 brew "qemu"                   # qemu
 
-cask "flutter"                # flutter
 cask "google-chrome"          # google-chrome
 cask "firefox"                # firefox
 cask "deepl"                  # deepl
 cask "tableplus"              # tableplus
+cask "paw"                    # paw
 cask "boostnote"              # boostnote
+cask "karabiner-elements"     # karabiner-elements
 cask "hammerspoon"            # hammerspoon
+cask "keycastr"               # keycastr
