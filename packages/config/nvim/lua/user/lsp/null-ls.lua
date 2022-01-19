@@ -1,20 +1,23 @@
-local null_ls_status_ok, null_ls = pcall(require, 'null-ls')
+local null_ls_status_ok, null_ls = pcall(require, "null-ls")
 if not null_ls_status_ok then
-    return
+	return
 end
 
 local formatting = null_ls.builtins.formatting
 local diagnostics = null_ls.builtins.diagnostics
 
 null_ls.setup({
-    debug = false,
-    sources = {
-        formatting.prettier.with({ extra_args = { '--single-quote', '--jsx-single-quote' } }),
-        formatting.eslint,
-        formatting.stylua,
-        formatting.black,
-        formatting.dart_format,
-        formatting.rustfmt,
-        formatting.terraform_fmt,
-    },
+	debug = false,
+	sources = {
+		formatting.prettier.with({ extra_args = { "--single-quote", "--jsx-single-quote" } }),
+		formatting.eslint,
+		formatting.stylua,
+		formatting.rustfmt,
+		formatting.terraform_fmt,
+	},
+	on_attach = function(client)
+		if client.resolved_capabilities.document_formatting then
+			vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
+		end
+	end,
 })

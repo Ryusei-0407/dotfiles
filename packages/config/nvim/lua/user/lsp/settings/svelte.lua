@@ -1,3 +1,3 @@
 return {
-    filetypes = { 'svelte' }
+	filetypes = { "svelte" },
 }

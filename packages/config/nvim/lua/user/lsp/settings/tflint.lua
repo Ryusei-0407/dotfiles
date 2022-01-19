@@ -1,3 +1,3 @@
 return {
-    filetypes = { 'terraform' }
+	filetypes = { "terraform" },
 }

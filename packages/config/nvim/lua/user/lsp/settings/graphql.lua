@@ -1,9 +1,9 @@
 return {
-    filetypes = {
-        'graphql',
-        'javascript',
-        'javascriptreact',
-        'typescript',
-        'typescriptreact'
-    }
+	filetypes = {
+		"graphql",
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact",
+	},
 }

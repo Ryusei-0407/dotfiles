@@ -1,3 +1,3 @@
 return {
-    filetypes = { 'solidity' }
+	filetypes = { "solidity" },
 }
