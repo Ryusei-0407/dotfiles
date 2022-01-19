@@ -78,6 +78,9 @@ brew "yarn"                   # yarn
 brew "pnpm"                   # pnpm -> better npm
 brew "typescript"             # typescript
 brew "snyk"                   # snyk
+brew "eslint"                 # eslint
+brew "prettier"               # prettier
+brew "stylua"                 # stylua
 brew "gcc"                    # gcc
 brew "python"                 # python
 brew "go"                     # go
