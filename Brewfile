@@ -1,7 +1,7 @@
 brew "stow"                   # stow
 brew "zsh"                    # zsh
 brew "mosh"                   # mosh
-brew "starship"               # zsh theme
+# brew "starship"               # zsh theme
 brew "exa"                    # exa -> better ls
 brew "bat"                    # bat -> better cat
 brew "gping"                  # gping -> better ping

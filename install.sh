@@ -10,10 +10,6 @@ if [ ! -f /opt/homebrew/bin/git ]; then
     brew install git
 fi
 
-if [ ! -f /opt/homebrew/bin/starship ]; then
-    brew install starship
-fi
-
 if [ ! -d ~/dotfiles ]; then
     cd && git clone git@github.com:Ryusei-0407/dotfiles.git
 fi
@@ -31,5 +27,5 @@ else
     rustup update
 fi
 
-stow -v -d ~/dotfiles/packages -t ~ zsh fzf git tmux hammerspoon
+stow -v -d ~/dotfiles/packages -t ~ zsh fzf git tmux hammerspoon p10k
 stow -v -d ~/dotfiles/packages -t ~/.config config
