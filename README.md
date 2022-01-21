@@ -34,3 +34,9 @@ sudo defaults write -g ApplePressAndHoldEnabled -bool true
 ```sh
 curl -o - https://raw.githubusercontent.com/Ryusei-0407/dotfiles/main/install.sh | sh
 ```
+
+### Reboot Computer
+
+```sh
+sudo reboot
+```
