@@ -88,6 +88,12 @@ return packer.startup(function(use)
 	use("tamago324/nlsp-settings.nvim")
 	use("jose-elias-alvarez/null-ls.nvim")
 
+	-- Rust
+	use("rust-lang/rust.vim")
+
+	-- Golang
+	use("fatih/vim-go")
+
 	-- Copilot
 	use("github/copilot.vim")
 
