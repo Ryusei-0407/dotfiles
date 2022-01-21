@@ -83,6 +83,16 @@ lsp_installer.on_server_ready(function(server)
 		opts = vim.tbl_deep_extends("force", pyright_opts, opts)
 	end
 
+	if server.name == "gopls" then
+		local gopls_opts = require("user.lsp.settings.gopls")
+		opts = vim.tbl_deep_extend("force", gopls_opts, opts)
+	end
+
+	if server.name == "golangci_lint_ls" then
+		local golangci_lint_ls_opts = require("user.lsp.settings.golangci_lint_ls")
+		opts = vim.tbl_deep_extend("force", golangci_lint_ls_opts, opts)
+	end
+
 	if server.name == "terraformls" then
 		local terraformls_opts = require("user.lsp.settings.terraformls")
 		opts = vim.tbl_deep_extend("force", terraformls_opts, opts)
