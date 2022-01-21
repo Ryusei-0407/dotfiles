@@ -13,6 +13,9 @@ null_ls.setup({
 		formatting.eslint,
 		formatting.stylua,
 		formatting.rustfmt,
+		formatting.gofumpt,
+		formatting.goimports,
+		formatting.golines,
 		formatting.terraform_fmt,
 	},
 	on_attach = function(client)
