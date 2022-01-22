@@ -2,7 +2,7 @@
 
 ## Setup
 
-### Make hidden files visible in the Finder
+### Setup dock
 
 ```sh
 defaults write com.apple.dock persistent-apps -array
@@ -10,6 +10,8 @@ defaults write com.apple.dock "show-recents" -bool "false"
 defaults write com.apple.dock "mineffect" -string "scale"
 defaults write com.apple.dock "mru-spaces" -bool "false"
 ```
+
+### Make hidden files visible in the Finder
 
 ```sh
 defaults write com.apple.finder AppleShowAllFiles TRUE
