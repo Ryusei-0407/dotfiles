@@ -1,7 +1,6 @@
 brew "stow"                   # stow
 brew "zsh"                    # zsh
 brew "mosh"                   # mosh
-# brew "starship"               # zsh theme
 brew "exa"                    # exa -> better ls
 brew "bat"                    # bat -> better cat
 brew "gping"                  # gping -> better ping
@@ -20,7 +19,6 @@ brew "viddy"                  # viddy -> better watch
 brew "htop"                   # htop -> better top
 brew "bottom"                 # bottom -> better htop
 brew "procs"                  # procs -> better ps
-brew "gnuplot"                # gnuplot
 brew "make"                   # make
 
 brew "opensc"                 # opensc
@@ -28,7 +26,6 @@ brew "opensc"                 # opensc
 brew "gh"                     # github
 brew "tig"                    # git
 brew "git-delta"              # diff
-brew "circleci"               # circleci
 
 brew "pkg-config"             # pkg-config
 brew "zlib"                   # zlib
