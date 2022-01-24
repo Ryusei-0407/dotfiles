@@ -20,13 +20,11 @@ brew "htop"                   # htop -> better top
 brew "bottom"                 # bottom -> better htop
 brew "procs"                  # procs -> better ps
 brew "make"                   # make
-
+brew "bazel"                  # bazel
 brew "opensc"                 # opensc
-
 brew "gh"                     # github
 brew "tig"                    # git
 brew "git-delta"              # diff
-
 brew "pkg-config"             # pkg-config
 brew "zlib"                   # zlib
 brew "librsync"               # librsync
@@ -36,7 +34,6 @@ brew "pygments"               # pygments
 brew "harfbuzz"               # harfbuzz
 brew "sphinx-doc"             # sphinx-doc
 brew "lcms2"                  # lcms2
-
 brew "dep"                    # dep
 brew "llvm"                   # llvm
 brew "ninja"                  # ninja
@@ -47,23 +44,18 @@ brew "tokei"                  # tokei -> count lines
 brew "hyperfine"              # hyperfine -> benchmark
 brew "dive"                   # dive
 brew "silicon"                # silicon
-
 brew "tree-sitter"            # tree-sitter -> syntax highlighting
 brew "yabai"                  # yabai -> tile manager
 brew "skhd"                   # skhd -> keyboard shortcuts
 brew "tmux"                   # tmux
 brew "neovim"                 # neovim
 brew "luajit"                 # luajit
-
 brew "awscli"                 # awscli
 brew "aws-iam-authenticator"  # aws-iam-authenticator
 brew "youtube-dl"             # youtube-dl
-
 brew "figlet"                 # figlet
 brew "cmatrix"                # cmatrix
 brew "macchina"               # macchina -> better watch
-
-
 brew "rust-analyzer"          # rust-analyzer
 brew "wasm-pack"              # wasm-pack
 brew "sccache"                # sccache
@@ -87,7 +79,6 @@ brew "sbt"                    # sbt -> scala build tool
 brew "autoconf"               # autoconf
 brew "terraform"              # terraform
 brew "cocoapods"              # cocoapods
-
 brew "docker"                 # docker
 brew "docker-compose"         # docker-compose
 brew "lima"                   # lima
