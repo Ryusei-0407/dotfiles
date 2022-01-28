@@ -40,36 +40,15 @@ return packer.startup(function(use)
 	use("nvim-lua/plenary.nvim")
 	use("kyazdani42/nvim-web-devicons")
 	use("kyazdani42/nvim-tree.lua")
-
-	-- colortheme
-	use("marko-cerovac/material.nvim")
 	use("Mofiqul/dracula.nvim")
-
-	-- alpha
 	use("goolord/alpha-nvim")
-
-	-- lualine
 	use("nvim-lualine/lualine.nvim")
-
-	-- indent
 	use("lukas-reineke/indent-blankline.nvim")
-
-	-- sandwitch
 	use("machakann/vim-sandwich")
-
-	-- silicon
 	use("segeljakt/vim-silicon")
-
-	-- block paste
 	use("Rasukarusan/vim-block-paste")
-
-	-- select multi lines
 	use("Rasukarusan/nvim-select-multi-line")
-
-	-- split window resize
 	use("simeji/winresizer")
-
-	-- cmp
 	use("hrsh7th/nvim-cmp")
 	use("hrsh7th/cmp-buffer")
 	use("hrsh7th/cmp-path")
@@ -77,34 +56,18 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-nvim-lsp")
 	use("hrsh7th/cmp-nvim-lua")
 	use("saadparwaiz1/cmp_luasnip")
-
-	-- snippet
 	use("L3MON4D3/LuaSnip")
 	use("rafamadriz/friendly-snippets")
-
-	-- LSP
 	use("neovim/nvim-lspconfig")
 	use("williamboman/nvim-lsp-installer")
 	use("tamago324/nlsp-settings.nvim")
 	use("jose-elias-alvarez/null-ls.nvim")
-
-	-- Rust
 	use("rust-lang/rust.vim")
-
-	-- Golang
 	use("fatih/vim-go")
-
-	-- Copilot
 	use("github/copilot.vim")
-
-	-- Telescipe
 	use("nvim-telescope/telescope.nvim")
 	use("nvim-telescope/telescope-media-files.nvim")
-
-	-- Treesitter
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-
-	-- Accelerate j or k
 	use({
 		"PHSix/faster.nvim",
 		event = { "VimEnter *" },
