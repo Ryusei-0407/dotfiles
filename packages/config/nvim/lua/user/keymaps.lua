@@ -37,7 +37,7 @@ vim.g.multi_corsor_quit_key = "<Esc>"
 -- block paste
 vim.g.block_paste_fill_blank = 1
 
--- fast
+-- fast option
 vim.g.did_install_default_menus = 1
 vim.g.did_install_syntax_menu = 1
 vim.g.did_indent_on = 1
