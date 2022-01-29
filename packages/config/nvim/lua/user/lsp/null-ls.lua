@@ -4,23 +4,20 @@ if not null_ls_status_ok then
 end
 
 local formatting = null_ls.builtins.formatting
-local diagnostics = null_ls.builtins.diagnostics
 
 null_ls.setup({
 	debug = false,
 	sources = {
 		formatting.prettier.with({ extra_args = { "--single-quote", "--jsx-single-quote" } }),
-		formatting.eslint,
 		formatting.stylua,
 		formatting.rustfmt,
-		formatting.gofumpt,
 		formatting.goimports,
 		formatting.golines,
 		formatting.terraform_fmt,
 	},
 	on_attach = function(client)
 		if client.resolved_capabilities.document_formatting then
-			vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
+			vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()")
 		end
 	end,
 })
