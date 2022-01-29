@@ -69,6 +69,11 @@ return packer.startup(function(use)
 	use("nvim-telescope/telescope.nvim")
 	use("nvim-telescope/telescope-media-files.nvim")
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+	-- faster plugins
+	use({
+		"lewis6991/impatient.nvim",
+		config = { compile_path = vim.fn.stdpath("config") .. "/lua/packer_compiled.lua" },
+	})
 	use({
 		"PHSix/faster.nvim",
 		event = { "VimEnter *" },
