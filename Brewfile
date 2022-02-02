@@ -74,7 +74,6 @@ brew "gcc"                    # gcc
 brew "python"                 # python
 brew "go"                     # go
 brew "java"                   # java
-brew "gradle"                 # gradle -> better mvn
 brew "sbt"                    # sbt -> scala build tool
 brew "autoconf"               # autoconf
 brew "terraform"              # terraform
