@@ -41,6 +41,7 @@ brew "glow"                   # glow
 brew "csview"                 # csview
 brew "mdcat"                  # mdcat -> preview markdown
 brew "tokei"                  # tokei -> count lines
+brew "wrk"                    # wrk -> HTTP benchmark tool
 brew "hyperfine"              # hyperfine -> benchmark
 brew "dive"                   # dive
 brew "silicon"                # silicon
