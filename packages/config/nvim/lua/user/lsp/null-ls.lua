@@ -9,7 +9,9 @@ null_ls.setup({
 	debug = false,
 	sources = {
 		formatting.prettier.with({ extra_args = { "--single-quote", "--jsx-single-quote" } }),
+		formatting.prismaFmt,
 		formatting.stylua,
+		formatting.cmake_format,
 		formatting.rustfmt,
 		formatting.goimports,
 		formatting.golines,

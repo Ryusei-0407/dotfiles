@@ -44,6 +44,11 @@ lsp_installer.on_server_ready(function(server)
 		opts = vim.tbl_deep_extend("force", tsserver_opts, opts)
 	end
 
+	if server.name == "prismals" then
+		local prismals_opts = require("user.lsp.settings.prismals")
+		opts = vim.tbl_deep_extend("force", prismals_opts, opts)
+	end
+
 	if server.name == "tflint" then
 		local tflint_opts = require("user.lsp.settings.tflint")
 		opts = vim.tbl_deep_extend("force", tflint_opts, opts)
