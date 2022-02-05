@@ -15,6 +15,7 @@ null_ls.setup({
 		formatting.goimports,
 		formatting.golines,
 		formatting.terraform_fmt,
+		formatting.pg_format,
 	},
 	on_attach = function(client)
 		if client.resolved_capabilities.document_formatting then
