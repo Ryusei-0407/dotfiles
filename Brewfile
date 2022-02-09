@@ -63,7 +63,7 @@ brew "sccache"                # sccache
 brew "ghc"                    # ghc
 brew "deno"                   # deno
 brew "dart"                   # dart
-brew "node"                   # node
+brew "volta"                  # volta
 brew "yarn"                   # yarn
 brew "pnpm"                   # pnpm -> better npm
 brew "typescript"             # typescript
