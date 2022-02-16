@@ -30,11 +30,6 @@ lsp_installer.on_server_ready(function(server)
 		opts = vim.tbl_deep_extend("force", dockerls_opts, opts)
 	end
 
-	if server.name == "rls" then
-		local rls_opts = require("user.lsp.settings.rls")
-		opts = vim.tab_deep_extend("force", rls_opts, opts)
-	end
-
 	if server.name == "rust_analyzer" then
 		local rust_analyzer_opts = require("user.lsp.settings.rust_analyzer")
 	end
