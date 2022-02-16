@@ -40,6 +40,7 @@ brew "ninja"                  # ninja
 brew "glow"                   # glow
 brew "csview"                 # csview
 brew "mdcat"                  # mdcat -> preview markdown
+brew "jless"                  # jless -> better jq
 brew "tokei"                  # tokei -> count lines
 brew "wrk"                    # wrk -> HTTP benchmark tool
 brew "hyperfine"              # hyperfine -> benchmark
@@ -58,7 +59,6 @@ brew "figlet"                 # figlet
 brew "cmatrix"                # cmatrix
 brew "macchina"               # macchina -> better watch
 brew "rust-analyzer"          # rust-analyzer
-brew "wasm-pack"              # wasm-pack
 brew "sccache"                # sccache
 brew "ghc"                    # ghc
 brew "deno"                   # deno
