@@ -78,6 +78,7 @@ brew "java"                   # java
 brew "sbt"                    # sbt -> scala build tool
 brew "autoconf"               # autoconf
 brew "terraform"              # terraform
+brew "vault"                  # vault
 brew "cocoapods"              # cocoapods
 brew "docker"                 # docker
 brew "docker-compose"         # docker-compose
