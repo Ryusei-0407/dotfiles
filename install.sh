@@ -23,8 +23,6 @@ fi
 # Rustup
 if [ ! -f ~/.cargo/bin/rustup ]; then
     curl https://sh.rustup.rs -sSf | sh
-else
-    rustup update
 fi
 
 stow -v -d ~/dotfiles/packages -t ~ zsh fzf git tmux hammerspoon p10k
