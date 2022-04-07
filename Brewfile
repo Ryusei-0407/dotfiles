@@ -15,7 +15,6 @@ brew "universal-ctags"        # universal-ctags
 brew "the_silver_searcher"    # the_silver_searcher -> better ag
 brew "peco"                   # peco -> history search
 brew "watch"                  # watch
-brew "viddy"                  # viddy -> better watch
 brew "htop"                   # htop -> better top
 brew "bottom"                 # bottom -> better htop
 brew "procs"                  # procs -> better ps
@@ -73,6 +72,7 @@ brew "prettier"               # prettier
 brew "stylua"                 # stylua
 brew "gcc"                    # gcc
 brew "python"                 # python
+brew "pipx"                   # pipx
 brew "go"                     # go
 brew "java"                   # java
 brew "sbt"                    # sbt -> scala build tool
@@ -84,6 +84,8 @@ brew "docker"                 # docker
 brew "docker-compose"         # docker-compose
 brew "lima"                   # lima
 brew "qemu"                   # qemu
+brew "michaeleisel/zld/zld"   # linker
+brew "marp-cli"               # marp cli
 
 cask "google-chrome"          # google-chrome
 cask "firefox"                # firefox
@@ -95,3 +97,4 @@ cask "karabiner-elements"     # karabiner-elements
 cask "hammerspoon"            # hammerspoon
 cask "keycastr"               # keycastr
 cask "raycast"                # raycast
+cask "warp"                   # warp

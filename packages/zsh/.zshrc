@@ -26,6 +26,7 @@ export PATH=$GEM_HOME/bin:$PATH
 export PATH=$HOME/.krew/bin:$PATH
 export PATH=/opt/homebrew/opt/ruby/bin:$PATH
 export PATH=/opt/homebrew/opt/make/libexec/gnubin:$PATH
+export PATH=$HOME/.local/bin:$PATH
 
 # alias
 alias zshconf='vi ~/.zshrc'
@@ -63,8 +64,8 @@ alias py3='/opt/homebrew/bin/python3.9'
 alias pip='pip3'
 alias dps='docker ps'
 alias dimg='docker images'
-alias up='docker-compose up -d'
-alias down='docker-compose down'
+alias up='docker compose up -d'
+alias down='docker compose down'
 alias tf='terraform'
 alias ga='git add'
 alias glog='git log --oneline --graph'
