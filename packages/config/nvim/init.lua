@@ -1,14 +1,15 @@
-require("user.options")
-require("user.keymaps")
-require("user.plugins")
-require("user.colorscheme")
-require("user.cmp")
-require("user.lsp")
-require("user.telescope")
-require("user.treesitter")
-require("user.nvim-tree")
-require("user.barbar")
-require("user.lualine")
-require("user.indentline")
-require("user.alpha")
-require("user.impatient")
+require("options")
+require("keymaps")
+require("plugins")
+require("telescope")
+require("barbar")
+require("indentline")
+
+vim.cmd([[
+try
+    colorscheme zephyr
+catch /^Vim\%((\a\+)\)\=:E185/
+    colorscheme default
+endtry
+]])
+

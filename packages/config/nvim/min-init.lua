@@ -38,5 +38,10 @@ vim.opt.shortmess:append("c")
 vim.cmd("set whichwrap+=<,>,h,l")
 vim.cmd([[set iskeyword+=-]])
 vim.cmd([[set formatoptions-=cro]])
-
-require("user.colorscheme")
+vim.cmd([[
+try
+    colorscheme zephyr
+catch /^Vim\%((\a\+)\)\=:E185/
+    colorscheme default
+endtry
+]])
