@@ -1,6 +1,6 @@
 vim.cmd([[
 try
-    colorscheme zephyr
+    colorscheme dracula
 catch /^Vim\%((\a\+)\)\=:E185/
     colorscheme default
 endtry
