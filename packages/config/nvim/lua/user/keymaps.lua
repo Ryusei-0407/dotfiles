@@ -20,8 +20,22 @@ keymap("n", "sv", ":vsplit<CR>", opts)
 keymap("n", "<leader>f", "<cmd>Telescope find_files<CR>", opts)
 keymap("n", "<C-t>", "<cmd>Telescope live_grep<CR>", opts)
 
+-- nvim-tree
+keymap("n", "<C-e>", ":NvimTreeToggle<CR>", opts)
+
 -- winresizer
 vim.g.winresizer_start_key = "<C-s>"
+
+-- multiple cursors
+vim.g.mluti_cursor_use_default_mapping = 0
+vim.g.multi_cursor_start_word_key = "<C-n>"
+vim.g.multi_corsor_next_key = "<C-n>"
+vim.g.multi_cursor_prev_key = "<C-p>"
+vim.g.multi_cursor_skip_key = "<C-x>"
+vim.g.multi_corsor_quit_key = "<Esc>"
+
+-- block paste
+vim.g.block_paste_fill_blank = 1
 
 -- fast option
 vim.g.did_install_default_menus = 1
