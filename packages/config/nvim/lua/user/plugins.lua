@@ -39,9 +39,17 @@ return packer.startup(function(use)
 	use("nvim-lua/popup.nvim")
 	use("nvim-lua/plenary.nvim")
 	use("kyazdani42/nvim-web-devicons")
-	use("kyazdani42/nvim-tree.lua")
+	use({
+		"nvim-neo-tree/neo-tree.nvim",
+		branch = "v2.x",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"kyazdani42/nvim-web-devicons",
+			"MunifTanjim/nui.nvim",
+		},
+	})
 	use({ "romgrk/barbar.nvim", requires = { "kyazdani42/nvim-web-devicons" } })
-    use("glepnir/zephyr-nvim")
+	use("glepnir/zephyr-nvim")
 	use("goolord/alpha-nvim")
 	use("nvim-lualine/lualine.nvim")
 	use("lukas-reineke/indent-blankline.nvim")

@@ -21,7 +21,7 @@ keymap("n", "<leader>f", "<cmd>Telescope find_files<CR>", opts)
 keymap("n", "<C-t>", "<cmd>Telescope live_grep<CR>", opts)
 
 -- nvim-tree
-keymap("n", "<C-e>", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<C-e>", ":Neotree toggle=true<CR>", opts)
 
 -- winresizer
 vim.g.winresizer_start_key = "<C-s>"
