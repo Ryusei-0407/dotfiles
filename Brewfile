@@ -91,7 +91,7 @@ cask "google-chrome"          # google-chrome
 cask "firefox"                # firefox
 cask "deepl"                  # deepl
 cask "tableplus"              # tableplus
-cask "paw"                    # paw
+cask "insomnia"               # insomnia
 cask "boostnote"              # boostnote
 cask "karabiner-elements"     # karabiner-elements
 cask "hammerspoon"            # hammerspoon
