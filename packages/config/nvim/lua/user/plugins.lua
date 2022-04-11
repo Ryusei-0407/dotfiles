@@ -82,7 +82,6 @@ return packer.startup(function(use)
 		run = ":TSUpdate",
 	})
 	use({ "yioneko/nvim-yati", requires = "nvim-treesitter/nvim-treesitter" })
-	use("JoosepAlviste/nvim-ts-context-commentstring")
 	-- faster option plugins
 	use({
 		"lewis6991/impatient.nvim",
