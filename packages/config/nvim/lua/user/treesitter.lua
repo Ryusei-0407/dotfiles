@@ -11,11 +11,5 @@ configs.setup({
 		disable = { "lua" },
 		additional_vim_regex_highlighting = true,
 	},
-	indent = {
-		enable = true,
-	},
-	yati = { enable = true },
-	context_commentstring = {
-		enable = true,
-	},
+	indent = { enable = true, disable = { "yaml" } },
 })
