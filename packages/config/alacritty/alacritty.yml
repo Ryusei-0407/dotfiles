@@ -6,7 +6,7 @@ window:
 
 font:
   normal:
-    family: MesloLGS NF
+    family: FiraCode Nerd Font
     style: Regular
   bold:
     family: MesloLGS NF
@@ -17,7 +17,7 @@ font:
   bold_italic:
     family: MesloLGS NF
     style: Bold Italic
-  size: 12
+  size: 13
   use_thin_strokes: true
 
 colors:
@@ -63,9 +63,6 @@ cursor:
 
 shell:
   program: /opt/homebrew/bin/zsh
-  args:
-    - -c
-    - /opt/homebrew/bin/tmux a -t 0 || /opt/homebrew/bin/tmux
   render_timer: false
   persistent_logging: false
   log_level: Off
