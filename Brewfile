@@ -83,6 +83,8 @@ brew "cocoapods"              # cocoapods
 brew "docker"                 # docker
 brew "docker-compose"         # docker-compose
 brew "lima"                   # lima
+brew "dager/tap/dagger"       # dagger
+brew "cue"                    # cue
 brew "qemu"                   # qemu
 brew "michaeleisel/zld/zld"   # linker
 brew "marp-cli"               # marp cli
