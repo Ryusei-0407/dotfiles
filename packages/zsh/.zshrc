@@ -16,6 +16,9 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 export GEM_HOME=$HOME/.gem
 export PKG_CONFIG_PATH=/opt/homebrew/opt/ruby/lib/pkgconfig
 export STARSHIP_CONFIG=$HOME/.config/starship/config.toml
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 export PATH=$PATH:/opt/homebrew/bin
 export PATH=$PATH:/opt/homebrew/sbin
 export PATH=$PATH:/usr/local/bin
@@ -76,6 +79,8 @@ alias dotfiles='~/dotfiles/install.sh'
 alias icat='kitty +kitten icat'
 # M1
 alias x64='arch -x86_64 bash'
+# Astar
+alias astar='open "https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A9944#/explorer" && astar-collator --port 30333 --ws-port 9944 --rpc-port 9933 --rpc-cors all --alice --dev'
     
 bindkey \^U backward-kill-line
    
