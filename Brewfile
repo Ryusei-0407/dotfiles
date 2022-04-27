@@ -75,6 +75,8 @@ brew "python"                 # python
 brew "pipx"                   # pipx
 brew "go"                     # go
 brew "java"                   # java
+brew "kotlin"                 # kotlin
+brew "ktlint"                 # ktlint
 brew "sbt"                    # sbt -> scala build tool
 brew "autoconf"               # autoconf
 brew "terraform"              # terraform
