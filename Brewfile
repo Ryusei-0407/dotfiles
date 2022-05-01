@@ -59,6 +59,8 @@ brew "cmatrix"                # cmatrix
 brew "macchina"               # macchina -> better watch
 brew "rust-analyzer"          # rust-analyzer
 brew "sccache"                # sccache
+brew "binaryen"               # binaryen
+brew "wabt"                   # wabt
 brew "ghc"                    # ghc
 brew "deno"                   # deno
 brew "dart"                   # dart
