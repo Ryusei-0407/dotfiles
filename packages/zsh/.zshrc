@@ -44,6 +44,7 @@ alias ll='exa -l --no-user --git --icons'
 alias lla='exa -la --no-user --git --icons'
 alias la='exa -a --git --icons'
 alias tree='exa --tree --git --icons'
+alias mkdir='mkdir -p'
 alias md='mdr'
 alias csv='csview'
 alias hex='hexyl'
@@ -79,17 +80,13 @@ alias dotfiles='~/dotfiles/install.sh'
 alias icat='kitty +kitten icat'
 # M1
 alias x64='arch -x86_64 bash'
+# Substrate
+alias substrate='open "https://paritytech.github.io/contracts-ui/#/add-contract" && substrate-contracts-node --dev'
 # Astar
 alias astar='open "https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A9944#/explorer" && astar-collator --port 30333 --ws-port 9944 --rpc-port 9933 --rpc-cors all --alice --dev'
     
 bindkey \^U backward-kill-line
-   
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '~/google-cloud-sdk/path.zsh.inc' ]; then . '~/google-cloud-sdk/path.zsh.inc'; fi
-  
-# The next line enables shell command completion for gcloud.
-if [ -f '~/google-cloud-sdk/completion.zsh.inc' ]; then . '~/google-cloud-sdk/completion.zsh.inc'; fi
-
+     
 autoload -Uz compinit && compinit
 autoload -U bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
@@ -135,3 +132,9 @@ zinit light zdharma-continuum/fast-syntax-highlighting
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/vault vault
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/ryuseifujiwara/Sandbox/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ryuseifujiwara/Sandbox/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/ryuseifujiwara/Sandbox/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ryuseifujiwara/Sandbox/google-cloud-sdk/completion.zsh.inc'; fi
