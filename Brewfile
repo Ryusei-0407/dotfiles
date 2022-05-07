@@ -24,6 +24,7 @@ brew "opensc"                 # opensc
 brew "gh"                     # github
 brew "tig"                    # git
 brew "git-delta"              # diff
+brew "git-secrets"            # git-secrets
 brew "pkg-config"             # pkg-config
 brew "zlib"                   # zlib
 brew "librsync"               # librsync
@@ -87,7 +88,7 @@ brew "cocoapods"              # cocoapods
 brew "docker"                 # docker
 brew "docker-compose"         # docker-compose
 brew "lima"                   # lima
-brew "dager/tap/dagger"       # dagger
+brew "dagger/tap/dagger"       # dagger
 brew "cue"                    # cue
 brew "qemu"                   # qemu
 brew "michaeleisel/zld/zld"   # linker
