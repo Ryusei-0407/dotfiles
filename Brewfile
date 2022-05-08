@@ -99,9 +99,7 @@ cask "firefox"                # firefox
 cask "deepl"                  # deepl
 cask "tableplus"              # tableplus
 cask "insomnia"               # insomnia
-cask "boostnote"              # boostnote
 cask "karabiner-elements"     # karabiner-elements
 cask "hammerspoon"            # hammerspoon
 cask "keycastr"               # keycastr
 cask "raycast"                # raycast
-cask "warp"                   # warp
