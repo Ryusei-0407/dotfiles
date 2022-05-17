@@ -60,6 +60,7 @@ brew "cmatrix"                # cmatrix
 brew "macchina"               # macchina -> better watch
 brew "rust-analyzer"          # rust-analyzer
 brew "sccache"                # sccache
+brew "z3"                     # z3
 brew "binaryen"               # binaryen
 brew "wabt"                   # wabt
 brew "ghc"                    # ghc
@@ -85,8 +86,6 @@ brew "autoconf"               # autoconf
 brew "terraform"              # terraform
 brew "vault"                  # vault
 brew "cocoapods"              # cocoapods
-brew "docker"                 # docker
-brew "docker-compose"         # docker-compose
 brew "lima"                   # lima
 brew "dagger/tap/dagger"       # dagger
 brew "cue"                    # cue
