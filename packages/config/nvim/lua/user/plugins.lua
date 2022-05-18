@@ -71,16 +71,15 @@ return packer.startup(function(use)
 	use("tamago324/nlsp-settings.nvim")
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("simrat39/rust-tools.nvim")
-	use("jjo/vim-cue")
 	use("github/copilot.vim")
 	use("nvim-telescope/telescope.nvim")
 	use("nvim-telescope/telescope-media-files.nvim")
-	use({
+    	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
 	})
 	use({ "yioneko/nvim-yati", requires = "nvim-treesitter/nvim-treesitter" })
-	-- faster option plugins
+    -- faster option plugins
 	use({
 		"lewis6991/impatient.nvim",
 		config = { compile_path = vim.fn.stdpath("config") .. "/lua/packer_compiled.lua" },
