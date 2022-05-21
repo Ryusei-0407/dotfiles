@@ -15,6 +15,7 @@ brew "universal-ctags"        # universal-ctags
 brew "the_silver_searcher"    # the_silver_searcher -> better ag
 brew "peco"                   # peco -> history search
 brew "watch"                  # watch
+brew "pget"                   # pget -> better wget
 brew "htop"                   # htop -> better top
 brew "bottom"                 # bottom -> better htop
 brew "procs"                  # procs -> better ps
