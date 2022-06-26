@@ -30,6 +30,7 @@ export PATH=$HOME/.krew/bin:$PATH
 export PATH=/opt/homebrew/opt/ruby/bin:$PATH
 export PATH=/opt/homebrew/opt/make/libexec/gnubin:$PATH
 export PATH=$HOME/.local/bin:$PATH
+export LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8
 
 # alias
 alias zshconf='vi ~/.zshrc'
