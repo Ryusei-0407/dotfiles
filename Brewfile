@@ -25,12 +25,14 @@ brew "glow"                   # glow
 brew "csview"                 # csview
 brew "universal-ctags"        # universal-ctags
 brew "youtube-dl"             # youtube-dl
+brew "asciinema"              # asciinema
 brew "awscli"                 # awscli
 brew "aws-iam-authenticator"  # aws-iam-authenticator
 brew "yabai"                  # yabai -> tile window manager
 brew "skhd"                   # skhd -> keyboard shortcuts
 
 brew "tmux"                   # tmux
+brew "tmate"                  # tmate
 brew "neovim"                 # neovim
 brew "luajit"                 # luajit
 brew "tree-sitter"            # tree-sitter -> syntax highlighting
@@ -84,12 +86,14 @@ brew "vault"                  # vault
 brew "cocoapods"              # cocoapods
 brew "lima"                   # lima
 brew "dive"                   # dive
-brew "dagger/tap/dagger"       # dagger
+brew "hadolint"               # hadolint
+brew "dagger/tap/dagger"      # dagger
 brew "cue"                    # cue
 brew "qemu"                   # qemu
 brew "michaeleisel/zld/zld"   # linker
 brew "marp-cli"               # marp cli
 
+cask "kitty"                  # kitty
 cask "google-chrome"          # google-chrome
 cask "firefox"                # firefox
 cask "deepl"                  # deepl
