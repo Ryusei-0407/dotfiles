@@ -24,10 +24,13 @@ brew "ninja"                  # ninja
 brew "glow"                   # glow
 brew "csview"                 # csview
 brew "universal-ctags"        # universal-ctags
+brew "duf"                    # duf
 brew "youtube-dl"             # youtube-dl
 brew "asciinema"              # asciinema
 brew "awscli"                 # awscli
 brew "aws-iam-authenticator"  # aws-iam-authenticator
+brew "doctl"                  # doctl
+
 brew "yabai"                  # yabai -> tile window manager
 brew "skhd"                   # skhd -> keyboard shortcuts
 
@@ -70,6 +73,7 @@ brew "typescript"             # typescript
 brew "snyk"                   # snyk
 brew "eslint"                 # eslint
 brew "prettier"               # prettier
+brew "zx"                     # zx
 brew "dart"                   # dart
 brew "stylua"                 # stylua
 brew "gcc"                    # gcc
