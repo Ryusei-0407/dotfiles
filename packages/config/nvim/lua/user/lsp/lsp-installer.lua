@@ -36,7 +36,7 @@ lsp_installer.on_server_ready(function(server)
 	end
 
 	if server.name == "rust_analyzer" then
-		local rust_analyzer_opts = require("user.lsp.settings.rust_analyzer")
+		require("user.lsp.settings.rust_analyzer")
 	end
 
 	if server.name == "tsserver" then
@@ -47,10 +47,6 @@ lsp_installer.on_server_ready(function(server)
 	if server.name == "tflint" then
 		local tflint_opts = require("user.lsp.settings.tflint")
 		opts = vim.tbl_deep_extend("force", tflint_opts, opts)
-	end
-
-	if server.name == "svelte" then
-		local svelte_opts = require("user.lsp.settings.svelte")
 	end
 
 	if server.name == "tailwindcss" then
@@ -66,11 +62,6 @@ lsp_installer.on_server_ready(function(server)
 	if server.name == "graphql" then
 		local graphql_opts = require("user.lsp.settings.graphql")
 		opts = vim.tbl_deep_extend("force", graphql_opts, opts)
-	end
-
-	if server.name == "solidity_ls" then
-		local solidity_ls_opts = require("user.lsp.settings.solidity_ls")
-		opts = vim.tbl_deep_extend("force", solidity_ls_opts, opts)
 	end
 
 	if server.name == "sumneko_lua" then
