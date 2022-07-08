@@ -30,11 +30,6 @@ lsp_installer.on_server_ready(function(server)
 		opts = vim.tbl_deep_extend("force", dockerls_opts, opts)
 	end
 
-	if server.name == "rls" then
-		local rls_opts = require("user.lsp.settings.rls")
-		opts = vim.tab_deep_extend("force", rls_opts, opts)
-	end
-
 	if server.name == "rust_analyzer" then
 		require("user.lsp.settings.rust_analyzer")
 	end
@@ -82,6 +77,11 @@ lsp_installer.on_server_ready(function(server)
 	if server.name == "golangci_lint_ls" then
 		local golangci_lint_ls_opts = require("user.lsp.settings.golangci_lint_ls")
 		opts = vim.tbl_deep_extend("force", golangci_lint_ls_opts, opts)
+	end
+
+	if server.name == "zls" then
+		local zls_opts = require("user.lsp.settings.zls")
+		opts = vim.tbl_deep_extend("force", zls_opts, opts)
 	end
 
 	if server.name == "dartls" then
