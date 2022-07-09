@@ -84,3 +84,5 @@ cask "karabiner-elements"     # karabiner-elements
 cask "hammerspoon"            # hammerspoon
 cask "keycastr"               # keycastr
 cask "raycast"                # raycast
+cask "arctype"                # arctype
+cask "tableplus"              # tableplus
