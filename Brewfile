@@ -15,15 +15,12 @@ brew "librsync"               # librsync
 brew "libpng"                 # libpng
 brew "ImageMagick"            # imagemagick
 brew "lcms2"                  # lcms2
-brew "dep"                    # dep
 brew "llvm"                   # llvm
 brew "ninja"                  # ninja
-brew "glow"                   # glow
 brew "csview"                 # csview
 brew "universal-ctags"        # universal-ctags
 brew "duf"                    # duf
 brew "youtube-dl"             # youtube-dl
-brew "asciinema"              # asciinema
 brew "awscli"                 # awscli
 brew "aws-iam-authenticator"  # aws-iam-authenticator
 
@@ -42,22 +39,18 @@ brew "exa"                    # exa -> better ls
 brew "bat"                    # bat -> better cat
 brew "gping"                  # gping -> better ping
 brew "httpie"                 # httpie -> better curl
-brew "tldr"                   # tldr -> preview markdown
 brew "fd"                     # fd -> better find
 brew "ripgrep"                # ripgrep -> better grep
 brew "zoxide"                 # zoxide -> better z
-brew "the_silver_searcher"    # the_silver_searcher -> better ag
 brew "peco"                   # peco -> better history search
 brew "pget"                   # pget -> better wget
 brew "htop"                   # htop -> better top
 brew "bottom"                 # bottom -> better htop
 brew "procs"                  # procs -> better ps
-brew "mdcat"                  # mdcat -> preview markdown
 brew "jless"                  # jless -> better jq
 brew "tokei"                  # tokei -> count lines
 brew "wrk"                    # wrk -> HTTP benchmark tool
 brew "hyperfine"              # hyperfine -> better time
-brew "macchina"               # macchina -> better watch
 
 # Rust
 brew "rust-analyzer"          # rust-analyzer
