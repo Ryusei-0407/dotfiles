@@ -8,15 +8,7 @@ brew "gh"                     # github
 brew "tig"                    # git
 brew "git-delta"              # diff
 brew "git-secrets"            # git secrets
-brew "opensc"                 # opensc
-brew "pkg-config"             # pkg config
-brew "zlib"                   # zlib
-brew "librsync"               # librsync
-brew "libpng"                 # libpng
-brew "ImageMagick"            # imagemagick
-brew "lcms2"                  # lcms2
 brew "llvm"                   # llvm
-brew "ninja"                  # ninja
 brew "csview"                 # csview
 brew "universal-ctags"        # universal-ctags
 brew "duf"                    # duf
