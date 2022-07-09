@@ -17,13 +17,13 @@ if ! [ -x "$(command -v git)" ]; then
     brew install git
 fi
 
-if [ ! -d $HOME/dotfiles ]; then
+if ! [ -d $HOME/dotfiles ]; then
     cd && git clone git@github.com:Ryusei-0407/dotfiles.git
 fi
 
 brew bundle -v --file=~/dotfiles/Brewfile
 
-if [ ! -d $HOME/.config ]; then
+if ! [ -d $HOME/.config ]; then
     mkdir $HOME/.config
 fi
 
