@@ -9,6 +9,7 @@ brew "tig"                    # git
 brew "git-delta"              # diff
 brew "git-secrets"            # git secrets
 brew "llvm"                   # llvm
+brew "glow"                   # glow
 brew "csview"                 # csview
 brew "universal-ctags"        # universal-ctags
 brew "duf"                    # duf
@@ -81,5 +82,4 @@ cask "karabiner-elements"     # karabiner-elements
 cask "hammerspoon"            # hammerspoon
 cask "keycastr"               # keycastr
 cask "raycast"                # raycast
-cask "arctype"                # arctype
 cask "tableplus"              # tableplus
