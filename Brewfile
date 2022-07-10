@@ -71,13 +71,10 @@ brew "autoconf"               # autoconf
 brew "terraform"              # terraform
 brew "cocoapods"              # cocoapods
 brew "hadolint"               # hadolint
-brew "cue"                    # cue
 brew "qemu"                   # qemu
 brew "dive"                   # dive
 
 # Cask
-cask "google-chrome"          # google-chrome
-cask "firefox"                # firefox
 cask "deepl"                  # deepl
 cask "insomnia"               # insomnia
 cask "karabiner-elements"     # karabiner-elements
