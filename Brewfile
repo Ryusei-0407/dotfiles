@@ -35,6 +35,7 @@ brew "httpie"                 # httpie -> better curl
 brew "fd"                     # fd -> better find
 brew "ripgrep"                # ripgrep -> better grep
 brew "zoxide"                 # zoxide -> better z
+brew "viddy"                  # viddy -> better watch
 brew "peco"                   # peco -> better history search
 brew "pget"                   # pget -> better wget
 brew "htop"                   # htop -> better top
