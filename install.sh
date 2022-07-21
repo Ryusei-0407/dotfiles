@@ -10,7 +10,7 @@ if ! [ $ARCH = arm64 ]; then
 fi
 
 if ! [ -x "$(command -v brew)" ]; then
-    echo >&2 "Install 'brew'"
+    echo >&2 "Install Homebrew"
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
