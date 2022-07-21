@@ -77,7 +77,12 @@ return packer.startup(function(use)
 	use("tomlion/vim-solidity")
 	use("nvim-telescope/telescope.nvim")
 	use("nvim-telescope/telescope-media-files.nvim")
-	use("nvim-treesitter/nvim-treesitter")
+	use({
+		"nvim-treesitter/nvim-treesitter",
+		run = function()
+			require("nvim-treesitter.install").update({ with_sync = true })
+		end,
+	})
 	use({ "yioneko/nvim-yati", requires = "nvim-treesitter/nvim-treesitter" })
 	-- faster option plugins
 	use({

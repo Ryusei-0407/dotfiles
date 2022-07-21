@@ -4,12 +4,14 @@ if not status_ok then
 end
 
 configs.setup({
-	sync_install = true,
+	ensure_installed = "all",
 	ignore_install = { "" },
 	highlight = {
 		enable = true,
-		disable = { "lua" },
-		additional_vim_regex_highlighting = true,
+		disable = { "" },
 	},
-	indent = { enable = true, disable = { "yaml" } },
+	autopairs = {
+		enable = true,
+	},
+	indent = { enable = true, disable = { "" } },
 })
