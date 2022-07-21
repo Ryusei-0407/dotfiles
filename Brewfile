@@ -77,6 +77,8 @@ brew "qemu"                   # qemu
 brew "dive"                   # dive
 
 # Cask
+# cask "kitty"                # kitty
+cask "alacritty"              # alacritty
 cask "deepl"                  # deepl
 cask "insomnia"               # insomnia
 cask "karabiner-elements"     # karabiner-elements
@@ -84,3 +86,4 @@ cask "hammerspoon"            # hammerspoon
 cask "keycastr"               # keycastr
 cask "raycast"                # raycast
 cask "tableplus"              # tableplus
+cask "alt-tab"                # alt-tab
