@@ -55,6 +55,7 @@ alias grep='rg'
 alias find='fd'
 alias wget='pget -p 6'
 alias ps='btm'
+alias port='lsof -i'
 alias nsl='nslookup'
 alias pb='pbcopy'
 alias pass='pwgen 20 1'
@@ -66,6 +67,7 @@ alias dps='docker ps'
 alias dimg='docker images'
 alias up='docker compose up -d'
 alias down='docker compose down'
+alias dprune='yes | docker system prune'
 alias tf='terraform'
 alias ga='git add'
 alias glog='git log --oneline --graph'
@@ -74,10 +76,6 @@ alias awsp='source _awsp'
 alias dotfiles='$HOME/dotfiles/install.sh'
 # M1
 alias x64='arch -x86_64 bash'
-# Substrate
-alias substrate='open "https://paritytech.github.io/contracts-ui/#/add-contract" && substrate-contracts-node --dev'
-# Astar
-alias astar='open "https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A9944#/explorer" && astar-collator --port 30333 --ws-port 9944 --rpc-port 9933 --rpc-cors all --alice --dev'
     
 bindkey \^U backward-kill-line
      
