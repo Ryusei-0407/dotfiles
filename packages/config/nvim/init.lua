@@ -2,7 +2,7 @@ vim.opt.backup = false
 vim.opt.clipboard = "unnamedplus"
 vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
-vim.opt.cmdheight = 2
+vim.opt.cmdheight = 1
 vim.opt.completeopt = { "menuone", "noselect" }
 vim.opt.conceallevel = 0
 vim.opt.hlsearch = true
@@ -69,8 +69,6 @@ vim.cmd([[
 ]])
 
 local opts = { noremap = true, silent = true }
-
-local term_opts = { silent = true }
 
 vim.api.nvim_set_keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
