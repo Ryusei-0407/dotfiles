@@ -23,10 +23,9 @@ vim.opt.writebackup = false
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
-vim.opt.cursorline = true
+vim.opt.cursorline = false
 vim.opt.number = true
 vim.opt.relativenumber = false
-vim.opt.numberwidth = 4
 vim.opt.signcolumn = "yes"
 vim.opt.wrap = false
 vim.opt.scrolloff = 8
@@ -104,69 +103,63 @@ vim.api.nvim_set_keymap("n", "j", "<Plug>(faster_move_gj)", { noremap = false, s
 vim.api.nvim_set_keymap("n", "k", "<Plug>(faster_move_gk)", { noremap = false, silent = true })
 
 require("impatient")
-require("impatient").enable_profile()
 require("config.lualine")
 require("config.alpha")
 require("config.indentline")
 require("config.telescope")
-require("config.trouble")
 require("config.cmp")
 require("lsp")
+require("rust-tools").setup()
 require("nvim-treesitter.configs").setup({
-	ensure_installed = "all",
-	ignore_install = { "phpdoc" },
-	context_commentstring = {
-		enable = true,
-	},
-	highlight = {
-		enable = true,
-		disable = { "lua" },
-	},
-	indent = {
-		enable = true,
-	},
+    ensure_installed = "all",
+    ignore_install = { "phpdoc" },
+    context_commentstring = {
+        enable = true,
+    },
+    highlight = {
+        enable = true,
+        disable = { "lua" },
+    },
+    indent = {
+        enable = true,
+    },
 })
 
 return require("packer").startup(function()
-	use("wbthomason/packer.nvim")
-	use("nvim-lualine/lualine.nvim")
-	use("nvim-lua/popup.nvim")
-	use("nvim-treesitter/nvim-treesitter")
-	use("lukas-reineke/indent-blankline.nvim")
-	use("PHSix/faster.nvim")
-	use("goolord/alpha-nvim")
-	use("nvim-lua/plenary.nvim")
-	use("kyazdani42/nvim-web-devicons")
-	use({
-		"nvim-neo-tree/neo-tree.nvim",
-		branch = "v2.x",
-		requires = {
-			"nvim-lua/plenary.nvim",
-			"kyazdani42/nvim-web-devicons",
-			"MunifTanjim/nui.nvim",
-		},
-	})
-	use("nvim-telescope/telescope.nvim")
-	use("nvim-telescope/telescope-media-files.nvim")
-	use({ "yioneko/nvim-yati", requires = { "nvim-treesitter/nvim-treesitter" } })
-	use({ "romgrk/barbar.nvim", requires = { "kyazdani42/nvim-web-devicons" } })
-	use("Mofiqul/dracula.nvim")
-	use("machakann/vim-sandwich")
-	use("simeji/winresizer")
-	use("hrsh7th/nvim-cmp")
-	use("hrsh7th/cmp-buffer")
-	use("hrsh7th/cmp-path")
-	use("hrsh7th/cmp-cmdline")
-	use("hrsh7th/cmp-nvim-lsp")
-	use("hrsh7th/cmp-nvim-lua")
-	use("neovim/nvim-lspconfig")
-	use("williamboman/nvim-lsp-installer")
-	use("tamago324/nlsp-settings.nvim")
-	use("jose-elias-alvarez/null-ls.nvim")
-	use("simrat39/rust-tools.nvim")
-	use("othree/html5.vim")
-	use("pangloss/vim-javascript")
-	use("evanleck/vim-svelte")
-	use({ "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" })
-	use("lewis6991/impatient.nvim")
+    use("wbthomason/packer.nvim")
+    use("nvim-lualine/lualine.nvim")
+    use("nvim-lua/popup.nvim")
+    use("nvim-treesitter/nvim-treesitter")
+    use("lukas-reineke/indent-blankline.nvim")
+    use("PHSix/faster.nvim")
+    use("goolord/alpha-nvim")
+    use("nvim-lua/plenary.nvim")
+    use("kyazdani42/nvim-web-devicons")
+    use({
+        "nvim-neo-tree/neo-tree.nvim",
+        branch = "v2.x",
+        requires = {
+            "nvim-lua/plenary.nvim",
+            "kyazdani42/nvim-web-devicons",
+            "MunifTanjim/nui.nvim",
+        },
+    })
+    use("nvim-telescope/telescope.nvim")
+    use("nvim-telescope/telescope-media-files.nvim")
+    use({ "yioneko/nvim-yati", requires = { "nvim-treesitter/nvim-treesitter" } })
+    use({ "romgrk/barbar.nvim", requires = { "kyazdani42/nvim-web-devicons" } })
+    use("Mofiqul/dracula.nvim")
+    use("machakann/vim-sandwich")
+    use("simeji/winresizer")
+    use("hrsh7th/nvim-cmp")
+    use("hrsh7th/cmp-buffer")
+    use("hrsh7th/cmp-path")
+    use("hrsh7th/cmp-cmdline")
+    use("hrsh7th/cmp-nvim-lsp")
+    use("hrsh7th/cmp-nvim-lua")
+    use("neovim/nvim-lspconfig")
+    use("williamboman/mason.nvim")
+    use("williamboman/mason-lspconfig.nvim")
+    use("simrat39/rust-tools.nvim")
+    use("lewis6991/impatient.nvim")
 end)
