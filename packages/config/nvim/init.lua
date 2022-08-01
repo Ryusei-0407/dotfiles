@@ -110,9 +110,6 @@ require("config.telescope")
 require("config.cmp")
 require("lsp")
 require("rust-tools").setup()
-
--- require("toggleterm").setup()
-
 require("toggleterm").setup({
   open_mapping = [[<C-\>]],
   size = 20,
