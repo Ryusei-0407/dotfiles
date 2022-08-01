@@ -55,14 +55,13 @@ brew "binaryen"               # binaryen
 # Node.JS
 brew "volta"                  # volta -> node
 brew "typescript"             # typescript
-brew "snyk"                   # snyk
 brew "eslint"                 # eslint
 brew "prettier"               # prettier
 brew "zx"                     # zx
 
 # Other languages
 brew "zig"                    # Zig
-brew "dart"                   # Dart
+brew "dart-sdk"                   # Dart
 brew "stylua"                 # stylua
 brew "gcc"                    # gcc
 brew "python"                 # python
