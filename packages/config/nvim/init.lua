@@ -110,6 +110,16 @@ require("config.telescope")
 require("config.cmp")
 require("lsp")
 require("rust-tools").setup()
+
+-- require("toggleterm").setup()
+
+require("toggleterm").setup({
+  open_mapping = [[<C-\>]],
+  size = 20,
+  hide_numbers = true,
+  direction = 'float',
+  close_on_exit = true,
+})
 require("nvim-treesitter.configs").setup({
     ensure_installed = "all",
     ignore_install = { "phpdoc" },
@@ -151,6 +161,7 @@ return require("packer").startup(function()
     use("Mofiqul/dracula.nvim")
     use("machakann/vim-sandwich")
     use("simeji/winresizer")
+    use({ "akinsho/toggleterm.nvim", tag = "v2.*" })
     use("hrsh7th/nvim-cmp")
     use("hrsh7th/cmp-buffer")
     use("hrsh7th/cmp-path")
