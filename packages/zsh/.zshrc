@@ -12,7 +12,7 @@ export RUSTC_WRAPPER=/opt/homebrew/bin/sccache
 export GO111MODULE=on
 export GOBIN=$HOME/go/bin
 export GOMODCACHE=$HOME/.cache/go_mod
-export JAVA_HOME=$(/usr/libexec/java_home)
+export JAVA_HOME=/opt/homebrew/opt/openjdk
 export GEM_HOME=$HOME/.gem
 export PKG_CONFIG_PATH=/opt/homebrew/opt/ruby/lib/pkgconfig
 export STARSHIP_CONFIG=$HOME/.config/starship/config.toml
@@ -24,6 +24,7 @@ export PATH=$PATH:/opt/homebrew/sbin
 export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:$CARGO_PATH
 export PATH=$PATH:$GOBIN
+export PATH=$PATH:$JAVA_HOME/bin
 export PATH=/opt/homebrew/opt/openssl@1.1/bin:$PATH
 export PATH=$GEM_HOME/bin:$PATH
 export PATH=$HOME/.krew/bin:$PATH
@@ -121,6 +122,8 @@ zinit light zdharma-continuum/fast-syntax-highlighting
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/vault vault
