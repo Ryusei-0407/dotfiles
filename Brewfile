@@ -18,8 +18,8 @@ brew "awscli"                 # awscli
 brew "aws-iam-authenticator"  # aws-iam-authenticator
 
 # Window manager
-brew "yabai"                  # yabai -> tile window manager
-brew "skhd"                   # skhd -> keyboard shortcuts
+brew "koekeishiya/formulae/yabai  # yabai -> tile window manager"
+brew "koekeishiya/formulae/skhd"  # skhd -> keyboard shortcuts
 
 # IDE
 brew "tmux"                   # tmux

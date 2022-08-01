@@ -30,6 +30,7 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
 ```sh
 defaults write -g ApplePressAndHoldEnabled -bool true
+defaults write -g KeyRepeat -int 1
 ```
 
 ### Install Rosetta2
