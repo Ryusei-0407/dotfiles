@@ -16,6 +16,7 @@ brew "duf"                    # duf
 brew "youtube-dl"             # youtube-dl
 brew "awscli"                 # awscli
 brew "aws-iam-authenticator"  # aws-iam-authenticator
+brew "gum"                    # gum
 
 # Window manager
 brew "koekeishiya/formulae/yabai  # yabai -> tile window manager"
