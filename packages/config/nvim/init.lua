@@ -67,6 +67,8 @@ vim.cmd([[
 
 ]])
 
+vim.cmd([[autocmd! BufRead,BufEnter *.astro set filetype=astro]])
+
 local opts = { noremap = true, silent = true }
 
 vim.api.nvim_set_keymap("", "<Space>", "<Nop>", opts)
