@@ -86,4 +86,5 @@ cask "hammerspoon"            # hammerspoon
 cask "keycastr"               # keycastr
 cask "raycast"                # raycast
 cask "tableplus"              # tableplus
+cask "arctype"                # arctype
 cask "alt-tab"                # alt-tab
