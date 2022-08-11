@@ -70,7 +70,6 @@ alias up='docker compose up -d'
 alias down='docker compose down'
 alias dprune='yes | docker volume prune && yes | docker system prune'
 alias tf='terraform'
-alias ga='git add'
 alias glog='git log --oneline --graph'
 alias opensim='open -a Simulator'
 alias awsp='source _awsp'
@@ -133,3 +132,25 @@ if [ -f '/Users/ryuseifujiwara/Sandbox/google-cloud-sdk/path.zsh.inc' ]; then . 
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/ryuseifujiwara/Sandbox/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ryuseifujiwara/Sandbox/google-cloud-sdk/completion.zsh.inc'; fi
+
+####################
+# Original Scripts #
+####################
+
+ga() {
+    local selected
+    selected=$(\git status -s | fzf -m --ansi --preview="echo {} | awk '{ print \$2}' | xargs \git diff --color origin/main" | awk '{ print $2}')
+    if [[ -n "$selected" ]]; then
+        git add `paste -s - <<< $selected`
+    fi
+
+    TYPE=$(gum choose "fix" "feat" "docs" "style" "refactor" "test" "chore" "revert")
+    SCOPE=$(gum input --placeholder "scope")
+
+    test -n "$SCOPE" && SCOPE="($SCOPE)"
+
+    SUMMARY=$(gum input --value "$TYPE$SCOPE: " --placeholder "Summary of this change")
+    DESCRIPTION=$(gum write --placeholder "Details of this change (CTRL+D to finish)")
+
+    gum confirm "Commit changes?" && git commit -m "$SUMMARY" -m "$DESCRIPTION"
+}
