@@ -19,7 +19,7 @@ brew "aws-iam-authenticator"  # aws-iam-authenticator
 brew "gum"                    # gum
 
 # Window manager
-brew "koekeishiya/formulae/yabai  # yabai -> tile window manager"
+brew "koekeishiya/formulae/yabai"  # yabai -> tile window manager
 brew "koekeishiya/formulae/skhd"  # skhd -> keyboard shortcuts
 
 # IDE
