@@ -5,7 +5,6 @@ brew "make"                   # make
 brew "fzf"                    # fzf
 brew "watch"                  # watch
 brew "gh"                     # github
-brew "tig"                    # git
 brew "git-delta"              # diff
 brew "git-secrets"            # git secrets
 brew "llvm"                   # llvm
