@@ -106,9 +106,10 @@ require("config.alpha")
 require("config.indentline")
 require("config.telescope")
 require("config.cmp")
+require("gitsigns").setup()
 require("lsp")
 require("rust-tools").setup()
-require("gitsigns").setup()
+require("nvim-ts-autotag").setup()
 require("toggleterm").setup({
   open_mapping = [[<C-\>]],
   size = 20,
@@ -168,5 +169,6 @@ return require("packer").startup(function()
     use("williamboman/mason.nvim")
     use("williamboman/mason-lspconfig.nvim")
     use("simrat39/rust-tools.nvim")
+    use("windwp/nvim-ts-autotag")
     use("lewis6991/impatient.nvim")
 end)
