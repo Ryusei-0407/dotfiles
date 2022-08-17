@@ -34,6 +34,7 @@ brew "gping"                  # gping -> better ping
 brew "httpie"                 # httpie -> better curl
 brew "fd"                     # fd -> better find
 brew "ripgrep"                # ripgrep -> better grep
+brew "choose-rust"            # choose-rust -> better cut
 brew "zoxide"                 # zoxide -> better z
 brew "viddy"                  # viddy -> better watch
 brew "peco"                   # peco -> better history search
@@ -47,6 +48,7 @@ brew "wrk"                    # wrk -> HTTP benchmark tool
 brew "hyperfine"              # hyperfine -> better time
 
 # Rust
+brew "mold"                   # mold
 brew "rust-analyzer"          # rust-analyzer
 brew "sccache"                # sccache
 brew "z3"                     # z3
