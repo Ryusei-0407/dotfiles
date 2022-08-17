@@ -31,7 +31,7 @@ if ! [ -d $HOME/.config ]; then
     mkdir $HOME/.config
 fi
 
-if ! [ -d $HOME/.local/share/nvim/site/packer ]; then
+if ! [ -d $HOME/.local/share/nvim/site/pack ]; then
     echo >&2 "Install packer.nvim"
     git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 fi
