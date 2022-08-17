@@ -60,8 +60,6 @@ brew "prettier"               # prettier
 brew "zx"                     # zx
 
 # Other languages
-brew "zig"                    # Zig
-brew "dart-sdk"                   # Dart
 brew "stylua"                 # stylua
 brew "gcc"                    # gcc
 brew "python"                 # python
