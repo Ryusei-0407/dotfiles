@@ -6,7 +6,7 @@ local status_ok, mason_lspconfig = pcall(require, "mason-lspconfig")
 if not status_ok then return end
 mason_lspconfig.setup_handlers({ function(server)
     local opt = {
-        capabilities = require("cmp_nvim_lsp").update_capabilities(
+        capabilities = require("cmp_nvim_lsp").default_capabilities(
             vim.lsp.protocol.make_client_capabilities()
         )
     }
