@@ -1,6 +1,7 @@
 brew "stow"                   # stow
 brew "zsh"                    # zsh
 brew "mosh"                   # mosh
+brew "tmux"                   # tmux
 brew "make"                   # make
 brew "fzf"                    # fzf
 brew "watch"                  # watch
@@ -9,6 +10,7 @@ brew "git-delta"              # diff
 brew "git-secrets"            # git secrets
 brew "llvm"                   # llvm
 brew "glow"                   # glow
+brew "stateful/tap/rdme"      # rdme
 brew "csview"                 # csview
 brew "universal-ctags"        # universal-ctags
 brew "duf"                    # duf
@@ -16,16 +18,22 @@ brew "youtube-dl"             # youtube-dl
 brew "awscli"                 # awscli
 brew "aws-iam-authenticator"  # aws-iam-authenticator
 brew "gum"                    # gum
+brew "protobuf"               # protobuf
+brew "protoc-gen-go"          # protoc go plugin
+brew "protoc-gen-go-grpc"     # protoc go plugin
+brew "golang-migrate"         # golang-migrate
+brew "emacs"                  # emacs
+brew "cirruslabs/cli/tart"    # tart
 
 # Window manager
-brew "koekeishiya/formulae/yabai"  # yabai -> tile window manager
+brew "koekeishiya/formulae/yabai" # yabai -> tile window manager
 brew "koekeishiya/formulae/skhd"  # skhd -> keyboard shortcuts
 
-# IDE
-brew "tmux"                   # tmux
 brew "neovim"                 # neovim
 brew "luajit"                 # luajit
 brew "tree-sitter"            # tree-sitter -> syntax highlighting
+tap "fsouza/prettierd"
+brew "fsouza/prettierd/prettierd"
 
 # Better tools
 brew "exa"                    # exa -> better ls
@@ -46,6 +54,7 @@ brew "jless"                  # jless -> better jq
 brew "tokei"                  # tokei -> count lines
 brew "wrk"                    # wrk -> HTTP benchmark tool
 brew "hyperfine"              # hyperfine -> better time
+brew "hexyl"                  # hexyl -> better xxd
 
 # Rust
 brew "mold"                   # mold
@@ -66,18 +75,20 @@ brew "stylua"                 # stylua
 brew "gcc"                    # gcc
 brew "python"                 # python
 brew "go"                     # go
-brew "java"                   # java
-brew "kotlin"                 # kotlin
 brew "autoconf"               # autoconf
-brew "terraform"              # terraform
+brew "tfenv"                  # tfenv
 brew "cocoapods"              # cocoapods
 brew "hadolint"               # hadolint
 brew "qemu"                   # qemu
 brew "dive"                   # dive
 
 # Cask
+cask "arc"                    # arc
+cask "coteditor"              # coteditor
 # cask "kitty"                # kitty
 cask "alacritty"              # alacritty
+cask "wezterm"                # wezterm
+cask "hyper"                  # hyper
 cask "deepl"                  # deepl
 cask "insomnia"               # insomnia
 cask "karabiner-elements"     # karabiner-elements
@@ -85,5 +96,5 @@ cask "hammerspoon"            # hammerspoon
 cask "keycastr"               # keycastr
 cask "raycast"                # raycast
 cask "tableplus"              # tableplus
-cask "arctype"                # arctype
 cask "alt-tab"                # alt-tab
+cask "proxyman"               # proxyman
