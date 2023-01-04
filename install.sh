@@ -41,5 +41,5 @@ if ! [ -x "$(command -v rustup)" ]; then
     curl https://sh.rustup.rs -sSf | sh
 fi
 
-stow -v -d $HOME/dotfiles/packages -t $HOME zsh fzf git tmux hammerspoon p10k
+stow -v -d $HOME/dotfiles/packages -t $HOME zsh fzf git tmux emacs hammerspoon p10k hyper
 stow -v -d $HOME/dotfiles/packages -t $HOME/.config config
