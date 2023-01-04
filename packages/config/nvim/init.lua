@@ -32,6 +32,8 @@ vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
 vim.opt.guifont = "monospace:h10"
 
+vim.cmd([[autocmd! FileType typescript,typescriptreact,terraform setlocal shiftwidth=2 softtabstop=2]])
+
 vim.opt.shortmess:append("c")
 
 vim.cmd("set whichwrap+=<,>,h,l")
@@ -103,7 +105,6 @@ vim.api.nvim_set_keymap("n", "<Space>w", ":BufferClose<CR>", opts)
 require("impatient")
 require("config.lualine")
 require("config.alpha")
-require("config.indentline")
 require("config.telescope")
 require("config.cmp")
 require("gitsigns").setup()
@@ -111,64 +112,66 @@ require("lsp")
 require("rust-tools").setup()
 require("nvim-ts-autotag").setup()
 require("toggleterm").setup({
-  open_mapping = [[<C-\>]],
-  size = 20,
-  hide_numbers = true,
-  direction = 'float',
-  close_on_exit = true,
+	open_mapping = [[<C-\>]],
+	size = 20,
+	hide_numbers = true,
+	direction = "float",
+	close_on_exit = true,
 })
 require("nvim-treesitter.configs").setup({
-    ensure_installed = "all",
-    ignore_install = { "phpdoc" },
-    context_commentstring = {
-        enable = true,
-    },
-    highlight = {
-        enable = true,
-        disable = { "lua" },
-    },
-    indent = {
-        enable = true,
-    },
+	ensure_installed = "all",
+	ignore_install = { "phpdoc" },
+	context_commentstring = {
+		enable = true,
+	},
+	highlight = {
+		enable = true,
+		disable = { "lua" },
+	},
+	indent = {
+		enable = true,
+	},
 })
 
 return require("packer").startup(function()
-    use("wbthomason/packer.nvim")
-    use("nvim-lualine/lualine.nvim")
-    use("nvim-lua/popup.nvim")
-    use("nvim-treesitter/nvim-treesitter")
-    use("lukas-reineke/indent-blankline.nvim")
-    use("goolord/alpha-nvim")
-    use("nvim-lua/plenary.nvim")
-    use("kyazdani42/nvim-web-devicons")
-    use({
-        "nvim-neo-tree/neo-tree.nvim",
-        branch = "v2.x",
-        requires = {
-            "nvim-lua/plenary.nvim",
-            "kyazdani42/nvim-web-devicons",
-            "MunifTanjim/nui.nvim",
-        },
-    })
-    use("nvim-telescope/telescope.nvim")
-    use("nvim-telescope/telescope-media-files.nvim")
-    use({ "yioneko/nvim-yati", requires = { "nvim-treesitter/nvim-treesitter" } })
-    use({ "romgrk/barbar.nvim", requires = { "kyazdani42/nvim-web-devicons" } })
-    use("Mofiqul/dracula.nvim")
-    use("machakann/vim-sandwich")
-    use("simeji/winresizer")
-    use({ "akinsho/toggleterm.nvim", tag = "v2.*" })
-    use("hrsh7th/nvim-cmp")
-    use("hrsh7th/cmp-buffer")
-    use("hrsh7th/cmp-path")
-    use("hrsh7th/cmp-cmdline")
-    use("hrsh7th/cmp-nvim-lsp")
-    use("hrsh7th/cmp-nvim-lua")
-    use("lewis6991/gitsigns.nvim")
-    use("neovim/nvim-lspconfig")
-    use("williamboman/mason.nvim")
-    use("williamboman/mason-lspconfig.nvim")
-    use("simrat39/rust-tools.nvim")
-    use("windwp/nvim-ts-autotag")
-    use("lewis6991/impatient.nvim")
+	use("wbthomason/packer.nvim")
+	use("nvim-lualine/lualine.nvim")
+	use("nvim-lua/popup.nvim")
+	use("nvim-treesitter/nvim-treesitter")
+	use("goolord/alpha-nvim")
+	use("nvim-lua/plenary.nvim")
+	use("kyazdani42/nvim-web-devicons")
+	use({
+		"nvim-neo-tree/neo-tree.nvim",
+		branch = "v2.x",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"kyazdani42/nvim-web-devicons",
+			"MunifTanjim/nui.nvim",
+		},
+	})
+	use("nvim-telescope/telescope.nvim")
+	use("nvim-telescope/telescope-media-files.nvim")
+	use({ "yioneko/nvim-yati", requires = { "nvim-treesitter/nvim-treesitter" } })
+	use({ "romgrk/barbar.nvim", requires = { "kyazdani42/nvim-web-devicons" } })
+	use("Mofiqul/dracula.nvim")
+	use("machakann/vim-sandwich")
+	use("simeji/winresizer")
+	use({ "akinsho/toggleterm.nvim", tag = "v2.*" })
+	use("hrsh7th/nvim-cmp")
+	use("hrsh7th/cmp-buffer")
+	use("hrsh7th/cmp-path")
+	use("hrsh7th/cmp-cmdline")
+	use("hrsh7th/cmp-nvim-lsp")
+	use("hrsh7th/cmp-nvim-lua")
+	use({ "L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*" })
+	use("lewis6991/gitsigns.nvim")
+	use("neovim/nvim-lspconfig")
+	use("williamboman/mason.nvim")
+	use("williamboman/mason-lspconfig.nvim")
+	use("jose-elias-alvarez/null-ls.nvim")
+	use("MunifTanjim/prettier.nvim")
+	use("simrat39/rust-tools.nvim")
+	use("windwp/nvim-ts-autotag")
+	use("lewis6991/impatient.nvim")
 end)

@@ -4,6 +4,7 @@ mason.setup()
 
 local status_ok, mason_lspconfig = pcall(require, "mason-lspconfig")
 if not status_ok then return end
+
 mason_lspconfig.setup_handlers({ function(server)
     local opt = {
         capabilities = require("cmp_nvim_lsp").default_capabilities(
@@ -14,7 +15,7 @@ mason_lspconfig.setup_handlers({ function(server)
 end })
 
 vim.keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>")
-vim.keymap.set("n", "gf", "<cmd>lua vim.lsp.buf.formatting()<CR>")
+-- vim.keymap.set("n", "gf", "<cmd>lua vim.lsp.buf.formatting()<CR>")
 vim.keymap.set("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>")
 vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
 vim.keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>")
@@ -39,3 +40,51 @@ augroup lsp_document_highlight
     autocmd CursorMoved,CursorMovedI * lua vim.lsp.buf.clear_references()
 augroup END
 ]]
+
+local status_ok, null_ls = pcall(require, "null-ls")
+if not status_ok then return end
+
+local formatting = null_ls.builtins.formatting
+
+null_ls.setup({
+    debug = false,
+    sources = {
+        formatting.stylua,
+        formatting.gofmt,
+        formatting.goimports,
+        formatting.golines,
+        formatting.rustfmt,
+        formatting.terraform_fmt,
+        formatting.prettierd,
+        formatting.eslint,
+    },
+})
+
+local status_ok, prettier = pcall(require, "prettier")
+if not status_ok then return end
+
+prettier.setup({
+    bin = "prettierd",
+    filetypes = {
+        "html",
+        "css",
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "svelte",
+        "astro",
+        "graphql",
+        "json",
+        "yaml",
+        "markdown"
+    },
+    cli_options = {
+        jsx_single_quote = false,
+        semi = true,
+        single_quote = true,
+        tab_width = 2,
+        use_tabs = false
+    }
+})
+
