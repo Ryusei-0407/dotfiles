@@ -29,8 +29,8 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 ### Enabling continuous input by pressing and holding a key
 
 ```sh
-defaults write -g ApplePressAndHoldEnabled -bool true
-defaults write -g KeyRepeat -int 1
+defaults write -g ApplePressAndHoldEnabled -bool false
+defaults write -g KeyRepeat -int 2
 ```
 
 ### Install Rosetta2
