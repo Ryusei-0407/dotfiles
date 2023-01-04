@@ -1,11 +1,19 @@
-(require 'package)
+(defvar bootstrap-version)
+(let ((bootstrap-file
+       (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
+      (bootstrap-version 6))
+  (unless (file-exists-p bootstrap-file)
+    (with-current-buffer
+        (url-retrieve-synchronously
+         "https://raw.githubusercontent.com/radian-software/straight.el/develop/install.el"
+         'silent 'inhibit-cookies)
+      (goto-char (point-max))
+      (eval-print-last-sexp)))
+  (load bootstrap-file nil 'nomessage))
 
-(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
-(add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/") t)
-(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
-(add-to-list 'package-archives '("ELPA" . "http://tromey.com/elpa/") t)
-
-(package-initialize)
+(setq straight-vc-git-default-clone-depth '(1 single-branch))
+(setq package-enable-at-startup nil)
+(setq use-package-verbose nil)
 
 (add-to-list 'default-frame-alist '(font . "FiraCode Nerd Font"))
 
@@ -70,7 +78,6 @@
 (global-set-key (kbd "s-e") 'my-switch-grep-buffer)
 
 (defmacro with-suppressed-message (&rest body)
-  "Suppress new messages temporarily in the echo area and the `*Messages*' buffer while BODY is evaluated."
   (declare (indent 0))
   (let ((message-log-max nil))
     `(with-temp-message (or (current-message) "") ,@body)))
@@ -85,6 +92,7 @@
 (setq inhibit-startup-message 1)
 (setq ring-bell-function 'ignore)
 (setq make-backup-files nil)
+(setq auto-save-list-file-prefix nil)
 (setq auto-save-default nil)
 (setq menu-bar-mode nil)
 (setq default-tab-width 4)
@@ -93,3 +101,25 @@
 (define-key global-map "\M-?" 'help-for-help)
 (define-key global-map [(super i)] 'find-name-dired)
 (define-key global-map [(super f)] 'rgrep)
+
+;; Color theme
+(straight-use-package 'dracula-theme
+		      :init (load-theme 'dracula t))
+
+;; LSP
+(straight-use-package 'lsp-mode)
+(straight-use-package 'lsp-ui)
+(straight-use-package 'company-mode)
+(straight-use-package 'yasnippet)
+
+;; Rust
+(straight-use-package 'rustic)
+
+;; Go
+(straight-use-package 'go-mode)
+(add-hook 'go-mode-hook 'lsp-deferred)
+
+;; Tree sitter
+(straight-use-package 'tree-sitter)
+(straight-use-package 'tree-sitter-langs)
+;; (tree-sitter-require 'rust)
