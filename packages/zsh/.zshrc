@@ -12,7 +12,6 @@ export RUSTC_WRAPPER=/opt/homebrew/bin/sccache
 export GO111MODULE=on
 export GOBIN=$HOME/go/bin
 export GOMODCACHE=$HOME/.cache/go_mod
-export JAVA_HOME=/opt/homebrew/opt/openjdk
 export GEM_HOME=$HOME/.gem
 export PKG_CONFIG_PATH=/opt/homebrew/opt/ruby/lib/pkgconfig
 export STARSHIP_CONFIG=$HOME/.config/starship/config.toml
@@ -24,7 +23,6 @@ export PATH=$PATH:/opt/homebrew/sbin
 export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:$CARGO_PATH
 export PATH=$PATH:$GOBIN
-export PATH=$PATH:$JAVA_HOME/bin
 export PATH=/opt/homebrew/opt/openssl@1.1/bin:$PATH
 export PATH=$GEM_HOME/bin:$PATH
 export PATH=$HOME/.krew/bin:$PATH
@@ -38,10 +36,17 @@ alias zshconf='vi $HOME/.zshrc'
 alias zshrc='source $HOME/.zshrc'
 alias yabaiconf='vi $HOME/.config/yabai/yabairc'
 alias skhdconf='vi $HOME/.config/skhd/skhdrc'
-alias skhd-up='nohup skhd & 2>&1 /dev/null'
+alias tell='say -v Samantha "done"'
+alias e='emacs'
+alias v='nvim'
 alias vi='nvim'
 alias vim='nvim --noplugin -u $HOME/dotfiles/packages/config/nvim/min-init.lua'
+alias f='fleet'
+alias c='code-insiders'
 alias j='z'
+alias a='cd ..'
+alias aa='cd ../..'
+alias aaa='cd ../../..'
 alias ls='exa --git --icons'
 alias ll='exa -l --no-user --git --icons'
 alias lla='exa -la --no-user --git --icons'
@@ -49,31 +54,31 @@ alias la='exa -a --git --icons'
 alias tree='exa --tree --git --icons'
 alias cut='choose'
 alias mkdir='mkdir -p'
+alias md='rdme'
 alias csv='csview'
 alias hex='hexyl'
 alias img='viu'
 alias grep='rg'
 alias find='fd'
-alias wget='pget -p 6'
 alias ps='btm'
-alias port='lsof -i'
 alias nsl='nslookup'
 alias pb='pbcopy'
-alias pass='pwgen 20 1'
 alias m='make'
-alias gcc='gcc-11'
-alias g++='g++-11'
+alias gcc='gcc-12'
+alias g++='g++-12'
 alias pip='pip3'
-alias dps='docker ps'
-alias dimg='docker images'
-alias up='docker compose up -d'
-alias down='docker compose down'
-alias dprune='yes | docker volume prune && yes | docker system prune'
+alias prettier='prettier --write --jsx-single-quote false --ignore-path .gitignore "./**/*.{js,jsx,ts,tsx,svelte.html,json,yml,yaml}"'
+alias docker='finch'
+alias dps='finch ps'
+alias dimg='finch images'
+alias up='finch compose up -d'
+alias down='finch compose down'
+alias dprune='yes | finch volume prune && yes | finch system prune'
 alias tf='terraform'
 alias glog='git log --oneline --graph'
 alias opensim='open -a Simulator'
-alias awsp='source _awsp'
 alias dotfiles='$HOME/dotfiles/install.sh'
+alias vm='tart'
 # M1
 alias x64='arch -x86_64 bash'
     
@@ -128,10 +133,10 @@ autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/vault vault
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/ryuseifujiwara/Sandbox/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ryuseifujiwara/Sandbox/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/ryu/repo/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ryu/repo/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/ryuseifujiwara/Sandbox/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ryuseifujiwara/Sandbox/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/ryu/repo/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ryu/repo/google-cloud-sdk/completion.zsh.inc'; fi
 
 ####################
 # Original Scripts #
