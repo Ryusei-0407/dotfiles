@@ -62,7 +62,8 @@ vim.g.skip_loading_mswin = 1
 vim.g.dracula_colortem = 0
 vim.cmd([[
     try
-        colorscheme dracula_pro_van_helsing
+        colorscheme dracula
+        colorscheme dracula_pro
     catch /^Vim\%((\a\+)\)\=:E185/
         colorscheme default
     endtry
