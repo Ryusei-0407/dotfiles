@@ -83,7 +83,6 @@ brew "qemu"                   # qemu
 brew "dive"                   # dive
 
 # Cask
-cask "arc"                    # arc
 cask "coteditor"              # coteditor
 # cask "kitty"                # kitty
 cask "alacritty"              # alacritty
