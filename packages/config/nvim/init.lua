@@ -132,6 +132,11 @@ require("nvim-treesitter.configs").setup({
 	indent = {
 		enable = true,
 	},
+    rainbow = {
+        enable = true,
+        extended_mode = true,
+        max_file_lines = nil,
+    },
 })
 
 return require("packer").startup(function()
@@ -139,6 +144,7 @@ return require("packer").startup(function()
 	use("nvim-lualine/lualine.nvim")
 	use("nvim-lua/popup.nvim")
 	use("nvim-treesitter/nvim-treesitter")
+    use("fedepujol/bracket-guides")
 	use("goolord/alpha-nvim")
 	use("nvim-lua/plenary.nvim")
 	use("kyazdani42/nvim-web-devicons")
