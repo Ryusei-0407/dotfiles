@@ -112,6 +112,7 @@ require("gitsigns").setup()
 require("lsp")
 require("rust-tools").setup()
 require("nvim-ts-autotag").setup()
+require("trouble").setup()
 require("toggleterm").setup({
 	open_mapping = [[<C-\>]],
 	size = 20,
@@ -157,6 +158,7 @@ return require("packer").startup(function()
 			"MunifTanjim/nui.nvim",
 		},
 	})
+    use({"folke/trouble.nvim", requires = { "kyazdani42/nvim-web-devicons" } })
 	use("nvim-telescope/telescope.nvim")
 	use("nvim-telescope/telescope-media-files.nvim")
 	use({ "yioneko/nvim-yati", requires = { "nvim-treesitter/nvim-treesitter" } })
