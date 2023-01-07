@@ -10,6 +10,7 @@ brew "git-delta"              # diff
 brew "git-secrets"            # git secrets
 brew "llvm"                   # llvm
 brew "glow"                   # glow
+brew "mdcat"                  # mdcat
 brew "stateful/tap/rdme"      # rdme
 brew "csview"                 # csview
 brew "universal-ctags"        # universal-ctags
