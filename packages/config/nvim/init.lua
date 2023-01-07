@@ -86,6 +86,9 @@ vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", opts)
 vim.api.nvim_set_keymap("n", "ss", ":split<CR>", opts)
 vim.api.nvim_set_keymap("n", "sv", ":vsplit<CR>", opts)
 
+-- lazygit
+vim.api.nvim_set_keymap("n", "gl", ":LazyGit<CR>", opts)
+
 -- neo-tree
 vim.api.nvim_set_keymap("n", "<C-e>", ":Neotree toggle=true<CR>", opts)
 
@@ -176,6 +179,7 @@ return require("packer").startup(function()
 	use("hrsh7th/cmp-nvim-lua")
 	use({ "L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*" })
 	use("lewis6991/gitsigns.nvim")
+    use("kdheepak/lazygit.nvim")
 	use("neovim/nvim-lspconfig")
 	use("williamboman/mason.nvim")
 	use("williamboman/mason-lspconfig.nvim")
