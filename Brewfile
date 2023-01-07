@@ -2,6 +2,7 @@ brew "stow"                   # stow
 brew "zsh"                    # zsh
 brew "mosh"                   # mosh
 brew "tmux"                   # tmux
+brew "lazygit"                # lazygit
 brew "make"                   # make
 brew "fzf"                    # fzf
 brew "watch"                  # watch
