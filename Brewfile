@@ -26,6 +26,7 @@ brew "protoc-gen-go-grpc"     # protoc go plugin
 brew "golang-migrate"         # golang-migrate
 brew "emacs"                  # emacs
 brew "cirruslabs/cli/tart"    # tart
+brew "iperf3"                 # iperf3
 
 # Window manager
 brew "koekeishiya/formulae/yabai" # yabai -> tile window manager
@@ -71,6 +72,8 @@ brew "typescript"             # typescript
 brew "eslint"                 # eslint
 brew "prettier"               # prettier
 brew "zx"                     # zx
+tap "snyk/tap"
+brew "snyk"                   # snyk
 
 # Other languages
 brew "stylua"                 # stylua
@@ -99,3 +102,5 @@ cask "raycast"                # raycast
 cask "tableplus"              # tableplus
 cask "alt-tab"                # alt-tab
 cask "proxyman"               # proxyman
+cask "finch"                  # finch
+cask "arc"                    # arc
