@@ -1,0 +1,48 @@
+{
+    "theme": "One Dark",
+    "buffer_font_family": "FiraCode Nerd Font",
+    "buffer_font_size": 13,
+    "soft_wrap": "none",
+    "vim_mode": false,
+    "terminal": {
+        "font_family": "FiraCode Nerd Font"
+    },
+    "language_overrides": {
+        "JavaScript": {
+            "tab_size": 2,
+            "format_on_save": {
+                "external": {
+                    "command": "prettierd",
+                    "arguments": [
+                        "--stdin-filepath",
+                        "{buffer_path}"
+                    ]
+                }
+            }
+        },
+        "TypeScript": {
+            "tab_size": 2,
+            "format_on_save": {
+                "external": {
+                    "command": "prettierd",
+                    "arguments": [
+                        "--stdin-filepath",
+                        "{buffer_path}"
+                    ]
+                }
+            }
+        },
+        "TSX": {
+            "tab_size": 2,
+            "format_on_save": {
+                "external": {
+                    "command": "prettierd",
+                    "arguments": [
+                        "--stdin-filepath",
+                        "{buffer_path}"
+                    ]
+                }
+            }
+        }
+    }
+}
