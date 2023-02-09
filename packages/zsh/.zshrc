@@ -54,6 +54,7 @@ alias la='exa -a --git --icons'
 alias tree='exa --tree --git --icons'
 alias cut='choose'
 alias mkdir='mkdir -p'
+alias lg='lazygit'
 alias md='rdme'
 alias csv='csview'
 alias hex='hexyl'
@@ -132,30 +133,16 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/vault vault
 
+if [[ ! -d ~/.zsh-autopair ]]; then
+  git clone https://github.com/hlissner/zsh-autopair ~/.zsh-autopair
+fi
+
+source ~/.zsh-autopair/autopair.zsh
+autopair-init
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/ryu/repo/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ryu/repo/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/ryu/repo/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ryu/repo/google-cloud-sdk/completion.zsh.inc'; fi
 
-####################
-# Original Scripts #
-####################
-
-# ga() {
-#     local selected
-#     selected=$(\git status -s | fzf -m --ansi --preview="echo {} | awk '{ print \$2}' | xargs \git diff --color origin/main" | awk '{ print $2}')
-#     if [[ -n "$selected" ]]; then
-#         git add `paste -s - <<< $selected`
-#     fi
-# 
-#     TYPE=$(gum choose "fix" "feat" "docs" "style" "refactor" "test" "chore" "revert")
-#     SCOPE=$(gum input --placeholder "scope")
-# 
-#     test -n "$SCOPE" && SCOPE="($SCOPE)"
-# 
-#     SUMMARY=$(gum input --value "$TYPE$SCOPE: " --placeholder "Summary of this change")
-#     DESCRIPTION=$(gum write --placeholder "Details of this change (CTRL+D to finish)")
-# 
-#     gum confirm "Commit changes?" && git commit -m "$SUMMARY" -m "$DESCRIPTION"
-# }
