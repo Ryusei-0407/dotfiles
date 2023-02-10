@@ -247,8 +247,6 @@ require('lazy').setup({
         dependencies = {
             "williamboman/mason.nvim",
             "williamboman/mason-lspconfig.nvim",
-            "jose-elias-alvarez/null-ls.nvim",
-            "MunifTanjim/prettier.nvim",
         },
         config = function()
             require("lsp")
