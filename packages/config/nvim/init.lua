@@ -110,7 +110,7 @@ require('lazy').setup({
     },
     {
         "nvim-lua/popup.nvim",
-        lazy = true,
+        lazy = false,
     },
     {
         "nvim-treesitter/nvim-treesitter",
@@ -139,7 +139,7 @@ require('lazy').setup({
     },
     {
         "fedepujol/bracket-guides",
-        lazy = true,
+        lazy = false,
     },
     {
         "goolord/alpha-nvim",
@@ -149,7 +149,7 @@ require('lazy').setup({
     },
     {
         "nvim-lua/plenary.nvim",
-        lazy = true,
+        lazy = false,
     },
     "kyazdani42/nvim-web-devicons",
     {
@@ -169,13 +169,13 @@ require('lazy').setup({
     },
     {
         "folke/trouble.nvim",
-        lazy = true,
+        lazy = false,
         dependencies = { "kyazdani42/nvim-web-devicons" },
         config = true,
     },
     {
         "nvim-telescope/telescope.nvim",
-        lazy = true,
+        lazy = false,
         dependencies = { "nvim-telescope/telescope-media-files.nvim" },
         config = function()
             require("config/telescope")
@@ -205,7 +205,7 @@ require('lazy').setup({
     "simeji/winresizer",
     {
         "akinsho/toggleterm.nvim",
-        lazy = true,
+        lazy = false,
         config = function()
             require("toggleterm").setup({
                 open_mapping = [[<C-\>]],
@@ -239,7 +239,7 @@ require('lazy').setup({
     },
     {
         "kdheepak/lazygit.nvim",
-        lazy = true,
+        lazy = false,
     },
     {
         "neovim/nvim-lspconfig",
@@ -255,14 +255,11 @@ require('lazy').setup({
     {
         "simrat39/rust-tools.nvim",
         lazy = false,
-        dependencies = {
-            "neovim/nvim-lspconfig"
-        },
         config = true,
     },
     {
         "windwp/nvim-ts-autotag",
-        lazy = true,
+        lazy = false,
         config = true,
     },
     {
