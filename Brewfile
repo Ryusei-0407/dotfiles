@@ -11,15 +11,12 @@ brew "git-delta"              # diff
 brew "git-secrets"            # git secrets
 brew "llvm"                   # llvm
 brew "glow"                   # glow
-brew "mdcat"                  # mdcat
-brew "stateful/tap/rdme"      # rdme
 brew "csview"                 # csview
 brew "universal-ctags"        # universal-ctags
 brew "duf"                    # duf
 brew "youtube-dl"             # youtube-dl
 brew "awscli"                 # awscli
 brew "aws-iam-authenticator"  # aws-iam-authenticator
-brew "gum"                    # gum
 brew "protobuf"               # protobuf
 brew "protoc-gen-go"          # protoc go plugin
 brew "protoc-gen-go-grpc"     # protoc go plugin
@@ -35,8 +32,6 @@ brew "koekeishiya/formulae/skhd"  # skhd -> keyboard shortcuts
 brew "neovim"                 # neovim
 brew "luajit"                 # luajit
 brew "tree-sitter"            # tree-sitter -> syntax highlighting
-tap "fsouza/prettierd"
-brew "fsouza/prettierd/prettierd"
 
 # Better tools
 brew "exa"                    # exa -> better ls
@@ -69,9 +64,6 @@ brew "binaryen"               # binaryen
 # Node.JS
 brew "volta"                  # volta -> node
 brew "typescript"             # typescript
-brew "eslint"                 # eslint
-brew "prettier"               # prettier
-brew "zx"                     # zx
 tap "snyk/tap"
 brew "snyk"                   # snyk
 
@@ -93,7 +85,6 @@ cask "coteditor"              # coteditor
 cask "alacritty"              # alacritty
 cask "wezterm"                # wezterm
 cask "hyper"                  # hyper
-cask "deepl"                  # deepl
 cask "insomnia"               # insomnia
 cask "karabiner-elements"     # karabiner-elements
 cask "hammerspoon"            # hammerspoon
