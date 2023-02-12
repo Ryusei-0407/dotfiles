@@ -31,11 +31,6 @@ if ! [ -d $HOME/.config ]; then
     mkdir $HOME/.config
 fi
 
-if ! [ -d $HOME/.local/share/nvim/site/pack ]; then
-    echo >&2 "Install packer.nvim"
-    git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-fi
-
 if ! [ -x "$(command -v rustup)" ]; then
     echo >&2 "Install rustup"
     curl https://sh.rustup.rs -sSf | sh
