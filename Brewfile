@@ -95,3 +95,4 @@ cask "alt-tab"                # alt-tab
 cask "proxyman"               # proxyman
 cask "finch"                  # finch
 cask "arc"                    # arc
+cask "monitorcontrol"         # monitorcontrol
