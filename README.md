@@ -9,6 +9,8 @@ defaults write com.apple.dock persistent-apps -array
 defaults write com.apple.dock "show-recents" -bool "false"
 defaults write com.apple.dock "mineffect" -string "scale"
 defaults write com.apple.dock "mru-spaces" -bool "false"
+defaults write com.apple.dock autohide-delay -float 0 && killall Dock
+defaults write com.apple.dock autohide-time-modifier -float 0.7 && killall Dock
 ```
 
 ### Make hidden files visible in the Finder
