@@ -234,7 +234,7 @@ require('lazy').setup({
     },
     {
         "lewis6991/gitsigns.nvim",
-        lazy = true,
+        lazy = false,
         config = true,
     },
     {
