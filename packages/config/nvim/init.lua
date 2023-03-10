@@ -64,16 +64,11 @@ vim.api.nvim_set_keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-vim.api.nvim_set_keymap("n", "<C-h>", "<C-w>h", opts)
-vim.api.nvim_set_keymap("n", "<C-j>", "<C-w>j", opts)
-vim.api.nvim_set_keymap("n", "<C-k>", "<C-w>k", opts)
-vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", opts)
-
 vim.api.nvim_set_keymap("n", "ss", ":split<CR>", opts)
 vim.api.nvim_set_keymap("n", "sv", ":vsplit<CR>", opts)
 
 -- lazygit
-vim.api.nvim_set_keymap("n", "lg", ":LazyGit<CR>", opts)
+vim.api.nvim_set_keymap("n", "<Space>lg", ":LazyGit<CR>", opts)
 -- neo-tree
 vim.api.nvim_set_keymap("n", "<C-e>", ":Neotree toggle=true<CR>", opts)
 -- telescope
@@ -151,7 +146,6 @@ require('lazy').setup({
         "nvim-lua/plenary.nvim",
         lazy = false,
     },
-    "kyazdani42/nvim-web-devicons",
     {
         "nvim-neo-tree/neo-tree.nvim",
         lazy = true,
@@ -201,8 +195,6 @@ require('lazy').setup({
             ]])
         end
     },
-    "machakann/vim-sandwich",
-    "simeji/winresizer",
     {
         "akinsho/toggleterm.nvim",
         lazy = false,
@@ -218,7 +210,7 @@ require('lazy').setup({
     },
     {
         "hrsh7th/nvim-cmp",
-        lazy = true,
+        lazy = false,
         event = "InsertEnter",
         dependencies = {
             "hrsh7th/cmp-buffer",
@@ -254,12 +246,12 @@ require('lazy').setup({
     },
     {
         "simrat39/rust-tools.nvim",
-        lazy = false,
+        ft = { "rust" },
         config = true,
     },
     {
         "windwp/nvim-ts-autotag",
-        lazy = false,
+        ft = { "typescriptreact" },
         config = true,
     },
     {
@@ -268,6 +260,118 @@ require('lazy').setup({
         config = true,
     },
     {
-        "lewis6991/impatient.nvim",
-    }
+        "ziontee113/SelectEase",
+        config = function()
+            local select_ease = require("SelectEase")
+
+            local lua_query = [[
+                ;; query
+                ((identifier) @cap)
+                ("string_content" @cap)
+                ((true) @cap)
+                ((false) @cap)
+            ]]
+            local python_query = [[
+                ;; query
+                ((identifier) @cap)
+                ((string) @cap)
+            ]]
+            local tsx_query = [[
+                ;; query
+                ((identifier) @cap)
+                ((string_fragment) @cap)
+                ((property_identifier) @cap)
+            ]]
+            local rust_query = [[
+                ;; query
+                ((boolean_literal) @cap)
+                ((string_literal) @cap)
+            
+                ; Identifiers
+                ((identifier) @cap)
+                ((field_identifier) @cap)
+                ((field_expression) @cap)
+                ((scoped_identifier) @cap)
+                ((unit_expression) @cap)
+            
+                ; Types
+                ((reference_type) @cap)
+                ((primitive_type) @cap)
+                ((type_identifier) @cap)
+                ((generic_type) @cap)
+            
+                ; Calls
+                ((call_expression) @cap)
+            ]]
+            local go_query = [[
+                ;; query
+                ((selector_expression) @cap) ; Method call
+                ((field_identifier) @cap) ; Method names in interface
+            
+                ; Identifiers
+                ((identifier) @cap)
+                ((expression_list) @cap) ; pseudo Identifier
+                ((int_literal) @cap)
+                ((interpreted_string_literal) @cap)
+            
+                ; Types
+                ((type_identifier) @cap)
+                ((pointer_type) @cap)
+                ((slice_type) @cap)
+            
+                ; Keywords
+                ((true) @cap)
+                ((false) @cap)
+                ((nil) @cap)
+            ]]
+
+            local queries = {
+                lua = lua_query,
+                python = python_query,
+                typescriptreact = tsx_query,
+                rust = rust_query,
+                go = go_query,
+            }
+
+            vim.keymap.set({ "n", "s", "i" }, "<C-k>", function()
+                select_ease.select_node({
+                    queries = queries,
+                    direction = "previous",
+                    vertical_drill_jump = true,
+                    fallback = function()
+                        select_ease.select_node({ queries = queries, direction = "previous" })
+                    end,
+                })
+            end, {})
+            vim.keymap.set({ "n", "s", "i" }, "<C-j>", function()
+                select_ease.select_node({
+                    queries = queries,
+                    direction = "next",
+                    vertical_drill_jump = true,
+                    fallback = function()
+                        select_ease.select_node({ queries = queries, direction = "next" })
+                    end,
+                })
+            end, {})
+
+            vim.keymap.set({ "n", "s", "i" }, "<C-h>", function()
+                select_ease.select_node({
+                    queries = queries,
+                    direction = "previous",
+                    current_line_only = true,
+                })
+            end, {})
+            vim.keymap.set({ "n", "s", "i" }, "<C-l>", function()
+                select_ease.select_node({
+                    queries = queries,
+                    direction = "next",
+                    current_line_only = true,
+                })
+            end, {})
+        end,
+    },
+    "kyazdani42/nvim-web-devicons",
+    "machakann/vim-sandwich",
+    "simeji/winresizer",
+    "lewis6991/impatient.nvim",
 })
