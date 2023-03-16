@@ -27,5 +27,5 @@ return {
 
     enable_tab_bar = false,
 
-    window_decorations = "NONE"
+    -- window_decorations = "NONE"
 }
