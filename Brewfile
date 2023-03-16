@@ -17,10 +17,6 @@ brew "duf"                    # duf
 brew "youtube-dl"             # youtube-dl
 brew "awscli"                 # awscli
 brew "aws-iam-authenticator"  # aws-iam-authenticator
-brew "protobuf"               # protobuf
-brew "protoc-gen-go"          # protoc go plugin
-brew "protoc-gen-go-grpc"     # protoc go plugin
-brew "golang-migrate"         # golang-migrate
 brew "emacs"                  # emacs
 brew "cirruslabs/cli/tart"    # tart
 brew "iperf3"                 # iperf3
@@ -53,6 +49,7 @@ brew "tokei"                  # tokei -> count lines
 brew "wrk"                    # wrk -> HTTP benchmark tool
 brew "hyperfine"              # hyperfine -> better time
 brew "hexyl"                  # hexyl -> better xxd
+brew "grex"                   # grex -> better regex
 
 # Rust
 brew "mold"                   # mold
