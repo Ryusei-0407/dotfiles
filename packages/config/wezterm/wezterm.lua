@@ -24,4 +24,8 @@ return {
 	scrollback_lines = 5000,
 
 	keys = keys,
+
+    enable_tab_bar = false,
+
+    window_decorations = "NONE"
 }
