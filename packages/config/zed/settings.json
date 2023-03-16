@@ -9,7 +9,8 @@
     },
     "language_overrides": {
         "JavaScript": {
-            "tab_size": 2,
+            "tab_size": 2
+            /*
             "format_on_save": {
                 "external": {
                     "command": "prettierd",
@@ -19,9 +20,11 @@
                     ]
                 }
             }
+            */
         },
         "TypeScript": {
-            "tab_size": 2,
+            "tab_size": 2
+            /*
             "format_on_save": {
                 "external": {
                     "command": "prettierd",
@@ -31,9 +34,11 @@
                     ]
                 }
             }
+            */
         },
         "TSX": {
-            "tab_size": 2,
+            "tab_size": 2
+            /*
             "format_on_save": {
                 "external": {
                     "command": "prettierd",
@@ -43,6 +48,7 @@
                     ]
                 }
             }
+            */
         }
     }
 }
