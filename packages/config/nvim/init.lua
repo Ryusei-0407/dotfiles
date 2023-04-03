@@ -39,6 +39,8 @@ vim.cmd("set whichwrap+=<,>,h,l")
 vim.cmd([[set iskeyword+=-]])
 vim.cmd([[set formatoptions-=cro]])
 
+if vim.loader then vim.loader.enable() end
+
 vim.g.did_install_default_menus = 1
 vim.g.did_install_syntax_menu = 1
 vim.g.did_indent_on = 1
@@ -63,6 +65,8 @@ local opts = { noremap = true, silent = true }
 vim.api.nvim_set_keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
+
+vim.api.nvim_set_keymap("n", "<Enter><Enter>", "<C-w><C-w>", opts)
 
 vim.api.nvim_set_keymap("n", "ss", ":split<CR>", opts)
 vim.api.nvim_set_keymap("n", "sv", ":vsplit<CR>", opts)
@@ -373,5 +377,4 @@ require('lazy').setup({
     "kyazdani42/nvim-web-devicons",
     "machakann/vim-sandwich",
     "simeji/winresizer",
-    "lewis6991/impatient.nvim",
 })
