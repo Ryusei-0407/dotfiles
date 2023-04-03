@@ -26,6 +26,7 @@ killall Finder
 ```sh
 defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+killall Finder
 ```
 
 ### Enabling continuous input by pressing and holding a key
