@@ -17,7 +17,10 @@ local keys = {
 }
 
 return {
-	font = wezterm.font("FiraCode Nerd Font", { font_size = 13.0, weight = "Bold" }),
+	font = wezterm.font {
+        family = "FiraCode Nerd Font",
+        weight = "Medium",
+    },
 
 	colors = colors,
 
@@ -27,5 +30,6 @@ return {
 
     enable_tab_bar = false,
 
-    -- window_decorations = "NONE"
+    check_for_updates = false,
+    show_update_window = false
 }
