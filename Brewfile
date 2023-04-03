@@ -20,6 +20,7 @@ brew "aws-iam-authenticator"  # aws-iam-authenticator
 brew "emacs"                  # emacs
 brew "cirruslabs/cli/tart"    # tart
 brew "iperf3"                 # iperf3
+brew "protobuf"               # protobuf
 
 # Window manager
 brew "koekeishiya/formulae/yabai" # yabai -> tile window manager
@@ -93,3 +94,6 @@ cask "proxyman"               # proxyman
 cask "finch"                  # finch
 cask "arc"                    # arc
 cask "monitorcontrol"         # monitorcontrol
+cask "cron"                   # cron
+tap "PlayCover/playcover"
+cask "playcover-community"    # playcover
