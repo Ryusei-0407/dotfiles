@@ -41,7 +41,6 @@ alias e='emacs'
 alias v='nvim'
 alias vi='nvim'
 alias vim='nvim'
-alias f='fleet'
 alias c='code-insiders'
 alias j='z'
 alias a='cd ..'
@@ -57,7 +56,6 @@ alias lg='lazygit'
 alias md='glow'
 alias csv='csview'
 alias hex='hexyl'
-alias img='viu'
 alias grep='rg'
 alias find='fd'
 alias ps='btm'
@@ -71,14 +69,22 @@ alias dps='finch ps'
 alias dimg='finch images'
 alias up='finch compose up -d'
 alias down='finch compose down'
-alias dprune='yes | finch volume prune && yes | finch system prune'
+alias dprune='yes | finch volume prune && yes | finch system prune --all'
 alias tf='terraform'
 alias glog='git log --oneline --graph'
 alias opensim='open -a Simulator'
 alias dotfiles='$HOME/dotfiles/install.sh'
 alias vm='tart'
+
 # M1
-alias x64='arch -x86_64 bash'
+if [ -x "$(command -v arch)" ]; then
+    alias x64='arch -x86_64 bash'
+fi
+
+# imgcat
+if [ -x "$(command -v wezterm)" ]; then
+    alias img='wezterm imgcat'
+fi
     
 bindkey \^U backward-kill-line
      
