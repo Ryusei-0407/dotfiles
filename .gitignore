@@ -1,5 +1,7 @@
 *.DS_Store
 .DS_Store
 Brewfile.lock.json
+color.sh
+archive/
 packages/config/nvim/autoload/
 packages/config/coc/extensions/*
