@@ -233,6 +233,15 @@ require('lazy').setup({
         end
     },
     {
+        "glepnir/lspsaga.nvim",
+        event = "LspAttach",
+        dependencies = {
+            "kyazdani42/nvim-web-devicons",
+            "nvim-treesitter/nvim-treesitter",
+        },
+        config = true,
+    },
+    {
         "zbirenbaum/copilot.lua",
           cmd = "Copilot",
           event = "InsertEnter",
