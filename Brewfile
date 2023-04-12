@@ -21,6 +21,8 @@ brew "emacs"                  # emacs
 brew "cirruslabs/cli/tart"    # tart
 brew "iperf3"                 # iperf3
 brew "protobuf"               # protobuf
+brew "bufbuild/buf/buf"       # buf
+brew "mkcert"                 # mkcert
 
 # Window manager
 brew "koekeishiya/formulae/yabai" # yabai -> tile window manager
