@@ -104,16 +104,13 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
     {
         "nvim-lualine/lualine.nvim",
-        lazy = false,
         config = true,
     },
     {
         "nvim-lua/popup.nvim",
-        lazy = false,
     },
     {
         "nvim-treesitter/nvim-treesitter",
-        lazy = false,
         config = function()
             require("nvim-treesitter/configs").setup({
                 ensure_installed = "all",
@@ -138,7 +135,6 @@ require('lazy').setup({
     },
     {
         "fedepujol/bracket-guides",
-        lazy = false,
     },
     {
         "goolord/alpha-nvim",
@@ -148,11 +144,9 @@ require('lazy').setup({
     },
     {
         "nvim-lua/plenary.nvim",
-        lazy = false,
     },
     {
         "nvim-neo-tree/neo-tree.nvim",
-        lazy = true,
         dependencies = {
             "MunifTanjim/nui.nvim",
             "nvim-lua/plenary.nvim",
@@ -167,13 +161,11 @@ require('lazy').setup({
     },
     {
         "folke/trouble.nvim",
-        lazy = false,
         dependencies = { "kyazdani42/nvim-web-devicons" },
         config = true,
     },
     {
         "nvim-telescope/telescope.nvim",
-        lazy = false,
         dependencies = { "nvim-telescope/telescope-media-files.nvim" },
         config = function()
             require("config/telescope")
@@ -181,17 +173,14 @@ require('lazy').setup({
     },
     {
         "yioneko/nvim-yati",
-        lazy = false,
         dependencies = { "nvim-treesitter/nvim-treesitter" },
     },
     {
         "romgrk/barbar.nvim",
-        lazy = false,
         dependencies = { "kyazdani42/nvim-web-devicons" },
     },
     {
         "Mofiqul/dracula.nvim",
-        lazy = false,
         config = function()
             vim.cmd([[
                 colorscheme dracula
@@ -201,7 +190,6 @@ require('lazy').setup({
     },
     {
         "akinsho/toggleterm.nvim",
-        lazy = false,
         config = function()
             require("toggleterm").setup({
                 open_mapping = [[<C-\>]],
@@ -214,7 +202,6 @@ require('lazy').setup({
     },
     {
         "hrsh7th/nvim-cmp",
-        lazy = false,
         event = "InsertEnter",
         dependencies = {
             "hrsh7th/cmp-buffer",
@@ -230,16 +217,13 @@ require('lazy').setup({
     },
     {
         "lewis6991/gitsigns.nvim",
-        lazy = false,
         config = true,
     },
     {
         "kdheepak/lazygit.nvim",
-        lazy = false,
     },
     {
         "neovim/nvim-lspconfig",
-        lazy = false,
         dependencies = {
             "williamboman/mason.nvim",
             "williamboman/mason-lspconfig.nvim",
@@ -247,6 +231,17 @@ require('lazy').setup({
         config = function()
             require("lsp")
         end
+    },
+    {
+        "zbirenbaum/copilot.lua",
+          cmd = "Copilot",
+          event = "InsertEnter",
+          config = true,
+    },
+    {
+        "zbirenbaum/copilot-cmp",
+          after = { "copilot.lua" },
+          config = true,
     },
     {
         "simrat39/rust-tools.nvim",
@@ -260,7 +255,6 @@ require('lazy').setup({
     },
     {
         "j-hui/fidget.nvim",
-        lazy = false,
         config = true,
     },
     {
