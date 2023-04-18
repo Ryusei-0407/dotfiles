@@ -2,8 +2,7 @@ brew "stow"                   # stow
 brew "zsh"                    # zsh
 brew "mosh"                   # mosh
 brew "tmux"                   # tmux
-brew "lazygit"                # lazygit
-brew "make"                   # make
+brew "lazygit"                # lazygit brew "make"                   # make
 brew "fzf"                    # fzf
 brew "watch"                  # watch
 brew "gh"                     # github
@@ -64,8 +63,7 @@ brew "binaryen"               # binaryen
 # Node.JS
 brew "volta"                  # volta -> node
 brew "typescript"             # typescript
-tap "snyk/tap"
-brew "snyk"                   # snyk
+brew "snyk/tap/snyk"          # snyk
 
 # Other languages
 brew "stylua"                 # stylua
@@ -80,22 +78,22 @@ brew "qemu"                   # qemu
 brew "dive"                   # dive
 
 # Cask
-cask "coteditor"              # coteditor
-# cask "kitty"                # kitty
-cask "alacritty"              # alacritty
-cask "wezterm"                # wezterm
-cask "hyper"                  # hyper
-cask "insomnia"               # insomnia
-cask "karabiner-elements"     # karabiner-elements
-cask "hammerspoon"            # hammerspoon
-cask "keycastr"               # keycastr
-cask "raycast"                # raycast
-cask "tableplus"              # tableplus
-cask "alt-tab"                # alt-tab
-cask "proxyman"               # proxyman
-cask "finch"                  # finch
-cask "arc"                    # arc
-cask "monitorcontrol"         # monitorcontrol
-cask "cron"                   # cron
-tap "PlayCover/playcover"
-cask "playcover-community"    # playcover
+cask "coteditor"                               # coteditor
+# cask "kitty"                                 # kitty
+cask "alacritty"                               # alacritty
+cask "wezterm"                                 # wezterm
+cask "hyper"                                   # hyper
+cask "1password/tap/1password-cli"             # 1password-cli
+cask "insomnia"                                # insomnia
+cask "karabiner-elements"                      # karabiner-elements
+cask "hammerspoon"                             # hammerspoon
+cask "keycastr"                                # keycastr
+cask "raycast"                                 # raycast
+cask "tableplus"                               # tableplus
+cask "alt-tab"                                 # alt-tab
+cask "proxyman"                                # proxyman
+cask "finch"                                   # finch
+cask "arc"                                     # arc
+cask "monitorcontrol"                          # monitorcontrol
+cask "cron"                                    # cron
+cask "PlayCover/playcover/playcover-community" # playcover
