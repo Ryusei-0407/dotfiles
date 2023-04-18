@@ -149,3 +149,4 @@ if [ -f '/Users/ryu/repo/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ryu/re
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/ryu/repo/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ryu/repo/google-cloud-sdk/completion.zsh.inc'; fi
 
+source /Users/ryu/.config/op/plugins.sh
