@@ -134,9 +134,6 @@ require('lazy').setup({
         end
     },
     {
-        "fedepujol/bracket-guides",
-    },
-    {
         "goolord/alpha-nvim",
         config = function()
             require("config/alpha")
