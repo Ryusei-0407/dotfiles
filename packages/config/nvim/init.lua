@@ -237,6 +237,7 @@ require('lazy').setup({
             "nvim-treesitter/nvim-treesitter",
         },
         config = true,
+        lazy = false,
     },
     {
         "zbirenbaum/copilot.lua",
