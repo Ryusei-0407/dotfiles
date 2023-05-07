@@ -53,7 +53,7 @@ alias cp='cp -c'
 alias cut='choose'
 alias mkdir='mkdir -p'
 alias lg='lazygit'
-alias md='glow'
+alias md='frogmouth'
 alias csv='csview'
 alias hex='hexyl'
 alias grep='rg'
@@ -62,8 +62,6 @@ alias ps='btm'
 alias nsl='nslookup'
 alias pb='pbcopy'
 alias m='make'
-alias gcc='gcc-12'
-alias g++='g++-12'
 alias docker='finch'
 alias dps='finch ps'
 alias dimg='finch images'
@@ -88,6 +86,7 @@ fi
     
 bindkey \^U backward-kill-line
      
+source /Users/ryu/.config/op/plugins.sh
 autoload -Uz compinit && compinit
 autoload -U bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
@@ -148,5 +147,3 @@ if [ -f '/Users/ryu/repo/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ryu/re
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/ryu/repo/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ryu/repo/google-cloud-sdk/completion.zsh.inc'; fi
-
-source /Users/ryu/.config/op/plugins.sh
