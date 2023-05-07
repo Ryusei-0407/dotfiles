@@ -1,54 +1,121 @@
 {
+    // Auto update
+    "telemetry": {
+        "diagnostics": false,
+        "metrics": false
+    },
+    "auto_update": false,
+    // Send usage data
+    "metrics": false,
+    // Send debug-related data, such as crash reports
+    "diagnostics": false,
+    // Use tab
+    "hard_tabs": false,
+    "tab_size": 4,
+    // Time format
+    "hour_format": "hour24",
+    // Color theme
     "theme": "One Dark",
+    // Font
     "buffer_font_family": "FiraCode Nerd Font",
     "buffer_font_size": 13,
+    // Word wrap
     "soft_wrap": "none",
+    // Vim mode
     "vim_mode": false,
+    // Terminal settings
     "terminal": {
-        "font_family": "FiraCode Nerd Font"
+        // Font
+        "font_family": "FiraCode Nerd Font",
+        // Cursor blink
+        "blinking": "terminal_controlled",
+        // Save system clipboard
+        "copy_on_select": true,
+        // Use like Emacs
+        "option_as_meta": true
+    },
+    // Github copilot setting
+    "features": {
+        "copilot": true
+    },
+    // LSP formatter
+    "formatter": "language_server",
+    // Format on save
+    "format_on_save": "on",
+    // Remove trailing whitespace on save
+    "remove_trailing_whitespace_on_save": true,
+    // LSP settings
+    "lsp": {
+        "rust-analyzer": {
+            "initialization_options": {
+                "checkOnSave": {
+                    "command": "clippy"
+                }
+            }
+        }
     },
     "language_overrides": {
         "JavaScript": {
-            "tab_size": 2
-            /*
+            "tab_size": 2,
             "format_on_save": {
                 "external": {
-                    "command": "prettierd",
+                    "command": "rome",
                     "arguments": [
-                        "--stdin-filepath",
-                        "{buffer_path}"
+                        "format",
+                        "--use-server",
+                        "--indent-style space",
+                        "--indent-width 2",
+                        "--quote-style single",
+                        "--semicolons always"
                     ]
                 }
             }
-            */
         },
         "TypeScript": {
-            "tab_size": 2
-            /*
+            "tab_size": 2,
             "format_on_save": {
                 "external": {
-                    "command": "prettierd",
+                    "command": "rome",
                     "arguments": [
-                        "--stdin-filepath",
-                        "{buffer_path}"
+                        "format",
+                        "--use-server",
+                        "--indent-style space",
+                        "--indent-width 2",
+                        "--quote-style single",
+                        "--semicolons always"
                     ]
                 }
             }
-            */
         },
         "TSX": {
-            "tab_size": 2
-            /*
+            "tab_size": 2,
             "format_on_save": {
                 "external": {
-                    "command": "prettierd",
+                    "command": "rome",
                     "arguments": [
-                        "--stdin-filepath",
-                        "{buffer_path}"
+                        "format",
+                        "--use-server",
+                        "--indent-style space",
+                        "--indent-width 2",
+                        "--quote-style single",
+                        "--semicolons always"
                     ]
                 }
             }
-            */
+        },
+        "Python": {
+            "format_on_save": {
+                "external": {
+                    "command": "black",
+                    "arguments": [
+                        "-",
+                        "--quiet",
+                        "--fast",
+                        "--line-length",
+                        "79"
+                    ]
+                }
+            }
         }
     }
 }
