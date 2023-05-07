@@ -22,6 +22,7 @@ brew "iperf3"                 # iperf3
 brew "protobuf"               # protobuf
 brew "bufbuild/buf/buf"       # buf
 brew "mkcert"                 # mkcert
+brew "emscripten"             # emscripten
 
 # Window manager
 brew "koekeishiya/formulae/yabai" # yabai -> tile window manager
@@ -54,7 +55,6 @@ brew "hexyl"                  # hexyl -> better xxd
 brew "grex"                   # grex -> better regex
 
 # Rust
-brew "mold"                   # mold
 brew "rust-analyzer"          # rust-analyzer
 brew "sccache"                # sccache
 brew "z3"                     # z3
@@ -78,22 +78,25 @@ brew "qemu"                   # qemu
 brew "dive"                   # dive
 
 # Cask
-cask "coteditor"                               # coteditor
-# cask "kitty"                                 # kitty
-cask "alacritty"                               # alacritty
-cask "wezterm"                                 # wezterm
-cask "hyper"                                   # hyper
-cask "1password/tap/1password-cli"             # 1password-cli
-cask "insomnia"                                # insomnia
-cask "karabiner-elements"                      # karabiner-elements
-cask "hammerspoon"                             # hammerspoon
-cask "keycastr"                                # keycastr
-cask "raycast"                                 # raycast
-cask "tableplus"                               # tableplus
-cask "alt-tab"                                 # alt-tab
-cask "proxyman"                                # proxyman
-cask "finch"                                   # finch
-cask "arc"                                     # arc
-cask "monitorcontrol"                          # monitorcontrol
-cask "cron"                                    # cron
-cask "PlayCover/playcover/playcover-community" # playcover
+cask "homebrew/cask-fonts/font-fira-code-nerd-font" # fira-code
+cask "homebrew/cask-fonts/font-fira-mono-nerd-font" # fira-mono
+cask "zed"                                          # zed
+cask "coteditor"                                    # coteditor
+# cask "kitty"                                      # kitty
+cask "alacritty"                                    # alacritty
+cask "wezterm"                                      # wezterm
+cask "hyper"                                        # hyper
+cask "1password/tap/1password-cli"                  # 1password-cli
+cask "insomnia"                                     # insomnia
+cask "karabiner-elements"                           # karabiner-elements
+cask "hammerspoon"                                  # hammerspoon
+cask "keycastr"                                     # keycastr
+cask "raycast"                                      # raycast
+cask "tableplus"                                    # tableplus
+cask "alt-tab"                                      # alt-tab
+cask "proxyman"                                     # proxyman
+cask "finch"                                        # finch
+cask "arc"                                          # arc
+cask "monitorcontrol"                               # monitorcontrol
+cask "cron"                                         # cron
+cask "topnotch"                                     # topnotch
