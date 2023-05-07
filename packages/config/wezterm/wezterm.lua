@@ -14,12 +14,43 @@ local keys = {
 		mods = "SHIFT|CTRL",
 		action = wezterm.action.QuickSelect,
 	},
+    {
+        key = "h",
+        mods = "SHIFT|CTRL",
+        action = wezterm.action.ActivatePaneDirection "Left",
+    },
+    {
+        key = "l",
+        mods = "SHIFT|CTRL",
+        action = wezterm.action.ActivatePaneDirection "Right",
+    },
+    {
+        key = "k",
+        mods = "SHIFT|CTRL",
+        action = wezterm.action.ActivatePaneDirection "Up",
+    },
+    {
+        key = "j",
+        mods = "SHIFT|CTRL",
+        action = wezterm.action.ActivatePaneDirection "Down",
+    },
+    {
+        key = "_",
+        mods = "SHIFT|CTRL",
+        action = wezterm.action.SplitVertical,
+    },
+    {
+        key = "|",
+        mods = "SHIFT|CTRL",
+        action = wezterm.action.SplitHorizontal,
+    },
 }
 
 return {
+    font_size = 13.0,
 	font = wezterm.font {
         family = "FiraCode Nerd Font",
-        weight = "Medium",
+        weight = "Regular",
     },
 
 	colors = colors,
