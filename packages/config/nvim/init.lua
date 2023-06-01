@@ -264,7 +264,15 @@ require('lazy').setup({
         "j-hui/fidget.nvim",
         config = true,
     },
+    {
+        "echasnovski/mini.surround",
+        version = "*",
+        config = true,
+    },
+    {
+        "michaelb/sniprun",
+        build = "sh ./install.sh",
+    },
     "kyazdani42/nvim-web-devicons",
-    "machakann/vim-sandwich",
     "simeji/winresizer",
 })
