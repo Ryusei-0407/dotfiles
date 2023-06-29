@@ -1,28 +1,31 @@
-brew "stow"                   # stow
-brew "zsh"                    # zsh
-brew "mosh"                   # mosh
-brew "tmux"                   # tmux
-brew "lazygit"                # lazygit brew "make"                   # make
-brew "fzf"                    # fzf
-brew "watch"                  # watch
-brew "gh"                     # github
-brew "git-delta"              # diff
-brew "git-secrets"            # git secrets
-brew "llvm"                   # llvm
-brew "glow"                   # glow
-brew "csview"                 # csview
-brew "universal-ctags"        # universal-ctags
-brew "duf"                    # duf
-brew "youtube-dl"             # youtube-dl
-brew "awscli"                 # awscli
-brew "aws-iam-authenticator"  # aws-iam-authenticator
-brew "emacs"                  # emacs
-brew "cirruslabs/cli/tart"    # tart
-brew "iperf3"                 # iperf3
-brew "protobuf"               # protobuf
-brew "bufbuild/buf/buf"       # buf
-brew "mkcert"                 # mkcert
-brew "emscripten"             # emscripten
+brew "stow"                      # stow
+brew "zsh"                       # zsh
+brew "mosh"                      # mosh
+brew "tmux"                      # tmux
+brew "lazygit"                   # lazygit
+brew "make"                      # make
+brew "fzf"                       # fzf
+brew "watch"                     # watch
+brew "gh"                        # github cli
+brew "git-lfs"                   # lfs
+brew "git-delta"                 # diff
+brew "git-secrets"               # git secrets
+brew "llvm"                      # llvm
+brew "glow"                      # glow
+brew "csview"                    # csview
+brew "universal-ctags"           # universal-ctags
+brew "duf"                       # duf
+brew "youtube-dl"                # youtube-dl
+brew "awscli"                    # awscli
+brew "aws-iam-authenticator"     # aws-iam-authenticator
+brew "emacs"                     # emacs
+brew "cirruslabs/cli/tart"       # tart
+brew "iperf3"                    # iperf3
+brew "protobuf"                  # protobuf
+brew "bufbuild/buf/buf"          # buf
+brew "mkcert"                    # mkcert
+brew "emscripten"                # emscripten
+brew "stepci"                    # stepci
 
 # Window manager
 brew "koekeishiya/formulae/yabai" # yabai -> tile window manager
@@ -82,10 +85,11 @@ cask "homebrew/cask-fonts/font-fira-code-nerd-font" # fira-code
 cask "homebrew/cask-fonts/font-fira-mono-nerd-font" # fira-mono
 cask "zed"                                          # zed
 cask "coteditor"                                    # coteditor
-# cask "kitty"                                      # kitty
-cask "alacritty"                                    # alacritty
 cask "wezterm"                                      # wezterm
-cask "hyper"                                        # hyper
+cask "rio"                                          # rio
+# cask "kitty"                                      # kitty
+# cask "alacritty"                                    # alacritty
+# cask "hyper"                                        # hyper
 cask "1password/tap/1password-cli"                  # 1password-cli
 cask "insomnia"                                     # insomnia
 cask "karabiner-elements"                           # karabiner-elements
@@ -99,4 +103,3 @@ cask "finch"                                        # finch
 cask "arc"                                          # arc
 cask "monitorcontrol"                               # monitorcontrol
 cask "cron"                                         # cron
-cask "topnotch"                                     # topnotch
