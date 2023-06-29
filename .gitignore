@@ -4,5 +4,3 @@ Brewfile.lock.json
 color.sh
 archive/
 packages/config/nvim/autoload/
-packages/config/coc/extensions/*
-p10k
