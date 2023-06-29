@@ -61,7 +61,7 @@ return {
 
     enable_tab_bar = false,
 
-    default_cursor_style = "SteadyBar",
+    -- default_cursor_style = "SteadyBar",
 
     check_for_updates = false,
     show_update_window = false
