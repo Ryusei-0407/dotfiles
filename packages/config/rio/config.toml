@@ -1,0 +1,9 @@
+performance = "High"
+font = "FiraCode Nerd Font"
+font-size = 15
+disable-renderer-when-unfocused = false
+
+[developer]
+enabled-fsp-counter = false
+log-level = "OFF"
+
