@@ -47,7 +47,7 @@ brew "zoxide"                 # zoxide -> better z
 brew "viddy"                  # viddy -> better watch
 brew "peco"                   # peco -> better history search
 brew "pget"                   # pget -> better wget
-brew "htop"                   # htop -> better top
+brew "btop"                   # btop -> better top
 brew "bottom"                 # bottom -> better htop
 brew "procs"                  # procs -> better ps
 brew "jless"                  # jless -> better jq
@@ -88,8 +88,8 @@ cask "coteditor"                                    # coteditor
 cask "wezterm"                                      # wezterm
 cask "rio"                                          # rio
 # cask "kitty"                                      # kitty
-# cask "alacritty"                                    # alacritty
-# cask "hyper"                                        # hyper
+# cask "alacritty"                                  # alacritty
+# cask "hyper"                                      # hyper
 cask "1password/tap/1password-cli"                  # 1password-cli
 cask "insomnia"                                     # insomnia
 cask "karabiner-elements"                           # karabiner-elements
@@ -103,3 +103,4 @@ cask "finch"                                        # finch
 cask "arc"                                          # arc
 cask "monitorcontrol"                               # monitorcontrol
 cask "cron"                                         # cron
+cask "linearmouse"                                  # linearmouse
