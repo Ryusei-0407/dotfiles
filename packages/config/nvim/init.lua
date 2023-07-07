@@ -30,6 +30,7 @@ vim.opt.signcolumn = "yes"
 vim.opt.wrap = false
 vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
+vim.opt.termguicolors = true
 vim.opt.guifont = "monospace:h10"
 vim.opt.ambiwidth = "single"
 vim.opt.undodir = vim.fn.stdpath("cache") .. "/undo"
@@ -67,25 +68,19 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 vim.api.nvim_set_keymap("n", "<Enter><Enter>", "<C-w><C-w>", opts)
-
 vim.api.nvim_set_keymap("n", "ss", ":split<CR>", opts)
 vim.api.nvim_set_keymap("n", "sv", ":vsplit<CR>", opts)
 
 -- lazygit
 vim.api.nvim_set_keymap("n", "<Space>lg", ":LazyGit<CR>", opts)
--- neo-tree
-vim.api.nvim_set_keymap("n", "<C-e>", ":Neotree toggle=true<CR>", opts)
 -- telescope
 vim.api.nvim_set_keymap("n", "<leader>f", "<cmd>Telescope find_files<CR>", opts)
 vim.api.nvim_set_keymap("n", "<C-t>", "<cmd>Telescope live_grep<CR>", opts)
+-- bufferline
+vim.api.nvim_set_keymap("n", "<Space>l", ":BufferLineCycleNext<CR>", opts)
+vim.api.nvim_set_keymap("n", "<Space>h", ":BufferLineCyclePrev<CR>", opts)
 -- winresizer
 vim.g.winresizer_start_key = "<C-s>"
--- barbar
-vim.api.nvim_set_keymap("n", "<Space>h", ":BufferPrevious<CR>", opts)
-vim.api.nvim_set_keymap("n", "<Space>l", ":BufferNext<CR>", opts)
-vim.api.nvim_set_keymap("n", "<Space>,", ":BufferMovePrevious<CR>", opts)
-vim.api.nvim_set_keymap("n", "<Space>.", ":BufferMoveNext<CR>", opts)
-vim.api.nvim_set_keymap("n", "<Space>w", ":BufferClose<CR>", opts)
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -102,13 +97,14 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-    {
-        "nvim-lualine/lualine.nvim",
-        config = true,
-    },
-    {
-        "nvim-lua/popup.nvim",
-    },
+    "nvim-lualine/lualine.nvim",
+    "nvim-lua/popup.nvim",
+    "nvim-lua/plenary.nvim",
+    "lukas-reineke/indent-blankline.nvim",
+    "lewis6991/gitsigns.nvim",
+    "kdheepak/lazygit.nvim",
+    "nvim-tree/nvim-web-devicons",
+    "simeji/winresizer",
     {
         "nvim-treesitter/nvim-treesitter",
         config = function()
@@ -140,26 +136,37 @@ require('lazy').setup({
         end
     },
     {
-        "nvim-lua/plenary.nvim",
-    },
-    {
         "nvim-neo-tree/neo-tree.nvim",
         dependencies = {
             "MunifTanjim/nui.nvim",
             "nvim-lua/plenary.nvim",
-            "kyazdani42/nvim-web-devicons",
+            "nvim-tree/nvim-web-devicons",
         },
         keys = {
             { "<C-e>", "<CMD>Neotree toggle=true<CR>" }
         },
         config = function()
-            require("config/neo-tree")
+            require("neo-tree").setup({
+                filesystem = {
+                    filtered_items = {
+                        visible = true,
+                        hide_dotfiles = false,
+                        hide_gitignored = true,
+                        force_visible_in_empty_folder = true,
+                        show_hidden_count = false,
+                    },
+                },
+            })
+            vim.cmd([[
+                highlight NeoTreeRootName gui=bold
+                highlight NeoTreeGitConflict gui=bold
+                highlight NeoTreeUntracked gui=none
+            ]])
         end
     },
     {
         "folke/trouble.nvim",
-        dependencies = { "kyazdani42/nvim-web-devicons" },
-        config = true,
+        dependencies = { "nvim-tree/nvim-web-devicons" },
     },
     {
         "nvim-telescope/telescope.nvim",
@@ -173,8 +180,18 @@ require('lazy').setup({
         dependencies = { "nvim-treesitter/nvim-treesitter" },
     },
     {
-        "romgrk/barbar.nvim",
-        dependencies = { "kyazdani42/nvim-web-devicons" },
+        "akinsho/bufferline.nvim",
+        version = "*",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+        config = function ()
+            require("bufferline").setup({
+                options = {
+                    indicator = {
+                        style = "icon"
+                    }
+                }
+            })
+        end
     },
     {
         "Mofiqul/dracula.nvim",
@@ -213,13 +230,6 @@ require('lazy').setup({
         end
     },
     {
-        "lewis6991/gitsigns.nvim",
-        config = true,
-    },
-    {
-        "kdheepak/lazygit.nvim",
-    },
-    {
         "neovim/nvim-lspconfig",
         dependencies = {
             "williamboman/mason.nvim",
@@ -233,47 +243,38 @@ require('lazy').setup({
         "glepnir/lspsaga.nvim",
         event = "LspAttach",
         dependencies = {
-            "kyazdani42/nvim-web-devicons",
+            "nvim-tree/nvim-web-devicons",
             "nvim-treesitter/nvim-treesitter",
         },
-        config = true,
         lazy = false,
     },
     {
         "zbirenbaum/copilot.lua",
           cmd = "Copilot",
           event = "InsertEnter",
-          config = true,
     },
     {
         "zbirenbaum/copilot-cmp",
           after = { "copilot.lua" },
-          config = true,
     },
     {
         "simrat39/rust-tools.nvim",
         ft = { "rust" },
-        config = true,
     },
     {
         "windwp/nvim-ts-autotag",
         ft = { "typescriptreact" },
-        config = true,
     },
     {
         "j-hui/fidget.nvim",
         tag = "legacy",
-        config = true,
     },
     {
         "echasnovski/mini.surround",
         version = "*",
-        config = true,
     },
     {
         "michaelb/sniprun",
         build = "sh ./install.sh",
     },
-    "kyazdani42/nvim-web-devicons",
-    "simeji/winresizer",
 })
