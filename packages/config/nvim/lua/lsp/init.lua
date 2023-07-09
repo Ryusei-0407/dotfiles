@@ -26,15 +26,14 @@ keymap("n", "ga", "<cmd>Lspsaga code_action<CR>")
 keymap("n", "gn", "<cmd>Lspsaga rename<CR>")
 keymap("n", "ge", "<cmd>Lspsaga show_line_diagnostics<CR>")
 
-vim.lsp.handlers["textDocument/publishDiagnostics"] =
-	vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, { virtual_text = false })
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, { virtual_text = false })
 
 vim.cmd([[
-highlight LspReferenceText cterm=underline ctermfg=1 ctermbg=8 gui=underline guifg=#A00000 guibg=#104040
-highlight LspReferenceRead cterm=underline ctermfg=1 ctermbg=8 gui=underline guifg=#A00000 guibg=#104040
-highlight LspReferenceWrite cterm=underline ctermfg=1 ctermbg=8 gui=underline guifg=#A00000 guibg=#104040
-augroup lsp_document_highlight
-    autocmd!
-    autocmd CursorMoved,CursorMovedI * lua vim.lsp.buf.clear_references()
-augroup END
+    highlight LspReferenceText cterm=underline ctermfg=1 ctermbg=8 gui=underline guifg=#A00000 guibg=#104040
+    highlight LspReferenceRead cterm=underline ctermfg=1 ctermbg=8 gui=underline guifg=#A00000 guibg=#104040
+    highlight LspReferenceWrite cterm=underline ctermfg=1 ctermbg=8 gui=underline guifg=#A00000 guibg=#104040
+    augroup lsp_document_highlight
+        autocmd!
+        autocmd CursorMoved,CursorMovedI * lua vim.lsp.buf.clear_references()
+    augroup END
 ]])

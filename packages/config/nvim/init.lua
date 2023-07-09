@@ -70,16 +70,6 @@ vim.g.maplocalleader = " "
 vim.api.nvim_set_keymap("n", "<Enter><Enter>", "<C-w><C-w>", opts)
 vim.api.nvim_set_keymap("n", "ss", ":split<CR>", opts)
 vim.api.nvim_set_keymap("n", "sv", ":vsplit<CR>", opts)
-
--- lazygit
-vim.api.nvim_set_keymap("n", "<Space>lg", ":LazyGit<CR>", opts)
--- telescope
-vim.api.nvim_set_keymap("n", "<leader>f", "<cmd>Telescope find_files<CR>", opts)
-vim.api.nvim_set_keymap("n", "<C-t>", "<cmd>Telescope live_grep<CR>", opts)
--- bufferline
-vim.api.nvim_set_keymap("n", "<Space>l", ":BufferLineCycleNext<CR>", opts)
-vim.api.nvim_set_keymap("n", "<Space>h", ":BufferLineCyclePrev<CR>", opts)
--- winresizer
 vim.g.winresizer_start_key = "<C-s>"
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -97,14 +87,30 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-    "nvim-lualine/lualine.nvim",
     "nvim-lua/popup.nvim",
     "nvim-lua/plenary.nvim",
-    "lukas-reineke/indent-blankline.nvim",
     "lewis6991/gitsigns.nvim",
-    "kdheepak/lazygit.nvim",
     "nvim-tree/nvim-web-devicons",
     "simeji/winresizer",
+    {
+        "nvim-lualine/lualine.nvim",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+        config = function ()
+            require("config/lualine")
+        end
+    },
+    {
+        "kdheepak/lazygit.nvim",
+        keys = {
+            { "<leader>lg", "<CMD>LazyGit<CR>" }
+        }
+    },
+    {
+        "lukas-reineke/indent-blankline.nvim",
+        config = function ()
+            require("config/indentline")
+        end
+    },
     {
         "nvim-treesitter/nvim-treesitter",
         config = function()
@@ -166,11 +172,18 @@ require('lazy').setup({
     },
     {
         "folke/trouble.nvim",
+        keys = {
+            { "<leader>tt", "<CMD>TroubleToggle<CR>" },
+        },
         dependencies = { "nvim-tree/nvim-web-devicons" },
     },
     {
         "nvim-telescope/telescope.nvim",
         dependencies = { "nvim-telescope/telescope-media-files.nvim" },
+        keys = {
+            { "<leader>f", "<CMD>Telescope find_files<CR>" },
+            { "<C-f>", "<CMD>Telescope live_grep<CR>" },
+        },
         config = function()
             require("config/telescope")
         end
@@ -183,9 +196,14 @@ require('lazy').setup({
         "akinsho/bufferline.nvim",
         version = "*",
         dependencies = { "nvim-tree/nvim-web-devicons" },
+        keys = {
+            { "<leader>l", "<CMD>BufferLineCycleNext<CR>" },
+            { "<leader>h", "<CMD>BufferLineCyclePrev<CR>" },
+        },
         config = function ()
             require("bufferline").setup({
                 options = {
+                    mode = "tabs",
                     indicator = {
                         style = "icon"
                     }
