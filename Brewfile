@@ -1,13 +1,14 @@
 brew "stow"                      # stow
 brew "zsh"                       # zsh
+brew "sheldon"                   # sheldon
 brew "mosh"                      # mosh
 brew "tmux"                      # tmux
 brew "lazygit"                   # lazygit
 brew "make"                      # make
 brew "fzf"                       # fzf
 brew "watch"                     # watch
+brew "awk"                       # awk
 brew "gh"                        # github cli
-brew "git-lfs"                   # lfs
 brew "git-delta"                 # diff
 brew "git-secrets"               # git secrets
 brew "llvm"                      # llvm
@@ -36,7 +37,7 @@ brew "luajit"                 # luajit
 brew "tree-sitter"            # tree-sitter -> syntax highlighting
 
 # Better tools
-brew "exa"                    # exa -> better ls
+brew "eza"                    # eza -> better ls
 brew "bat"                    # bat -> better cat
 brew "gping"                  # gping -> better ping
 brew "httpie"                 # httpie -> better curl
@@ -48,7 +49,6 @@ brew "viddy"                  # viddy -> better watch
 brew "peco"                   # peco -> better history search
 brew "pget"                   # pget -> better wget
 brew "btop"                   # btop -> better top
-brew "bottom"                 # bottom -> better htop
 brew "procs"                  # procs -> better ps
 brew "jless"                  # jless -> better jq
 brew "tokei"                  # tokei -> count lines
@@ -62,19 +62,22 @@ brew "rust-analyzer"          # rust-analyzer
 brew "sccache"                # sccache
 brew "z3"                     # z3
 brew "binaryen"               # binaryen
+brew "cargo-nextest"          # cargo-nextest
 
 # Node.JS
-brew "volta"                  # volta -> node
-brew "typescript"             # typescript
-brew "snyk/tap/snyk"          # snyk
+brew "volta"                      # volta -> node
+brew "typescript"                 # typescript
+brew "snyk/tap/snyk"              # snyk
+brew "oven-sh/bun/bun"            # bun
+brew "fsouza/prettierd/prettierd" # prettierd
 
 # Other languages
 brew "stylua"                 # stylua
+brew "yamlfmt"                # yamlfmt
 brew "gcc"                    # gcc
 brew "python"                 # python
 brew "go"                     # go
 brew "autoconf"               # autoconf
-brew "tfenv"                  # tfenv
 brew "cocoapods"              # cocoapods
 brew "hadolint"               # hadolint
 brew "qemu"                   # qemu
@@ -85,13 +88,13 @@ cask "homebrew/cask-fonts/font-fira-code-nerd-font" # fira-code
 cask "homebrew/cask-fonts/font-fira-mono-nerd-font" # fira-mono
 cask "zed"                                          # zed
 cask "coteditor"                                    # coteditor
+cask "httpie"                                       # httpie
 cask "wezterm"                                      # wezterm
 cask "rio"                                          # rio
 # cask "kitty"                                      # kitty
 # cask "alacritty"                                  # alacritty
 # cask "hyper"                                      # hyper
 cask "1password/tap/1password-cli"                  # 1password-cli
-cask "insomnia"                                     # insomnia
 cask "karabiner-elements"                           # karabiner-elements
 cask "hammerspoon"                                  # hammerspoon
 cask "keycastr"                                     # keycastr
