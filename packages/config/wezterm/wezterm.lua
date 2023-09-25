@@ -47,7 +47,7 @@ local keys = {
 }
 
 return {
-    font_size = 13.0,
+    font_size = 12.0,
 	font = wezterm.font {
         family = "FiraCode Nerd Font",
         weight = "Regular",
