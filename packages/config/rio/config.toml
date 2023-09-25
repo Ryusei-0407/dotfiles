@@ -1,7 +1,131 @@
+# Cursor
+#
+# Default cursor is Block
+# Other available options are: "_" and "|"
+#
+# cursor = "|"
+
+# Performance
+#
+# Set WGPU rendering performance
+# High: Adapter that has the highest performance. This is often a discrete GPU.
+# Low: Adapter that uses the least possible power. This is often an integrated GPU.
+#
 performance = "High"
-font = "FiraCode Nerd Font"
-font-size = 15
+
+# Shell
+#
+# You can set `shell.program` to the path of your favorite shell, e.g. `/bin/fish`.
+# Entries in `shell.args` are passed unmodified as arguments to the shell.
+#
+# Default:
+#   - (Mac OS) user login shell
+#   - (Linux/BSD) user login shell
+#   - (Windows) powershell
+#
+shell = { program = "/opt/homebrew/bin/zsh", args = ["--login"] }
+
+# Editor
+#
+# You can set your default editor to open configuration file
+#
+# Default:
+#   - (Mac OS) value of $EDITOR with a fallback to "vim"
+#   - (Linux/BSD) value of $EDITOR with a fallback to "vi"
+#   - (Windows) value of $EDITOR with a fallback to "vi"
+#
+editor = "nvim"
+
+# Disable render when unfocused
+#
+# This property disable renderer processes while Rio is unfocused.
+#
 disable-renderer-when-unfocused = false
+
+# Use fork
+#
+# Defaults for POSIX-based systems (Windows is not configurable):
+# Mac OS: spawn processes
+# Linux/BSD: fork processes
+#
+use-fork = true
+
+[fonts]
+size = 14
+
+[fonts.regular]
+family = "FiraCode Nerd Font"
+style = "Normal"
+weight = 400
+
+[fonts.bold]
+family = "FiraCode Nerd Font"
+style = "Normal"
+weight = 800
+
+[fonts.italic]
+family = "FiraCode Nerd Font"
+style = "italic"
+weight = 400
+
+[fonts.bold-italic]
+family = "FiraCode Nerd Font"
+style = "italic"
+weight = 800
+
+# Navigation
+#
+# "mode" - Define navigation mode
+#   - NativeTab (Mac OS only)
+#   - CollapsedTab
+#   - BottomTab
+#   - TopTab
+#   - Breadcrumb
+#
+# "clickable" - Enable click on tabs to switch
+# "use-current-path" - Use same path whenever a new tab is created.
+# "color-automation" - Set a specific color for the tab whenever a specific program is running.
+# "macos-hide-window-buttons" - (Mac OS only) Hide window buttons
+#
+[navigation]
+mode = "NativeTab"
+clickable = false
+use-current-path = true
+macos-hide-window-buttons = false
+
+# Colors
+#
+# Colors definition will overwrite any property in theme
+# (considering if theme folder docs exists and is being used)
+#
+[colors]
+background = "#22212c"
+foreground = "#f8f8f2"
+
+black = "#22212c"
+red = "#ff9580"
+green = "#8aff80"
+yellow = "#ffff80"
+blue = "#9580ff"
+magenta = "#ff80bf"
+cyan = "#80ffea"
+white = "#f8f8f2"
+
+tabs = '#12B5E5'
+tabs-active = '#FCBA28'
+selection-background = "#454158"
+selection-foreground = "#f8f8f2"
+
+dim-foreground = "#9a9a9a"
+
+light-black = "#6272a4"
+light-red = "#ffaa99"
+light-green = "#a2ff99"
+light-yellow = "#ffff99"
+light-blue = "#aa99ff"
+light-magenta = "#ff99cc"
+light-cyan = "#99ffee"
+light-white = "#ffffff"
 
 [developer]
 enabled-fsp-counter = false
