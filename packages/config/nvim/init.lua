@@ -40,7 +40,9 @@ vim.cmd("set whichwrap+=<,>,h,l")
 vim.cmd([[set iskeyword+=-]])
 vim.cmd([[set formatoptions-=cro]])
 
-if vim.loader then vim.loader.enable() end
+if vim.loader then
+	vim.loader.enable()
+end
 
 vim.g.did_install_default_menus = 1
 vim.g.did_install_syntax_menu = 1
@@ -63,236 +65,283 @@ vim.g.skip_loading_mswin = 1
 
 local opts = { noremap = true, silent = true }
 
-vim.api.nvim_set_keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+vim.api.nvim_set_keymap("", "<Space>", "<Nop>", opts)
 vim.api.nvim_set_keymap("n", "<Enter><Enter>", "<C-w><C-w>", opts)
 vim.api.nvim_set_keymap("n", "ss", ":split<CR>", opts)
 vim.api.nvim_set_keymap("n", "sv", ":vsplit<CR>", opts)
+
+vim.api.nvim_set_keymap("i", "<C-f>", "<Right>", opts)
+vim.api.nvim_set_keymap("i", "<C-b>", "<Left>", opts)
+vim.api.nvim_set_keymap("i", "<C-p>", "<Up>", opts)
+vim.api.nvim_set_keymap("i", "<C-n>", "<Down>", opts)
+vim.api.nvim_set_keymap("i", "<C-a>", "<Home>", opts)
+vim.api.nvim_set_keymap("i", "<C-e>", "<End>", opts)
+
 vim.g.winresizer_start_key = "<C-s>"
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable",
-    lazypath,
-  })
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable",
+		lazypath,
+	})
 end
 
 vim.opt.rtp:prepend(lazypath)
 
-require('lazy').setup({
-    "nvim-lua/popup.nvim",
-    "nvim-lua/plenary.nvim",
-    "lewis6991/gitsigns.nvim",
-    "nvim-tree/nvim-web-devicons",
-    "simeji/winresizer",
-    {
-        "nvim-lualine/lualine.nvim",
-        dependencies = { "nvim-tree/nvim-web-devicons" },
-        config = function ()
-            require("config/lualine")
-        end
-    },
-    {
-        "kdheepak/lazygit.nvim",
-        keys = {
-            { "<leader>lg", "<CMD>LazyGit<CR>" }
-        }
-    },
-    {
-        "lukas-reineke/indent-blankline.nvim",
-        config = function ()
-            require("config/indentline")
-        end
-    },
-    {
-        "nvim-treesitter/nvim-treesitter",
-        config = function()
-            require("nvim-treesitter/configs").setup({
-                ensure_installed = "all",
-                ignore_install = { "phpdoc" },
-                context_commentstring = {
-                    enable = true,
-                },
-                highlight = {
-                    enable = true,
-                    disable = { "lua" },
-                },
-                indent = {
-                    enable = true,
-                },
-                rainbow = {
-                    enable = true,
-                    extended_mode = true,
-                    max_file_lines = nil,
-                },
-            })
-        end
-    },
-    {
-        "goolord/alpha-nvim",
-        config = function()
-            require("config/alpha")
-        end
-    },
-    {
-        "nvim-neo-tree/neo-tree.nvim",
-        dependencies = {
-            "MunifTanjim/nui.nvim",
-            "nvim-lua/plenary.nvim",
-            "nvim-tree/nvim-web-devicons",
-        },
-        keys = {
-            { "<C-e>", "<CMD>Neotree toggle=true<CR>" }
-        },
-        config = function()
-            require("neo-tree").setup({
-                filesystem = {
-                    filtered_items = {
-                        visible = true,
-                        hide_dotfiles = false,
-                        hide_gitignored = true,
-                        force_visible_in_empty_folder = true,
-                        show_hidden_count = false,
-                    },
-                },
-            })
-            vim.cmd([[
+require("lazy").setup({
+	"nvim-lua/popup.nvim",
+	"nvim-lua/plenary.nvim",
+	"lewis6991/gitsigns.nvim",
+	"nvim-tree/nvim-web-devicons",
+	"simeji/winresizer",
+	{
+		"gbprod/cutlass.nvim",
+		opts = {
+			cut_key = nil,
+			override_del = true,
+		},
+	},
+	{
+		"nvim-lualine/lualine.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		config = function()
+			require("config/lualine")
+		end,
+	},
+	{
+		"kdheepak/lazygit.nvim",
+		keys = {
+			{ "<leader>lg", "<CMD>LazyGit<CR>" },
+		},
+	},
+	{
+		"lukas-reineke/indent-blankline.nvim",
+		config = function()
+			require("config/indentline")
+		end,
+	},
+	{
+		"nvim-treesitter/nvim-treesitter",
+		config = function()
+			require("nvim-treesitter/configs").setup({
+				ensure_installed = "all",
+				ignore_install = { "phpdoc" },
+				context_commentstring = {
+					enable = true,
+				},
+				highlight = {
+					enable = true,
+					disable = { "lua" },
+				},
+				indent = {
+					enable = true,
+				},
+				rainbow = {
+					enable = true,
+					extended_mode = true,
+					max_file_lines = nil,
+				},
+			})
+		end,
+	},
+	{
+		"m-demare/hlargs.nvim",
+		config = true,
+	},
+	{
+		"goolord/alpha-nvim",
+		config = function()
+			require("config/alpha")
+		end,
+	},
+	{
+		"nvim-neo-tree/neo-tree.nvim",
+		dependencies = {
+			"MunifTanjim/nui.nvim",
+			"nvim-lua/plenary.nvim",
+			"nvim-tree/nvim-web-devicons",
+		},
+		keys = {
+			{ "<C-e>", "<CMD>Neotree toggle=true<CR>" },
+		},
+		config = function()
+			require("neo-tree").setup({
+				filesystem = {
+					filtered_items = {
+						visible = true,
+						hide_dotfiles = false,
+						hide_gitignored = true,
+						force_visible_in_empty_folder = true,
+						show_hidden_count = false,
+					},
+				},
+			})
+			vim.cmd([[
                 highlight NeoTreeRootName gui=bold
                 highlight NeoTreeGitConflict gui=bold
                 highlight NeoTreeUntracked gui=none
             ]])
-        end
-    },
-    {
-        "folke/trouble.nvim",
-        keys = {
-            { "<leader>tt", "<CMD>TroubleToggle<CR>" },
-        },
-        dependencies = { "nvim-tree/nvim-web-devicons" },
-    },
-    {
-        "nvim-telescope/telescope.nvim",
-        dependencies = { "nvim-telescope/telescope-media-files.nvim" },
-        keys = {
-            { "<leader>f", "<CMD>Telescope find_files<CR>" },
-            { "<C-f>", "<CMD>Telescope live_grep<CR>" },
-        },
-        config = function()
-            require("config/telescope")
-        end
-    },
-    {
-        "yioneko/nvim-yati",
-        dependencies = { "nvim-treesitter/nvim-treesitter" },
-    },
-    {
-        "akinsho/bufferline.nvim",
-        version = "*",
-        dependencies = { "nvim-tree/nvim-web-devicons" },
-        keys = {
-            { "<leader>l", "<CMD>BufferLineCycleNext<CR>" },
-            { "<leader>h", "<CMD>BufferLineCyclePrev<CR>" },
-        },
-        config = function ()
-            require("bufferline").setup({
-                options = {
-                    mode = "tabs",
-                    indicator = {
-                        style = "icon"
-                    }
-                }
-            })
-        end
-    },
-    {
-        "Mofiqul/dracula.nvim",
-        config = function()
-            vim.cmd([[
+		end,
+	},
+	{
+		"folke/trouble.nvim",
+		keys = {
+			{ "<leader>tt", "<CMD>TroubleToggle<CR>" },
+		},
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+	},
+	{
+		"nvim-telescope/telescope.nvim",
+		dependencies = { "nvim-telescope/telescope-media-files.nvim" },
+		keys = {
+			{ "<leader>f", "<CMD>Telescope find_files<CR>" },
+			{ "<C-f>", "<CMD>Telescope live_grep<CR>" },
+		},
+		config = function()
+			require("config/telescope")
+		end,
+	},
+	{
+		"yioneko/nvim-yati",
+		dependencies = { "nvim-treesitter/nvim-treesitter" },
+	},
+	{
+		"romgrk/barbar.nvim",
+		dependencies = {
+			"lewis6991/gitsigns.nvim",
+			"nvim-tree/nvim-web-devicons",
+		},
+		vim.keymap.set("n", "<leader>h", function()
+			vim.cmd("BufferPrevious")
+		end),
+		vim.keymap.set("n", "<leader>l", function()
+			vim.cmd("BufferNext")
+		end),
+		vim.keymap.set("n", "<leader>w", function()
+			vim.cmd("BufferClose")
+		end),
+		lazy = false,
+	},
+	{
+		"Mofiqul/dracula.nvim",
+		config = function()
+			vim.cmd([[
                 colorscheme dracula
                 colorscheme dracula_pro
             ]])
-        end
-    },
-    {
-        "akinsho/toggleterm.nvim",
-        config = function()
-            require("toggleterm").setup({
-                open_mapping = [[<C-\>]],
-                size = 20,
-                hide_numbers = true,
-                direction = "float",
-                close_on_exit = true,
-            })
-        end
-    },
-    {
-        "hrsh7th/nvim-cmp",
-        event = "InsertEnter",
-        dependencies = {
-            "hrsh7th/cmp-buffer",
-            "hrsh7th/cmp-path",
-            "hrsh7th/cmp-cmdline",
-            "hrsh7th/cmp-nvim-lsp",
-            "hrsh7th/cmp-nvim-lua",
-            "L3MON4D3/LuaSnip",
-        },
-        config = function()
-            require("config/cmp")
-        end
-    },
-    {
-        "neovim/nvim-lspconfig",
-        dependencies = {
-            "williamboman/mason.nvim",
-            "williamboman/mason-lspconfig.nvim",
-        },
-        config = function()
-            require("lsp")
-        end
-    },
-    {
-        "glepnir/lspsaga.nvim",
-        event = "LspAttach",
-        dependencies = {
-            "nvim-tree/nvim-web-devicons",
-            "nvim-treesitter/nvim-treesitter",
-        },
-        lazy = false,
-    },
-    {
-        "zbirenbaum/copilot.lua",
-          cmd = "Copilot",
-          event = "InsertEnter",
-    },
-    {
-        "zbirenbaum/copilot-cmp",
-          after = { "copilot.lua" },
-    },
-    {
-        "simrat39/rust-tools.nvim",
-        ft = { "rust" },
-    },
-    {
-        "windwp/nvim-ts-autotag",
-        ft = { "typescriptreact" },
-    },
-    {
-        "j-hui/fidget.nvim",
-        tag = "legacy",
-    },
-    {
-        "echasnovski/mini.surround",
-        version = "*",
-    },
-    {
-        "michaelb/sniprun",
-        build = "sh ./install.sh",
-    },
+		end,
+	},
+	{
+		"akinsho/toggleterm.nvim",
+		config = function()
+			require("toggleterm").setup({
+				open_mapping = [[<C-\>]],
+				size = 20,
+				hide_numbers = true,
+				direction = "float",
+				close_on_exit = true,
+			})
+		end,
+	},
+	{
+		"hrsh7th/nvim-cmp",
+		event = "InsertEnter",
+		dependencies = {
+			"hrsh7th/cmp-buffer",
+			"hrsh7th/cmp-path",
+			"hrsh7th/cmp-cmdline",
+			"hrsh7th/cmp-nvim-lsp",
+			"hrsh7th/cmp-nvim-lua",
+			"L3MON4D3/LuaSnip",
+		},
+		config = function()
+			require("config/cmp")
+		end,
+	},
+	{
+		"neovim/nvim-lspconfig",
+		dependencies = {
+			"williamboman/mason.nvim",
+			"williamboman/mason-lspconfig.nvim",
+		},
+		config = function()
+			require("lsp")
+		end,
+	},
+	{
+		"glepnir/lspsaga.nvim",
+		event = "LspAttach",
+		dependencies = {
+			"nvim-tree/nvim-web-devicons",
+			"nvim-treesitter/nvim-treesitter",
+		},
+		lazy = false,
+		config = true,
+	},
+	{
+		"stevearc/conform.nvim",
+		config = function()
+			require("conform").setup({
+				formatters_by_ft = {
+					lua = { "stylua" },
+					javascript = { { "prettierd", "eslint" } },
+					typescript = { { "prettierd", "eslint" } },
+					typescriptreact = { { "prettierd", "eslint" } },
+					go = { { "gofmt", "goimports" } },
+					rust = { "rustfmt" },
+					json = { "jq" },
+					["*"] = { "codespell" },
+					["_"] = { "trim_whitespace" },
+				},
+				format_on_save = {
+					timeout_ms = 500,
+					lsp_fallback = true,
+				},
+			})
+		end,
+	},
+	{
+		"zbirenbaum/copilot.lua",
+		cmd = "Copilot",
+		event = "InsertEnter",
+		config = true,
+	},
+	{
+		"zbirenbaum/copilot-cmp",
+		after = { "copilot.lua" },
+		config = true,
+	},
+	{
+		"simrat39/rust-tools.nvim",
+		ft = { "rust" },
+		config = true,
+	},
+	{
+		"windwp/nvim-ts-autotag",
+		ft = { "typescriptreact" },
+		config = true,
+	},
+	{
+		"j-hui/fidget.nvim",
+		tag = "legacy",
+		config = true,
+	},
+	{
+		"echasnovski/mini.surround",
+		version = "*",
+		config = true,
+	},
+	{
+		"michaelb/sniprun",
+		build = "sh ./install.sh",
+		config = true,
+	},
 })
