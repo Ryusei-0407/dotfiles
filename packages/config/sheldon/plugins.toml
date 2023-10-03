@@ -32,3 +32,4 @@ github = "zdharma-continuum/fast-syntax-highlighting"
 
 [plugins.history-search-multi-word]
 github = "zdharma-continuum/history-search-multi-word"
+apply = ["defer"]
