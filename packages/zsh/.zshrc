@@ -87,7 +87,7 @@ function ensure_zcompiled {
 ensure_zcompiled ~/.zshrc
 
 if [[ ! -r ~/.config/sheldon/sheldon.zsh|| ~/.config/sheldon/plugins.toml -nt ~/.config/sheldon/sheldon.zsh ]]; then
-  sheldon source > $sheldon_cache
+  sheldon source > ~/.config/sheldon/sheldon.zsh
   source ~/.config/sheldon/sheldon.zsh
 fi
 
