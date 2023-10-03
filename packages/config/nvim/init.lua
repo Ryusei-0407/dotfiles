@@ -123,12 +123,6 @@ require("lazy").setup({
 		},
 	},
 	{
-		"lukas-reineke/indent-blankline.nvim",
-		config = function()
-			require("config/indentline")
-		end,
-	},
-	{
 		"nvim-treesitter/nvim-treesitter",
 		config = function()
 			require("nvim-treesitter/configs").setup({
