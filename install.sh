@@ -36,5 +36,5 @@ if ! [ -x "$(command -v rustup)" ]; then
     curl https://sh.rustup.rs -sSf | sh
 fi
 
-stow -d $HOME/dotfiles/packages -t $HOME $(/bin/ls $PWD/packages | grep -v config | xargs)
+stow -d $HOME/dotfiles/packages -t $HOME $(/bin/ls /Users/$(whoami)/dotfiles/packages | grep -v config | xargs)
 stow -d $HOME/dotfiles/packages -t $HOME/.config config
