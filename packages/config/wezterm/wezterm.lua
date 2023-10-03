@@ -14,44 +14,44 @@ local keys = {
 		mods = "SHIFT|CTRL",
 		action = wezterm.action.QuickSelect,
 	},
-    {
-        key = "h",
-        mods = "SHIFT|CTRL",
-        action = wezterm.action.ActivatePaneDirection "Left",
-    },
-    {
-        key = "l",
-        mods = "SHIFT|CTRL",
-        action = wezterm.action.ActivatePaneDirection "Right",
-    },
-    {
-        key = "k",
-        mods = "SHIFT|CTRL",
-        action = wezterm.action.ActivatePaneDirection "Up",
-    },
-    {
-        key = "j",
-        mods = "SHIFT|CTRL",
-        action = wezterm.action.ActivatePaneDirection "Down",
-    },
-    {
-        key = "_",
-        mods = "SHIFT|CTRL",
-        action = wezterm.action.SplitVertical,
-    },
-    {
-        key = "|",
-        mods = "SHIFT|CTRL",
-        action = wezterm.action.SplitHorizontal,
-    },
+	{
+		key = "h",
+		mods = "SHIFT|CTRL",
+		action = wezterm.action.ActivatePaneDirection("Left"),
+	},
+	{
+		key = "l",
+		mods = "SHIFT|CTRL",
+		action = wezterm.action.ActivatePaneDirection("Right"),
+	},
+	{
+		key = "k",
+		mods = "SHIFT|CTRL",
+		action = wezterm.action.ActivatePaneDirection("Up"),
+	},
+	{
+		key = "j",
+		mods = "SHIFT|CTRL",
+		action = wezterm.action.ActivatePaneDirection("Down"),
+	},
+	{
+		key = "_",
+		mods = "SHIFT|CTRL",
+		action = wezterm.action.SplitVertical,
+	},
+	{
+		key = "|",
+		mods = "SHIFT|CTRL",
+		action = wezterm.action.SplitHorizontal,
+	},
 }
 
 return {
-    font_size = 12.0,
-	font = wezterm.font {
-        family = "FiraCode Nerd Font",
-        weight = "Regular",
-    },
+	font_size = 12.0,
+	font = wezterm.font({
+		family = "FiraCode Nerd Font",
+		weight = "Regular",
+	}),
 
 	colors = colors,
 
@@ -59,10 +59,10 @@ return {
 
 	keys = keys,
 
-    enable_tab_bar = false,
+	enable_tab_bar = false,
 
-    -- default_cursor_style = "SteadyBar",
+	default_cursor_style = "SteadyBar",
 
-    check_for_updates = false,
-    show_update_window = false
+	check_for_updates = false,
+	show_update_window = false,
 }
