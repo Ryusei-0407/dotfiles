@@ -13,7 +13,6 @@ brew "git-delta"                 # diff
 brew "git-secrets"               # git secrets
 brew "llvm"                      # llvm
 brew "glow"                      # glow
-brew "csview"                    # csview
 brew "universal-ctags"           # universal-ctags
 brew "duf"                       # duf
 brew "youtube-dl"                # youtube-dl
@@ -39,6 +38,7 @@ brew "tree-sitter"            # tree-sitter -> syntax highlighting
 # Better tools
 brew "eza"                    # eza -> better ls
 brew "bat"                    # bat -> better cat
+brew "xsv"                    # xsv -> better csv
 brew "gping"                  # gping -> better ping
 brew "httpie"                 # httpie -> better curl
 brew "fd"                     # fd -> better find
