@@ -6,7 +6,8 @@ export GOMODCACHE=$HOME/.cache/go_mod
 export GEM_HOME=$HOME/.gem
 export PKG_CONFIG_PATH=/opt/homebrew/opt/ruby/lib/pkgconfig
 export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH" export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+export PATH="$VOLTA_HOME/bin:$PATH"
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 export PATH=$PATH:/opt/homebrew/bin
 export PATH=$PATH:/opt/homebrew/sbin
 export PATH=$PATH:/usr/local/bin
@@ -29,7 +30,6 @@ alias e='emacs'
 alias v='nvim'
 alias vi='nvim'
 alias vim='nvim'
-alias c='code-insiders'
 alias bat='bat --theme=Dracula'
 alias j='z'
 alias a='cd ..'
@@ -43,7 +43,7 @@ alias cut='choose'
 alias mkdir='mkdir -p'
 alias lg='lazygit'
 alias md='frogmouth'
-alias csv='csview'
+alias csv='xsv'
 alias hex='hexyl'
 alias grep='rg'
 alias find='fd'
