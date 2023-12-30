@@ -23,20 +23,20 @@
     show = delta
 
 [delta]
-    plus-style = "syntax #012800"
-    minus-style = "syntax #340001"
-    syntax-theme = Monokai Extended
-    navifate = true
+    navigate = true
+    light = false
     line-numbers = true
     side-by-side = true
-    line-numbers-left-format = ""
-    line-numbers-right-format = "| "
+
+[merge]
+    colorMoved = default
 
 [interactive]
     diffFilter = delta --color-only
 
 [core]
 	editor = /opt/homebrew/bin/nvim
+    pager = delta
 
 [alias]
     d = "diff"
