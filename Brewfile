@@ -56,6 +56,7 @@ brew "wrk"                    # wrk -> HTTP benchmark tool
 brew "hyperfine"              # hyperfine -> better time
 brew "hexyl"                  # hexyl -> better xxd
 brew "grex"                   # grex -> better regex
+brew "difftastic"             # difftastic -> better diff
 
 # Rust
 brew "rust-analyzer"          # rust-analyzer
