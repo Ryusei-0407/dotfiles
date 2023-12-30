@@ -123,10 +123,13 @@ require("lazy").setup({
 		},
 	},
 	{
-		"lukas-reineke/indent-blankline.nvim",
-		main = "ibl",
+		"shellRaining/hlchunk.nvim",
+		event = { "UIEnter" },
 		config = function()
-			require("ibl").setup()
+			require("hlchunk").setup({
+				blank = { enable = false },
+			})
+			vim.cmd([[EnableHLLineNum]])
 		end,
 	},
 	{
@@ -231,13 +234,22 @@ require("lazy").setup({
 		end),
 		lazy = false,
 	},
+	-- {
+	-- 	"Mofiqul/dracula.nvim",
+	-- 	config = function()
+	-- 		vim.cmd([[
+	--             colorscheme dracula
+	--             colorscheme dracula_pro
+	--         ]])
+	-- 	end,
+	-- },
 	{
-		"Mofiqul/dracula.nvim",
+		"catppuccin/nvim",
+		lazy = false,
+		name = "catppuccin",
+		priority = 1000,
 		config = function()
-			vim.cmd([[
-                colorscheme dracula
-                colorscheme dracula_pro
-            ]])
+			vim.cmd.colorscheme("catppuccin-mocha")
 		end,
 	},
 	{
@@ -261,7 +273,6 @@ require("lazy").setup({
 			"hrsh7th/cmp-cmdline",
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-nvim-lua",
-			"L3MON4D3/LuaSnip",
 		},
 		config = function()
 			require("config/cmp")
@@ -323,6 +334,15 @@ require("lazy").setup({
 	{
 		"simrat39/rust-tools.nvim",
 		ft = { "rust" },
+		config = true,
+	},
+	{
+		"akinsho/flutter-tools.nvim",
+		lazy = false,
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"stevearc/dressing.nvim",
+		},
 		config = true,
 	},
 	{
