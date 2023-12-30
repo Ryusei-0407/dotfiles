@@ -107,3 +107,5 @@ cask "arc"                                          # arc
 cask "monitorcontrol"                               # monitorcontrol
 cask "cron"                                         # cron
 cask "linearmouse"                                  # linearmouse
+cask "flutter"                                      # flutter
+cask "android-studio"                               # android-studio
