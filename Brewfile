@@ -24,8 +24,7 @@ brew "iperf3"                    # iperf3
 brew "protobuf"                  # protobuf
 brew "bufbuild/buf/buf"          # buf
 brew "mkcert"                    # mkcert
-brew "emscripten"                # emscripten
-brew "stepci"                    # stepci
+# brew "emscripten"                # emscripten
 
 # Window manager
 brew "koekeishiya/formulae/yabai" # yabai -> tile window manager
@@ -67,10 +66,7 @@ brew "cargo-nextest"          # cargo-nextest
 
 # Node.JS
 brew "volta"                      # volta -> node
-brew "typescript"                 # typescript
-brew "snyk/tap/snyk"              # snyk
 brew "oven-sh/bun/bun"            # bun
-brew "fsouza/prettierd/prettierd" # prettierd
 
 # Other languages
 brew "stylua"                 # stylua
