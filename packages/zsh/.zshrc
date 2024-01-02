@@ -5,20 +5,19 @@ export GO111MODULE=on export GOBIN=$HOME/go/bin
 export GOMODCACHE=$HOME/.cache/go_mod
 export GEM_HOME=$HOME/.gem
 export PKG_CONFIG_PATH=/opt/homebrew/opt/ruby/lib/pkgconfig
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
-export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+export VOLTA_HOME=$HOME/.volta
+export PATH=$VOLTA_HOME/bin:$PATH
 export PATH=$PATH:/opt/homebrew/bin
 export PATH=$PATH:/opt/homebrew/sbin
 export PATH=$PATH:/usr/local/bin
+export PATH=$HOME/.local/bin:$PATH
 export PATH=$PATH:$CARGO_PATH
 export PATH=$PATH:$GOBIN
-export PATH=/opt/homebrew/opt/openssl@1.1/bin:$PATH
 export PATH=$GEM_HOME/bin:$PATH
-export PATH=$HOME/.krew/bin:$PATH
+export PATH=/opt/homebrew/opt/llvm/bin:$PATH
 export PATH=/opt/homebrew/opt/ruby/bin:$PATH
 export PATH=/opt/homebrew/opt/make/libexec/gnubin:$PATH
-export PATH=$HOME/.local/bin:$PATH
+export PATH=/opt/homebrew/opt/openssl@1.1/bin:$PATH
 export LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8
 
 alias zshconf='vi $HOME/.zshrc'
