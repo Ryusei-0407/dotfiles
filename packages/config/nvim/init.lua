@@ -200,20 +200,19 @@ require("lazy").setup({
 		keys = {
 			{ "<leader>tt", "<CMD>TroubleToggle<CR>" },
 		},
-		dependencies = { "nvim-tree/nvim-web-devicons" },
+		dependencies = {
+			"nvim-tree/nvim-web-devicons",
+		},
 	},
 	{
 		"nvim-telescope/telescope.nvim",
 		dependencies = {
-			{
-				"nvim-telescope/telescope-fzf-native.nvim",
-				build = "make",
-			},
+			"nvim-telescope/telescope-frecency.nvim",
 			"nvim-telescope/telescope-media-files.nvim",
+			"nvim-tree/nvim-web-devicons",
 		},
 		keys = {
-			{ "<leader>f", "<CMD>Telescope find_files<CR>" },
-			{ "<C-f>", "<CMD>Telescope live_grep<CR>" },
+			{ "<leader>f", "<CMD>Telescope frecency workspace=CWD<CR>" },
 		},
 		config = function()
 			require("config/telescope")
@@ -225,21 +224,18 @@ require("lazy").setup({
 	},
 	{
 		"romgrk/barbar.nvim",
+		lazy = false,
 		dependencies = {
 			"lewis6991/gitsigns.nvim",
 			"nvim-tree/nvim-web-devicons",
 		},
-		vim.keymap.set("n", "<leader>h", function()
-			vim.cmd("BufferPrevious")
-		end),
-		vim.keymap.set("n", "<leader>l", function()
-			vim.cmd("BufferNext")
-		end),
-		vim.keymap.set("n", "<leader>w", function()
-			vim.cmd("BufferClose")
-		end),
-		lazy = false,
+		keys = {
+			{ "<leader>h", "<CMD>BufferPrevious<CR>" },
+			{ "<leader>l", "<CMD>BufferNext<CR>" },
+			{ "<leader>w", "<CMD>BufferClose<CR>" },
+		},
 	},
+	-- Dracula
 	-- {
 	-- 	"Mofiqul/dracula.nvim",
 	-- 	config = function()
@@ -364,11 +360,6 @@ require("lazy").setup({
 	{
 		"echasnovski/mini.surround",
 		version = "*",
-		config = true,
-	},
-	{
-		"michaelb/sniprun",
-		build = "sh ./install.sh",
 		config = true,
 	},
 })
