@@ -3,5 +3,5 @@
 Brewfile.lock.json
 color.sh
 archive/
-packages/config/nvim/autoload/
 */**/*.zwc
+packages/config/zed/embeddings/
