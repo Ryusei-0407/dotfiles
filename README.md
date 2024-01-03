@@ -16,7 +16,7 @@ defaults write com.apple.dock autohide-time-modifier -float 0.7 && killall Dock
 ### Make hidden files visible in the Finder
 
 ```sh
-defaults write com.apple.finder AppleShowAllFiles TRUE
+defaults write com.apple.finder AppleShowAllFiles True
 defaults read com.apple.finder AppleShowAllFiles
 killall Finder
 ```
