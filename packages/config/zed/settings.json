@@ -22,7 +22,7 @@
     // Word wrap
     "soft_wrap": "none",
     // Vim mode
-    "vim_mode": false,
+    "vim_mode": true,
     // Terminal settings
     "terminal": {
         // Font
