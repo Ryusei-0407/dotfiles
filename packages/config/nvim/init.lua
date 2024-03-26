@@ -306,9 +306,6 @@ require("lazy").setup({
 			require("conform").setup({
 				formatters_by_ft = {
 					lua = { "stylua" },
-					-- javascript = { { "prettierd", "eslint" } },
-					-- typescript = { { "prettierd", "eslint" } },
-					-- typescriptreact = { { "prettierd", "eslint" } },
 					go = { { "gofmt", "goimports" } },
 					rust = { "rustfmt" },
 					json = { "jq" },
@@ -339,13 +336,12 @@ require("lazy").setup({
 		config = true,
 	},
 	{
-		"akinsho/flutter-tools.nvim",
-		lazy = false,
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"stevearc/dressing.nvim",
-		},
-		config = true,
+		"MeanderingProgrammer/markdown.nvim",
+		name = "render-markdown",
+		dependencies = { "nvim-treesitter/nvim-treesitter" },
+		config = function()
+			require("render-markdown").setup({})
+		end,
 	},
 	{
 		"windwp/nvim-ts-autotag",
