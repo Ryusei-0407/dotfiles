@@ -37,6 +37,7 @@ brew "tree-sitter"            # tree-sitter -> syntax highlighting
 # Better tools
 brew "eza"                    # eza -> better ls
 brew "bat"                    # bat -> better cat
+# brew "ynqa/tap/jnv"           # jnv -> better jq
 brew "xsv"                    # xsv -> better csv
 brew "gping"                  # gping -> better ping
 brew "httpie"                 # httpie -> better curl
@@ -65,8 +66,12 @@ brew "binaryen"               # binaryen
 brew "cargo-nextest"          # cargo-nextest
 
 # Node.JS
-brew "volta"                      # volta -> node
-brew "oven-sh/bun/bun"            # bun
+brew "volta"                  # volta -> node
+brew "oven-sh/bun/bun"        # bun
+
+# gRPC
+brew "protobuf"               # protobuf
+brew "grpcurl"                # grpcurl
 
 # Other languages
 brew "stylua"                 # stylua
@@ -87,22 +92,21 @@ cask "zed"                                          # zed
 cask "coteditor"                                    # coteditor
 cask "httpie"                                       # httpie
 cask "wezterm"                                      # wezterm
-cask "rio"                                          # rio
-# cask "kitty"                                      # kitty
-# cask "alacritty"                                  # alacritty
-# cask "hyper"                                      # hyper
-cask "1password/tap/1password-cli"                  # 1password-cli
+# cask "rio"                                          # rio
+# cask "kitty"                                        # kitty
+# cask "alacritty"                                    # alacritty
+# cask "hyper"                                        # hyper
+cask "1password-cli"                                # 1password-cli
 cask "karabiner-elements"                           # karabiner-elements
 cask "hammerspoon"                                  # hammerspoon
 cask "keycastr"                                     # keycastr
 cask "raycast"                                      # raycast
-cask "tableplus"                                    # tableplus
+# cask "tableplus"                                    # tableplus
 cask "alt-tab"                                      # alt-tab
 cask "proxyman"                                     # proxyman
 cask "finch"                                        # finch
 cask "arc"                                          # arc
 cask "monitorcontrol"                               # monitorcontrol
-cask "cron"                                         # cron
 cask "linearmouse"                                  # linearmouse
-cask "flutter"                                      # flutter
-cask "android-studio"                               # android-studio
+# cask "flutter"                                      # flutter
+# cask "android-studio"                               # android-studio
