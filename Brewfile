@@ -18,17 +18,24 @@ brew "duf"                       # duf
 brew "youtube-dl"                # youtube-dl
 brew "awscli"                    # awscli
 brew "aws-iam-authenticator"     # aws-iam-authenticator
+brew "azure-cli"                 # azure-cli
 brew "emacs"                     # emacs
 brew "cirruslabs/cli/tart"       # tart
 brew "iperf3"                    # iperf3
 brew "protobuf"                  # protobuf
 brew "bufbuild/buf/buf"          # buf
 brew "mkcert"                    # mkcert
+brew "7-zip"                     # 7zip
 # brew "emscripten"                # emscripten
 
+brew "gitlab-runner"             # gitlab-runner
+brew "helm"                      # helm
+
 # Window manager
-brew "koekeishiya/formulae/yabai" # yabai -> tile window manager
-brew "koekeishiya/formulae/skhd"  # skhd -> keyboard shortcuts
+brew "koekeishiya/formulae/yabai"  # yabai -> tile window manager
+brew "koekeishiya/formulae/skhd"   # skhd -> keyboard shortcuts
+# cask "nikitabobko/tap/aerospace"  # aerospace -> tile window manager
+brew "FelixKratz/formulae/borders" # borders -> window borders
 
 brew "neovim"                 # neovim
 brew "luajit"                 # luajit
@@ -37,7 +44,6 @@ brew "tree-sitter"            # tree-sitter -> syntax highlighting
 # Better tools
 brew "eza"                    # eza -> better ls
 brew "bat"                    # bat -> better cat
-# brew "ynqa/tap/jnv"           # jnv -> better jq
 brew "xsv"                    # xsv -> better csv
 brew "gping"                  # gping -> better ping
 brew "httpie"                 # httpie -> better curl
@@ -64,38 +70,37 @@ brew "sccache"                # sccache
 brew "z3"                     # z3
 brew "binaryen"               # binaryen
 brew "cargo-nextest"          # cargo-nextest
-
-# Node.JS
-brew "volta"                  # volta -> node
-brew "oven-sh/bun/bun"        # bun
+brew "wasm-tools"             # wasm-tools
+brew "wasmtime"               # wasmtime
 
 # gRPC
 brew "protobuf"               # protobuf
 brew "grpcurl"                # grpcurl
 
 # Other languages
+brew "uv"                     # uv
 brew "stylua"                 # stylua
 brew "yamlfmt"                # yamlfmt
 brew "gcc"                    # gcc
-brew "python"                 # python
-brew "go"                     # go
 brew "autoconf"               # autoconf
 brew "cocoapods"              # cocoapods
 brew "hadolint"               # hadolint
 brew "qemu"                   # qemu
 brew "dive"                   # dive
+brew "opentofu"               # opentofu
+
+brew "mise"
 
 # Cask
 cask "homebrew/cask-fonts/font-fira-code-nerd-font" # fira-code
 cask "homebrew/cask-fonts/font-fira-mono-nerd-font" # fira-mono
+cask "homebrew/cask-fonts/font-0xproto-nerd-font"   # 0xproto
+cask "homebrew/cask-fonts/font-monaspace-nerd-font" # monaspace
 cask "zed"                                          # zed
 cask "coteditor"                                    # coteditor
 cask "httpie"                                       # httpie
-cask "wezterm"                                      # wezterm
-# cask "rio"                                          # rio
-# cask "kitty"                                        # kitty
-# cask "alacritty"                                    # alacritty
-# cask "hyper"                                        # hyper
+cask "wezterm@nightly"                              # wezterm
+cask "ghostty"                                      # ghostty
 cask "1password-cli"                                # 1password-cli
 cask "karabiner-elements"                           # karabiner-elements
 cask "hammerspoon"                                  # hammerspoon
@@ -104,9 +109,10 @@ cask "raycast"                                      # raycast
 # cask "tableplus"                                    # tableplus
 cask "alt-tab"                                      # alt-tab
 cask "proxyman"                                     # proxyman
-cask "finch"                                        # finch
 cask "arc"                                          # arc
+cask "orbstack"                                     # orbstack
 cask "monitorcontrol"                               # monitorcontrol
 cask "linearmouse"                                  # linearmouse
+cask "notion-calendar"                              # notion-calendar
 # cask "flutter"                                      # flutter
 # cask "android-studio"                               # android-studio
