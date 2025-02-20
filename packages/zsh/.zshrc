@@ -1,7 +1,6 @@
 export HOMEBREW_CACHE=/opt/homebrew/cache
-export CARGO_PATH=$HOME/.cargo/bin
 export RUSTC_WRAPPER=/opt/homebrew/bin/sccache
-export GO111MODULE=on export GOBIN=$HOME/go/bin
+export GO111MODULE=on
 export GOMODCACHE=$HOME/.cache/go_mod
 export GEM_HOME=$HOME/.gem
 export PKG_CONFIG_PATH=/opt/homebrew/opt/ruby/lib/pkgconfig
@@ -11,14 +10,14 @@ export PATH=$PATH:/opt/homebrew/bin
 export PATH=$PATH:/opt/homebrew/sbin
 export PATH=$PATH:/usr/local/bin
 export PATH=$HOME/.local/bin:$PATH
-export PATH=$PATH:$CARGO_PATH
-export PATH=$PATH:$GOBIN
+export PATH=$HOME/.local/share/mise/shims:$PATH
 export PATH=$GEM_HOME/bin:$PATH
 export PATH=/opt/homebrew/opt/llvm/bin:$PATH
 export PATH=/opt/homebrew/opt/ruby/bin:$PATH
 export PATH=/opt/homebrew/opt/make/libexec/gnubin:$PATH
 export PATH=/opt/homebrew/opt/openssl@1.1/bin:$PATH
 export LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8
+export POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 alias zshconf='vi $HOME/.zshrc'
 alias zshrc='source $HOME/.zshrc'
@@ -50,12 +49,11 @@ alias ps='btop'
 alias nsl='nslookup'
 alias pb='pbcopy'
 alias m='make'
-alias docker='finch'
-alias dps='finch ps'
-alias dimg='finch images'
-alias up='finch compose up -d'
-alias down='finch compose down'
-alias dprune='yes | finch volume prune && yes | finch system prune --all'
+alias dps='docker ps'
+alias dimg='docker images'
+alias up='docker compose up -d'
+alias down='docker compose down'
+alias dprune='yes | docker volume prune && yes | docker system prune --all'
 alias glog='git log --oneline --graph'
 alias opensim='open -a Simulator'
 alias dotfiles='$HOME/dotfiles/install.sh'
