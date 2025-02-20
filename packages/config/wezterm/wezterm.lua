@@ -39,11 +39,17 @@ local keys = {
 }
 
 return {
-	font_size = 12.0,
+	font_size = 12.5,
 	font = wezterm.font({
-		family = "FiraCode Nerd Font",
+		family = "0xProto Nerd Font",
+		-- family = "MonaspiceAr Nerd Font",
 		weight = "Regular",
 	}),
+
+	use_ime = true,
+
+	window_background_opacity = 0.85,
+	macos_window_background_blur = 20,
 
 	color_scheme = "Catppuccin Mocha",
 
@@ -51,10 +57,15 @@ return {
 
 	keys = keys,
 
-	enable_tab_bar = false,
+	window_decorations = "RESIZE",
+	show_new_tab_button_in_tab_bar = false,
+	hide_tab_bar_if_only_one_tab = true,
+	show_close_tab_button_in_tabs = false,
+	tab_bar_at_bottom = true,
+	enable_tab_bar = true,
 
 	default_cursor_style = "SteadyBar",
 
 	check_for_updates = false,
-	show_update_window = false,
+	-- show_update_window = false,
 }
