@@ -99,9 +99,36 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	"nvim-lua/popup.nvim",
 	"nvim-lua/plenary.nvim",
-	"lewis6991/gitsigns.nvim",
 	"nvim-tree/nvim-web-devicons",
 	"simeji/winresizer",
+	"yioneko/nvim-yati",
+	"MunifTanjim/nui.nvim",
+	"nvim-telescope/telescope-frecency.nvim",
+	"nvim-telescope/telescope-media-files.nvim",
+	"hrsh7th/cmp-buffer",
+	"hrsh7th/cmp-path",
+	"hrsh7th/cmp-cmdline",
+	"hrsh7th/cmp-nvim-lsp",
+	"hrsh7th/cmp-nvim-lua",
+	"williamboman/mason.nvim",
+	"williamboman/mason-lspconfig.nvim",
+	"sindrets/diffview.nvim",
+	"SmiteshP/nvim-navic",
+	"anuvyklack/middleclass",
+	"anuvyklack/animation.nvim",
+	{
+		"lewis6991/gitsigns.nvim",
+		event = { "BufReadPre" },
+		config = function()
+			require("config/gitsigns")
+		end,
+	},
+	{
+		"folke/todo-comments.nvim",
+		config = function()
+			require("todo-comments").setup({})
+		end,
+	},
 	{
 		"gbprod/cutlass.nvim",
 		opts = {
@@ -111,7 +138,6 @@ require("lazy").setup({
 	},
 	{
 		"nvim-lualine/lualine.nvim",
-		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = function()
 			require("config/lualine")
 		end,
@@ -123,20 +149,33 @@ require("lazy").setup({
 		},
 	},
 	{
-		"shellRaining/hlchunk.nvim",
-		event = { "UIEnter" },
+		"lukas-reineke/indent-blankline.nvim",
+		main = "ibl",
 		config = function()
-			require("hlchunk").setup({
-				blank = { enable = false },
-			})
-			vim.cmd([[EnableHLLineNum]])
+			require("ibl").setup()
 		end,
 	},
 	{
 		"nvim-treesitter/nvim-treesitter",
 		config = function()
 			require("nvim-treesitter/configs").setup({
-				ensure_installed = "all",
+				ensure_installed = {
+					"bash",
+					"lua",
+					"cpp",
+					"python",
+					"typescript",
+					"tsx",
+					"go",
+					"rust",
+					"sql",
+					"hcl",
+					"json",
+					"yaml",
+					"toml",
+					"markdown",
+					"markdown_inline",
+				},
 				ignore_install = { "phpdoc" },
 				context_commentstring = {
 					enable = true,
@@ -168,11 +207,6 @@ require("lazy").setup({
 	},
 	{
 		"nvim-neo-tree/neo-tree.nvim",
-		dependencies = {
-			"MunifTanjim/nui.nvim",
-			"nvim-lua/plenary.nvim",
-			"nvim-tree/nvim-web-devicons",
-		},
 		keys = {
 			{ "<C-e>", "<CMD>Neotree toggle=true<CR>" },
 		},
@@ -197,20 +231,14 @@ require("lazy").setup({
 	},
 	{
 		"folke/trouble.nvim",
+		opts = {},
+		cmd = "Trouble",
 		keys = {
-			{ "<leader>tt", "<CMD>TroubleToggle<CR>" },
-		},
-		dependencies = {
-			"nvim-tree/nvim-web-devicons",
+			{ "<leader>tt", "<CMD>Trouble diagnostics toggle focus=true<CR>" },
 		},
 	},
 	{
 		"nvim-telescope/telescope.nvim",
-		dependencies = {
-			"nvim-telescope/telescope-frecency.nvim",
-			"nvim-telescope/telescope-media-files.nvim",
-			"nvim-tree/nvim-web-devicons",
-		},
 		keys = {
 			{ "<leader>f", "<CMD>Telescope frecency workspace=CWD<CR>" },
 		},
@@ -219,20 +247,20 @@ require("lazy").setup({
 		end,
 	},
 	{
-		"yioneko/nvim-yati",
-		dependencies = { "nvim-treesitter/nvim-treesitter" },
-	},
-	{
 		"romgrk/barbar.nvim",
 		lazy = false,
-		dependencies = {
-			"lewis6991/gitsigns.nvim",
-			"nvim-tree/nvim-web-devicons",
-		},
 		keys = {
 			{ "<leader>h", "<CMD>BufferPrevious<CR>" },
 			{ "<leader>l", "<CMD>BufferNext<CR>" },
 			{ "<leader>w", "<CMD>BufferClose<CR>" },
+		},
+	},
+	{
+		"sphamba/smear-cursor.nvim",
+		opts = {
+			stiffness = 0.8,
+			trailing_stiffness = 0.5,
+			distance_stop_animation = 0.1,
 		},
 	},
 	-- Dracula
@@ -269,23 +297,12 @@ require("lazy").setup({
 	{
 		"hrsh7th/nvim-cmp",
 		event = "InsertEnter",
-		dependencies = {
-			"hrsh7th/cmp-buffer",
-			"hrsh7th/cmp-path",
-			"hrsh7th/cmp-cmdline",
-			"hrsh7th/cmp-nvim-lsp",
-			"hrsh7th/cmp-nvim-lua",
-		},
 		config = function()
 			require("config/cmp")
 		end,
 	},
 	{
 		"neovim/nvim-lspconfig",
-		dependencies = {
-			"williamboman/mason.nvim",
-			"williamboman/mason-lspconfig.nvim",
-		},
 		config = function()
 			require("lsp")
 		end,
@@ -293,10 +310,6 @@ require("lazy").setup({
 	{
 		"glepnir/lspsaga.nvim",
 		event = "LspAttach",
-		dependencies = {
-			"nvim-tree/nvim-web-devicons",
-			"nvim-treesitter/nvim-treesitter",
-		},
 		lazy = false,
 		config = true,
 	},
@@ -306,6 +319,10 @@ require("lazy").setup({
 			require("conform").setup({
 				formatters_by_ft = {
 					lua = { "stylua" },
+					javascript = { "biome format" },
+					javascriptreact = { "biome format" },
+					typescript = { "biome format" },
+					typescriptreact = { "biome format" },
 					go = { { "gofmt", "goimports" } },
 					rust = { "rustfmt" },
 					json = { "jq" },
@@ -338,7 +355,6 @@ require("lazy").setup({
 	{
 		"MeanderingProgrammer/markdown.nvim",
 		name = "render-markdown",
-		dependencies = { "nvim-treesitter/nvim-treesitter" },
 		config = function()
 			require("render-markdown").setup({})
 		end,
@@ -357,5 +373,34 @@ require("lazy").setup({
 		"echasnovski/mini.surround",
 		version = "*",
 		config = true,
+	},
+	{
+		"smjonas/inc-rename.nvim",
+		config = function()
+			require("inc_rename").setup({
+				cmd_name = "Rename",
+				preview_empty_name = false,
+				show_message = true,
+				save_in_cmdline_history = true,
+				input_buffer_type = nil,
+				post_hook = nil,
+			})
+		end,
+	},
+	{
+		"b0o/incline.nvim",
+		event = "VeryLazy",
+		config = function()
+			require("config/incline")
+		end,
+	},
+	{
+		"anuvyklack/windows.nvim",
+		config = function()
+			vim.o.winwidth = 10
+			vim.o.winminwidth = 10
+			vim.o.equalalways = false
+			require("windows").setup({})
+		end,
 	},
 })

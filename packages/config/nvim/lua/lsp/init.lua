@@ -20,13 +20,14 @@ mason_lspconfig.setup_handlers({
 
 local keymap = vim.keymap.set
 
-keymap("n", "K",  "<cmd>Lspsaga hover_doc<CR>")
+keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>")
 keymap("n", "gd", "<cmd>Lspsaga peek_definition<CR>")
 keymap("n", "ga", "<cmd>Lspsaga code_action<CR>")
 keymap("n", "gn", "<cmd>Lspsaga rename<CR>")
 keymap("n", "ge", "<cmd>Lspsaga show_line_diagnostics<CR>")
 
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, { virtual_text = false })
+vim.lsp.handlers["textDocument/publishDiagnostics"] =
+	vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, { virtual_text = false })
 
 vim.cmd([[
     highlight LspReferenceText cterm=underline ctermfg=1 ctermbg=8 gui=underline guifg=#A00000 guibg=#104040
