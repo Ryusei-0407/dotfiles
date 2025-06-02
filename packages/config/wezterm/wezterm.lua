@@ -36,6 +36,11 @@ local keys = {
 		mods = "SHIFT|CTRL",
 		action = wezterm.action.SplitHorizontal,
 	},
+	{
+		key = "Enter",
+		mods = "SHIFT",
+		action = wezterm.action.SendString("\n"),
+	},
 }
 
 return {
