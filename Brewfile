@@ -6,7 +6,6 @@ brew "tmux"                      # tmux
 brew "lazygit"                   # lazygit
 brew "make"                      # make
 brew "fzf"                       # fzf
-brew "watch"                     # watch
 brew "awk"                       # awk
 brew "gh"                        # github cli
 brew "git-delta"                 # diff
@@ -18,7 +17,6 @@ brew "duf"                       # duf
 brew "youtube-dl"                # youtube-dl
 brew "awscli"                    # awscli
 brew "aws-iam-authenticator"     # aws-iam-authenticator
-brew "azure-cli"                 # azure-cli
 brew "emacs"                     # emacs
 brew "cirruslabs/cli/tart"       # tart
 brew "iperf3"                    # iperf3
@@ -28,13 +26,14 @@ brew "mkcert"                    # mkcert
 brew "7-zip"                     # 7zip
 # brew "emscripten"                # emscripten
 
-brew "gitlab-runner"             # gitlab-runner
-brew "helm"                      # helm
+# Temporary
+#
+brew "azure-cli"                                    # Azure CLI
+brew "azure/functions/azure-functions-core-tools@4" # Azure Functions Core Tools
 
 # Window manager
 brew "koekeishiya/formulae/yabai"  # yabai -> tile window manager
 brew "koekeishiya/formulae/skhd"   # skhd -> keyboard shortcuts
-# cask "nikitabobko/tap/aerospace"  # aerospace -> tile window manager
 brew "FelixKratz/formulae/borders" # borders -> window borders
 
 brew "neovim"                 # neovim
@@ -44,7 +43,6 @@ brew "tree-sitter"            # tree-sitter -> syntax highlighting
 # Better tools
 brew "eza"                    # eza -> better ls
 brew "bat"                    # bat -> better cat
-brew "xsv"                    # xsv -> better csv
 brew "gping"                  # gping -> better ping
 brew "httpie"                 # httpie -> better curl
 brew "fd"                     # fd -> better find
@@ -91,20 +89,22 @@ brew "opentofu"               # opentofu
 
 brew "mise"
 
-# Cask
+# Fonts
 cask "homebrew/cask-fonts/font-fira-code-nerd-font" # fira-code
 cask "homebrew/cask-fonts/font-fira-mono-nerd-font" # fira-mono
 cask "homebrew/cask-fonts/font-0xproto-nerd-font"   # 0xproto
 cask "homebrew/cask-fonts/font-monaspace-nerd-font" # monaspace
+
+# Cask
 cask "zed"                                          # zed
-cask "coteditor"                                    # coteditor
-cask "httpie"                                       # httpie
+# cask "zed@preview"                                  # zed@preview
+cask "visual-studio-code@insiders"                  # visual-studio-code@insiders
+# cask "httpie"                                       # httpie
 cask "wezterm@nightly"                              # wezterm
 cask "ghostty"                                      # ghostty
 cask "1password-cli"                                # 1password-cli
 cask "karabiner-elements"                           # karabiner-elements
 cask "hammerspoon"                                  # hammerspoon
-cask "keycastr"                                     # keycastr
 cask "raycast"                                      # raycast
 # cask "tableplus"                                    # tableplus
 cask "alt-tab"                                      # alt-tab
@@ -114,5 +114,6 @@ cask "orbstack"                                     # orbstack
 cask "monitorcontrol"                               # monitorcontrol
 cask "linearmouse"                                  # linearmouse
 cask "notion-calendar"                              # notion-calendar
+cask "readdle-spark"                                # spark
 # cask "flutter"                                      # flutter
 # cask "android-studio"                               # android-studio
