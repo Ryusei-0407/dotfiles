@@ -1,7 +1,47 @@
 [
     {
+        "context": "Workspace",
         "bindings": {
-            "ctrl-\\": "workspace::NewTerminal"
+            "ctrl-\\": "workspace::ToggleBottomDock"
+        }
+    },
+    {
+        "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
+        "bindings": {
+            "space e": "project_panel::ToggleFocus",
+            "space g": "git_panel::ToggleFocus",
+            "enter enter": "workspace::ActivateNextPane",
+            "space ]": "pane::GoForward",
+            "space [": "pane::GoBack",
+            "space w": "pane::CloseActiveItem",
+            "s s": "pane::SplitVertical",
+            "s v": "pane::SplitHorizontal"
+        }
+    },
+    {
+        "context": "Editor && (vim_mode == visual) && !VimWaiting && !menu",
+        "bindings": {
+            "/": ["editor::ToggleComments", { "advance_downwards": false }]
+        }
+    },
+    {
+        "context": "ProjectPanel && not_editing",
+        "bindings": {
+            "enter": "project_panel::Open",
+            "a": "project_panel::NewFile",
+            "A": "project_panel::NewDirectory",
+            "r": "project_panel::Rename",
+            "d": "project_panel::Delete",
+            "p": "project_panel::Paste",
+            "y": "project_panel::Copy",
+            "x": "project_panel::Cut",
+            "space e": "workspace::ToggleLeftDock"
+        }
+    },
+    {
+        "context": "GitPanel && ChangesList",
+        "bindings": {
+            "space g": "workspace::ToggleLeftDock"
         }
     }
 ]

@@ -1,121 +1,94 @@
 {
-    // Auto update
+    "features": {
+        "edit_prediction_provider": "zed"
+    },
     "telemetry": {
         "diagnostics": false,
         "metrics": false
     },
     "auto_update": false,
-    // Send usage data
     "metrics": false,
-    // Send debug-related data, such as crash reports
-    "diagnostics": false,
-    // Use tab
     "hard_tabs": false,
     "tab_size": 4,
-    // Time format
+    "tabs": {
+        "close_position": "right",
+        "file_icons": true,
+        "git_status": true,
+        "activate_on_close": "history",
+        "show_close_button": "hover",
+        "show_diagnostics": "all"
+    },
     "hour_format": "hour24",
-    // Color theme
-    "theme": "One Dark",
-    // Font
-    "buffer_font_family": "FiraCode Nerd Font",
+    "theme": "Catppuccin Mocha",
+    "buffer_font_family": "0xProto Nerd Font",
     "buffer_font_size": 13,
-    // Word wrap
     "soft_wrap": "none",
-    // Vim mode
     "vim_mode": true,
-    // Terminal settings
-    "terminal": {
-        // Font
-        "font_family": "FiraCode Nerd Font",
-        // Cursor blink
-        "blinking": "terminal_controlled",
-        // Save system clipboard
-        "copy_on_select": true,
-        // Use like Emacs
-        "option_as_meta": true
+    "restore_on_startup": "none",
+    "disabled_in": ["comment", "string"],
+    "hide_mouse_while_typing": true,
+    "inlay_hints": {
+        "enabled": true,
+        "show_type_hints": true,
+        "show_parameter_hints": true,
+        "show_overloads": true,
+        "edit_debounce_ms": 700,
+        "scroll_debounce_ms": 50
     },
-    // Github copilot setting
-    "features": {
-        "copilot": true
-    },
-    // LSP formatter
-    "formatter": "language_server",
-    // Format on save
-    "format_on_save": "on",
-    // Remove trailing whitespace on save
-    "remove_trailing_whitespace_on_save": true,
-    // LSP settings
     "lsp": {
-        "rust-analyzer": {
+        "ruse-analyzer": {
             "initialization_options": {
-                "checkOnSave": {
+                "check": {
                     "command": "clippy"
                 }
             }
         }
     },
-    "language_overrides": {
-        "JavaScript": {
-            "tab_size": 2,
-            "format_on_save": {
-                "external": {
-                    "command": "rome",
-                    "arguments": [
-                        "format",
-                        "--use-server",
-                        "--indent-style space",
-                        "--indent-width 2",
-                        "--quote-style single",
-                        "--semicolons always"
-                    ]
-                }
-            }
-        },
-        "TypeScript": {
-            "tab_size": 2,
-            "format_on_save": {
-                "external": {
-                    "command": "rome",
-                    "arguments": [
-                        "format",
-                        "--use-server",
-                        "--indent-style space",
-                        "--indent-width 2",
-                        "--quote-style single",
-                        "--semicolons always"
-                    ]
-                }
-            }
-        },
-        "TSX": {
-            "tab_size": 2,
-            "format_on_save": {
-                "external": {
-                    "command": "rome",
-                    "arguments": [
-                        "format",
-                        "--use-server",
-                        "--indent-style space",
-                        "--indent-width 2",
-                        "--quote-style single",
-                        "--semicolons always"
-                    ]
-                }
-            }
-        },
-        "Python": {
-            "format_on_save": {
-                "external": {
-                    "command": "black",
-                    "arguments": [
-                        "-",
-                        "--quiet",
-                        "--fast",
-                        "--line-length",
-                        "79"
-                    ]
-                }
+    "format_on_save": "on",
+    "diagnostics": {
+        "include_warnings": true,
+        "inline": {
+            "enabled": false,
+            "update_debounce_ms": 150,
+            "padding": 4,
+            "min_column": 0,
+            "max_severity": null
+        }
+    },
+    "use_smartcase_search": true,
+    "terminal": {
+        "cursor_shape": "bar",
+        "font_family": "0xProto Nerd Font",
+        "font_fallbacks": ["0xProto Nerd Font"],
+        "line_height": "standard",
+        "blinking": "terminal_controlled",
+        "copy_on_select": true,
+        "option_as_meta": true,
+        "detect_venv": {
+            "on": {
+                "directories": [".env", "env", ".venv", "venv"],
+                "activate_script": "default"
             }
         }
+    },
+    "assistant": {
+        "version": "2",
+        "enabled": true,
+        "button": true,
+        "dock": "right",
+        "default_model": {
+            "provider": "copilot_chat",
+            "model": "claude-sonnet-4"
+        },
+        "editor_model": {
+            "provider": "zed.dev",
+            "model": "claude-3-7-sonnet-latest"
+        }
+    },
+    "auto_install_extensions": {
+        "html": true,
+        "catppuccin": true,
+        "catppuccin-icons": true,
+        "biome": true
     }
 }
