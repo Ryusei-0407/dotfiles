@@ -1,5 +1,6 @@
 require("config.options")
 require("config.keymaps")
+require("config.loader")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -38,6 +39,7 @@ require("lazy").setup({
 		{ import = "lazyvim.plugins.extras.ai.copilot" },
 		{ import = "lazyvim.plugins.extras.ai.copilot-chat" },
 		{ import = "lazyvim.plugins.extras.formatting.biome" },
+		{ import = "plugins.claude-code" },
 		{ import = "plugins.toggleterm" },
 		{ import = "plugins.incline" },
 	},

@@ -7,6 +7,8 @@ keymap.set("", "<Space>", "<Nop>")
 keymap.set("n", "<Enter><Enter>", "<C-w><C-w>")
 
 -- Buffer
-keymap.set("n", "<C-]>", "<CMD>BufferLineCycleNext<CR>")
-keymap.set("n", "<C-[>", "<CMD>BufferLineCyclePrev<CR>")
--- keymap.set("n", "<leader>w", "<CMD>BufferClose<CR>")
+keymap.set("n", "<leader>]", "<CMD>bnext<CR>")
+keymap.set("n", "<leader>[", "<CMD>bprevious<CR>")
+keymap.set("n", "<leader>w", function()
+	Snacks.bufdelete()
+end)
