@@ -1,11 +1,30 @@
 local wezterm = require("wezterm")
 
+wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
+	local background = "#5c6d74"
+	local foreground = "#FFFFFF"
+
+	if tab.is_active then
+		background = "#FF00FF"
+		foreground = "#FFFFFF"
+	end
+
+	local title = "   " .. wezterm.truncate_right(tab.active_pane.title, max_width - 1) .. "   "
+
+	return {
+		{ Background = { Color = background } },
+		{ Foreground = { Color = foreground } },
+		{ Text = title },
+	}
+end)
+
 local keys = {
 	{
 		key = "q",
 		mods = "SHIFT|CTRL",
 		action = wezterm.action.QuickSelect,
 	},
+	-- Split and Pane Navigation keybindings
 	{
 		key = "h",
 		mods = "SHIFT|CTRL",
@@ -36,19 +55,25 @@ local keys = {
 		mods = "SHIFT|CTRL",
 		action = wezterm.action.SplitHorizontal,
 	},
+	-- Claude Code keybindings
 	{
 		key = "Enter",
 		mods = "SHIFT",
 		action = wezterm.action.SendString("\n"),
 	},
+	{
+		key = "g",
+		mods = "SHIFT|CTRL",
+		action = wezterm.action.SendString("\x07"),
+	},
 }
 
 return {
-	font_size = 12.5,
-	font = wezterm.font({
-		family = "0xProto Nerd Font",
-		-- family = "MonaspiceAr Nerd Font",
-		weight = "Regular",
+	font_size = 11.0,
+	font = wezterm.font_with_fallback({
+		{ family = "0xProto Nerd Font", weight = "Regular" },
+		"ヒラギノ角ゴシック",
+		"Noto Color Emoji",
 	}),
 
 	use_ime = true,
