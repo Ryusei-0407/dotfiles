@@ -1,18 +1,11 @@
 export HOMEBREW_CACHE=/opt/homebrew/cache
-export RUSTC_WRAPPER=/opt/homebrew/bin/sccache
-export GO111MODULE=on
-export GOMODCACHE=$HOME/.cache/go_mod
 export GEM_HOME=$HOME/.gem
 export PKG_CONFIG_PATH=/opt/homebrew/opt/ruby/lib/pkgconfig
-export VOLTA_HOME=$HOME/.volta
-export PATH=$VOLTA_HOME/bin:$PATH
 export PATH=$PATH:/opt/homebrew/bin
 export PATH=$PATH:/opt/homebrew/sbin
 export PATH=$PATH:/usr/local/bin
 export PATH=$HOME/.local/bin:$PATH
-export PATH=$HOME/.local/share/mise/shims:$PATH
 export PATH=$GEM_HOME/bin:$PATH
-export PATH=/opt/homebrew/opt/llvm/bin:$PATH
 export PATH=/opt/homebrew/opt/ruby/bin:$PATH
 export PATH=/opt/homebrew/opt/make/libexec/gnubin:$PATH
 export PATH=/opt/homebrew/opt/openssl@1.1/bin:$PATH
@@ -24,6 +17,8 @@ alias zshrc='source $HOME/.zshrc'
 alias yabaiconf='vi $HOME/.config/yabai/yabairc'
 alias skhdconf='vi $HOME/.config/skhd/skhdrc'
 alias tell='say -v Samantha "done"'
+alias ja='plamo-translate --to Japanese'
+alias en='plamo-translate --to English'
 alias e='emacs'
 alias v='nvim'
 alias vi='nvim'
@@ -35,11 +30,11 @@ alias ll='eza -l --no-user --git --icons'
 alias lla='eza -la --no-user --git --icons'
 alias la='eza -a --git --icons'
 alias tree='eza --tree --git-ignore --git --icons'
-alias cp='cp -c'
+alias md='treemd'
+alias cp='cp'
 alias cut='choose'
 alias mkdir='mkdir -p'
 alias lg='lazygit'
-alias csv='xsv'
 alias hex='hexyl'
 alias grep='rg'
 alias find='fd'
@@ -107,6 +102,7 @@ fi
 eval "$(sheldon source)"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(zoxide init zsh)"
+eval "$(direnv hook zsh)"
 
 autoload -Uz compinit && compinit
 autoload -U bashcompinit && bashcompinit
