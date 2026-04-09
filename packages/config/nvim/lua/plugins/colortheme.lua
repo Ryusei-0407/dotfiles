@@ -1,11 +1,17 @@
 return {
-	"catppuccin/nvim",
+	"ThorstenRhau/token",
 	lazy = false,
-	name = "catppuccin",
-	priority = 1000,
 	config = function()
-		vim.cmd.colorscheme("catppuccin-mocha")
+		vim.cmd.colorschema("token")
 	end,
+
+	-- "catppuccin/nvim",
+	-- lazy = false,
+	-- name = "catppuccin",
+	-- priority = 1000,
+	-- config = function()
+	-- 	vim.cmd.colorscheme("catppuccin-mocha")
+	-- end,
 
 	-- Dracula
 	-- "Mofiqul/dracula.nvim",
