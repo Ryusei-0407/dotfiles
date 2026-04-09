@@ -22,11 +22,12 @@ brew "iperf3"                    # iperf3
 brew "7-zip"                     # 7zip
 brew "direnv"                    # direnv
 # brew "emscripten"                # emscripten
+brew "poppler"                   # poppler
 
 # Window manager
-brew "koekeishiya/formulae/yabai"  # yabai -> tile window manager
-brew "koekeishiya/formulae/skhd"   # skhd -> keyboard shortcuts
-brew "FelixKratz/formulae/borders" # borders -> window borders
+brew "koekeishiya/formulae/yabai"     # yabai -> tile window manager
+brew "koekeishiya/formulae/skhd"      # skhd -> keyboard shortcuts
+brew "FelixKratz/formulae/borders"    # borders -> window borders
 
 # brew "Gaurav-Gosain/tap/tuios"     # tuios
 brew "neovim"                      # neovim
@@ -46,7 +47,6 @@ brew "choose-rust"            # choose-rust -> better cut
 brew "zoxide"                 # zoxide -> better z
 brew "viddy"                  # viddy -> better watch
 brew "peco"                   # peco -> better history search
-brew "pget"                   # pget -> better wget
 brew "btop"                   # btop -> better top
 brew "procs"                  # procs -> better ps
 brew "jless"                  # jless -> better jq
@@ -73,23 +73,28 @@ brew "qemu"                   # qemu
 cask "homebrew/cask-fonts/font-fira-code-nerd-font" # fira-code
 cask "homebrew/cask-fonts/font-fira-mono-nerd-font" # fira-mono
 cask "homebrew/cask-fonts/font-0xproto-nerd-font"   # 0xproto
-cask "homebrew/cask-fonts/font-monaspace-nerd-font" # monaspace
+cask "homebrew/cask-fonts/font-monaspice-nerd-font" # monaspace
 
 # Cask
 cask "zed"                                          # zed
 cask "wezterm@nightly"                              # wezterm
-cask "ghostty"                                      # ghostty
+cask "ghostty@tip"                                  # ghostty
+cask "manaflow-ai/cmux/cmux"                        # cmux
+cask "codex"                                        # codex
 cask "1password-cli"                                # 1password-cli
 cask "karabiner-elements"                           # karabiner-elements
-cask "hammerspoon"                                  # hammerspoon
+# cask "hammerspoon"                                  # hammerspoon
 cask "raycast"                                      # raycast
-cask "tableplus"                                    # tableplus
+cask "dataflare"                                    # dataflare
+# cask "stats"                                        # stats
 cask "alt-tab"                                      # alt-tab
 cask "proxyman"                                     # proxyman
 cask "arc"                                          # arc
-cask "google-chrome"                                # google-chrome
+cask "orion"                                        # orion
 cask "orbstack"                                     # orbstack
-cask "monitorcontrol"                               # monitorcontrol
 cask "linearmouse"                                  # linearmouse
 cask "notion-calendar"                              # notion-calendar
 cask "readdle-spark"                                # spark
+cask "productdevbook/tap/portkiller"                # portkiller
+cask "jordanbaird-ice"                              # ice
+cask "nikitabobko/tap/aerospace"                    # aerospace
