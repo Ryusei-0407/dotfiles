@@ -43,7 +43,6 @@ abbr -a dup "docker compose up -d"
 abbr -a ddown "docker compose down"
 abbr -a dprune "yes | docker volume prune && yes | docker sytem prune --all"
 abbr -a glog "git log --oneline --graph"
-abbr -a site2skill "uvx --from git+https://github.com/laiso/site2skill site2skill"
 
 fish_default_key_bindings
 
