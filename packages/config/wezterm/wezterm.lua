@@ -55,6 +55,23 @@ local keys = {
 		mods = "SHIFT|CTRL",
 		action = wezterm.action.SplitHorizontal,
 	},
+	-- Move Tab position
+	{
+		key = "{",
+		mods = "SHIFT|ALT",
+		action = wezterm.action.MoveTabRelative(-1),
+	},
+	{
+		key = "}",
+		mods = "SHIFT|ALT",
+		action = wezterm.action.MoveTabRelative(1),
+	},
+	-- Toggle zoom pane
+	{
+		key = "z",
+		mods = "CTRL",
+		action = wezterm.action.TogglePaneZoomState,
+	},
 	-- Claude Code keybindings
 	{
 		key = "Enter",
@@ -69,7 +86,7 @@ local keys = {
 }
 
 return {
-	font_size = 11.0,
+	font_size = 10.5,
 	font = wezterm.font_with_fallback({
 		{ family = "0xProto Nerd Font", weight = "Regular" },
 		"ヒラギノ角ゴシック",
@@ -78,7 +95,7 @@ return {
 
 	use_ime = true,
 
-	window_background_opacity = 0.85,
+	window_background_opacity = 0.75,
 	macos_window_background_blur = 20,
 
 	color_scheme = "Catppuccin Mocha",
