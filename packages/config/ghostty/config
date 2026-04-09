@@ -1,13 +1,14 @@
 # Theme
-# theme = catppuccin-mocha
+# theme = dark:Catppuccin Mocha,light:Catppuccin Latte
+theme = dark:token-dark,light:token-light
 
 background-opacity = 0.85
-background-blur = true
+background-blur = macos-glass-clear
 
 # Font
 font-family = "0xProto Nerd Font"
 font-feature = -dlig
-font-size = 11.0
+font-size = 10.5
 
 font-thicken = true
 font-thicken-strength = 1
@@ -18,10 +19,13 @@ alpha-blending = linear
 # Mac OS
 macos-titlebar-style = tabs
 macos-window-shadow = false
+macos-window-buttons = hidden
+macos-titlebar-proxy-icon = hidden
 
 
 # Window
 window-subtitle = false
+
 
 # etc
 mouse-hide-while-typing = true
@@ -31,5 +35,6 @@ mouse-hide-while-typing = true
 keybind = ctrl+shift+\=new_split:right
 keybind = ctrl+shift+-=new_split:down
 
-# Claude Code
+## Claude Code
 keybind = shift+enter=text:\n
+keybind = ctrl+shift+g=text:\x07
