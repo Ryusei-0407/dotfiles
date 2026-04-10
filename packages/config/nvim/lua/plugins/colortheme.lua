@@ -2,9 +2,10 @@ return {
 	"ThorstenRhau/token",
 	lazy = false,
 	config = function()
-		vim.cmd.colorschema("token")
+		vim.cmd.colorscheme("token")
 	end,
 
+	-- Catppuccin-mocha
 	-- "catppuccin/nvim",
 	-- lazy = false,
 	-- name = "catppuccin",
